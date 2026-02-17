@@ -1,0 +1,1384 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: iFolders\n"
+"POT-Creation-Date: 2025-12-12 12:16+0300\n"
+"PO-Revision-Date: 2025-12-12 12:16+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 2.4.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: ifolders.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: assets/blocks/galleryblock/index.js:74
+msgid "Gallery Settings"
+msgstr "Galerie-Einstellungen"
+
+#: assets/blocks/galleryblock/index.js:76
+msgid "Folder"
+msgstr "Ordner"
+
+#: assets/blocks/galleryblock/index.js:85
+msgid "Columns"
+msgstr "Spalten"
+
+#: assets/blocks/galleryblock/index.js:94
+msgid "Max Items"
+msgstr "Max. Artikel"
+
+#: assets/blocks/galleryblock/index.js:102
+msgid "Image Size"
+msgstr "Bildgröße"
+
+#: includes/Blocks/GalleryBlock.php:19
+msgid "Thumbnail"
+msgstr "Vorschaubild"
+
+#: includes/Blocks/GalleryBlock.php:20
+msgid "Medium"
+msgstr "Mittel"
+
+#: includes/Blocks/GalleryBlock.php:21
+msgid "Large"
+msgstr "Groß"
+
+#: includes/Blocks/GalleryBlock.php:22
+msgid "Full size"
+msgstr "Volle Größe"
+
+#: includes/Blocks/GalleryBlock.php:72
+msgid "No folder selected."
+msgstr "Kein Ordner ausgewählt."
+
+#: includes/Blocks/GalleryBlock.php:78
+msgid "The selected folder has no items."
+msgstr "Der ausgewählte Ordner enthält keine Objekte."
+
+#: includes/Fallbacks/plugin-exist.php:14
+msgid ""
+"It looks like you have another version of iFolders installed, please "
+"uninstall it before activating this new version."
+msgstr ""
+"Es sieht so aus, als hätten Sie eine andere Version von iFolders "
+"installiert, bitte deinstallieren Sie sie, bevor Sie diese neue Version "
+"aktivieren."
+
+#: includes/Models/FoldersModel.php:9
+msgid "Media"
+msgstr "Medien"
+
+#: includes/Models/FoldersModel.php:10
+msgid "Posts"
+msgstr "Beiträge"
+
+#: includes/Models/FoldersModel.php:11
+msgid "Pages"
+msgstr "Seiten"
+
+#: includes/Models/FoldersModel.php:12
+msgid "Users"
+msgstr "Benutzer"
+
+#: includes/Models/HelperModel.php:76 includes/System/Folders.php:277
+#: includes/Views/modal-folder-type.php:14
+#: includes/Views/modal-security-profile.php:14
+msgid "Title"
+msgstr "Titel"
+
+#: includes/Models/HelperModel.php:77 includes/System/Folders.php:280
+msgid "Alternative text"
+msgstr "Alternativtext"
+
+#: includes/Models/HelperModel.php:78 includes/System/Folders.php:284
+msgid "File URL"
+msgstr "Dateipfad"
+
+#: includes/Models/HelperModel.php:79 includes/System/Folders.php:290
+msgid "Dimension"
+msgstr "Dimension"
+
+#: includes/Models/HelperModel.php:80 includes/System/Folders.php:295
+msgid "Size"
+msgstr "Größe"
+
+#: includes/Models/HelperModel.php:81 includes/System/Folders.php:299
+msgid "Filename"
+msgstr "Dateiname"
+
+#: includes/Models/HelperModel.php:82 includes/System/Folders.php:303
+msgid "Type"
+msgstr "Typ"
+
+#: includes/Models/HelperModel.php:83 includes/System/Folders.php:307
+msgid "Date"
+msgstr "Datum"
+
+#: includes/Models/HelperModel.php:84 includes/System/Folders.php:311
+msgid "Uploaded by"
+msgstr "Hochgeladen von"
+
+#: includes/Models/HelperModel.php:114 includes/Models/HelperModel.php:127
+msgid "The operation completed successfully"
+msgstr "Der Vorgang wurde erfolgreich abgeschlossen"
+
+#: includes/Models/HelperModel.php:115 includes/Models/HelperModel.php:128
+msgid "The operation failed"
+msgstr "Der Vorgang ist fehlgeschlagen"
+
+#: includes/Models/HelperModel.php:116 includes/Models/HelperModel.php:130
+msgid "This is the pro feature."
+msgstr "Dies ist die Pro-Funktion."
+
+#: includes/Models/HelperModel.php:116 includes/Models/HelperModel.php:130
+msgid "Upgrade to get the full power."
+msgstr "Rüsten Sie auf, um die volle Leistung zu erhalten."
+
+#: includes/Models/HelperModel.php:117
+msgid "Parent Folder"
+msgstr "Übergeordneter Ordner"
+
+#: includes/Models/HelperModel.php:118 includes/Models/HelperModel.php:168
+msgid "New Folder"
+msgstr "Neuer Ordner"
+
+#: includes/Models/HelperModel.php:129
+msgid "These plugin settings are built-in and cannot be modified"
+msgstr ""
+"Diese Plugin-Einstellungen sind integriert und können nicht geändert werden"
+
+#: includes/Models/HelperModel.php:132
+msgid "The license is already registered for other domain"
+msgstr "Die Lizenz ist bereits für eine andere Domain registriert"
+
+#: includes/Models/HelperModel.php:133
+msgid "Failed to connect to license server"
+msgstr "Verbindung zum Lizenzserver konnte nicht hergestellt werden"
+
+#: includes/Models/HelperModel.php:134
+msgid "The personal token is invalid or has been deleted"
+msgstr "Das persönliche Token ist ungültig oder wurde gelöscht"
+
+#: includes/Models/HelperModel.php:135
+msgid ""
+"The personal token is missing the required permission for license server"
+msgstr ""
+"Dem persönlichen Token fehlt die erforderliche Berechtigung für den "
+"Lizenzserver"
+
+#: includes/Models/HelperModel.php:136
+msgid "Invalid purchase code"
+msgstr "Ungültiger Kaufcode"
+
+#: includes/Models/HelperModel.php:137
+msgid "Something goes wrong, try again shortly"
+msgstr "Etwas geht schief, versuchen Sie es in Kürze erneut"
+
+#: includes/Models/HelperModel.php:138
+msgid "Parsing error, try again shortly"
+msgstr "Parsing-Fehler, versuchen Sie es in Kürze erneut"
+
+#: includes/Models/HelperModel.php:139
+msgid "Error updating license data"
+msgstr "Fehler beim Aktualisieren der Lizenzdaten"
+
+#: includes/Models/HelperModel.php:174
+msgid "Color"
+msgstr "Farbe"
+
+#: includes/Models/HelperModel.php:180
+msgid "Rename"
+msgstr "Umbenennen"
+
+#: includes/Models/HelperModel.php:186
+msgid "Copy"
+msgstr "Kopieren"
+
+#: includes/Models/HelperModel.php:192
+msgid "Paste"
+msgstr "Einfügen"
+
+#: includes/Models/HelperModel.php:198
+#: includes/Views/modal-confirm-clear-all.php:16
+#: includes/Views/modal-confirm-delete.php:16
+#: includes/Views/modal-security-profile-rights.php:27
+#: includes/Views/modal-security-profile.php:53 includes/Views/sidebar.php:66
+msgid "Delete"
+msgstr "Löschen"
+
+#: includes/Models/HelperModel.php:204
+msgid "Download"
+msgstr "Download"
+
+#: includes/Models/SecurityProfilesModel.php:38
+msgid "Common Folders"
+msgstr "Gemeinsame Ordner"
+
+#: includes/Models/SecurityProfilesModel.php:41
+msgid "Personal Folders"
+msgstr "Personalakten"
+
+#: includes/Models/SecurityProfilesModel.php:50
+msgid ""
+"Users can create, view, and edit each other's folders if they are granted "
+"such access."
+msgstr ""
+"Benutzer können die Ordner der anderen erstellen, anzeigen und bearbeiten, "
+"wenn ihnen ein solcher Zugriff gewährt wird."
+
+#: includes/Models/SecurityProfilesModel.php:53
+msgid ""
+"Users can only create, view and edit their personal folders if they are "
+"granted such access."
+msgstr ""
+"Benutzer können ihre persönlichen Ordner nur erstellen, anzeigen und "
+"bearbeiten, wenn ihnen ein solcher Zugriff gewährt wird."
+
+#: includes/System/Notice.php:26
+msgid "Thanks for start using the plugin iFolders. Let's create first folders."
+msgstr ""
+"Vielen Dank, dass Sie mit der Verwendung des Plugins iFolders begonnen "
+"haben. Lassen Sie uns erste Ordner erstellen."
+
+#: includes/System/Notice.php:26
+msgid "Go to WordPress Media Library."
+msgstr "Gehen Sie zur WordPress-Medienbibliothek."
+
+#: includes/Views/feedback.php:6
+msgid "I do not need this plugin anymore"
+msgstr "Ich brauche dieses Plugin nicht mehr"
+
+#: includes/Views/feedback.php:9
+msgid "I found another plugin that do the job better"
+msgstr "Ich habe ein anderes Plugin gefunden, das die Arbeit besser macht"
+
+#: includes/Views/feedback.php:10
+msgid "Please tell us which one"
+msgstr "Bitte sagen Sie uns, welche"
+
+#: includes/Views/feedback.php:13
+msgid "I don't know how to use it"
+msgstr "Ich weiß nicht, wie ich es benutzen soll"
+
+#: includes/Views/feedback.php:16
+msgid "This's temporary deactivation"
+msgstr "Dies ist eine vorübergehende Deaktivierung"
+
+#: includes/Views/feedback.php:19
+msgid "It's not working on my website"
+msgstr "Es funktioniert nicht auf meiner Website"
+
+#: includes/Views/feedback.php:22
+msgid "Other"
+msgstr "Andere"
+
+#: includes/Views/feedback.php:23
+msgid "Please share a reason..."
+msgstr "Bitte teilen Sie einen Grund mit..."
+
+#: includes/Views/feedback.php:30
+msgid "Quick Feedback"
+msgstr "Schnelles Feedback"
+
+#: includes/Views/feedback.php:34
+msgid ""
+"Before you deactivate iFolders could you let us know why? Your feedback will "
+"help us improve the product, please tell us why did you decide to deactivate "
+"iFolders. Thank you!"
+msgstr ""
+"Bevor Sie iFolders deaktivieren, können Sie uns mitteilen, warum? Ihr "
+"Feedback wird uns helfen, das Produkt zu verbessern, bitte teilen Sie uns "
+"mit, warum Sie sich entschieden haben, iFolders zu deaktivieren. Vielen Dank!"
+
+#: includes/Views/feedback.php:50
+msgid "Submit & Deactivate"
+msgstr "Absenden & deaktivieren"
+
+#: includes/Views/feedback.php:51
+msgid "Skip & Deactivate"
+msgstr "Überspringen & deaktivieren"
+
+#: includes/Views/modal-confirm-clear-all.php:7
+#: includes/Views/modal-confirm-delete.php:7
+msgid "Confirm"
+msgstr "Bestätigen"
+
+#: includes/Views/modal-confirm-clear-all.php:12
+msgid "Are you sure you want to deactivate the plugin and delete all its data?"
+msgstr ""
+"Sind Sie sicher, dass Sie das Plugin deaktivieren und alle seine Daten "
+"löschen möchten?"
+
+#: includes/Views/modal-confirm-clear-all.php:15
+#: includes/Views/modal-confirm-delete.php:15 includes/Views/sidebar.php:44
+#: includes/Views/sidebar.php:65 includes/Views/sidebar.php:101
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: includes/Views/modal-confirm-delete.php:12
+msgid "Are you sure you want to delete {{Modal.data.count}} items?"
+msgstr "Möchten Sie wirklich {{Modal.data.count}}-Elemente löschen?"
+
+#: includes/Views/modal-folder-type.php:7
+msgid "New Folder Type"
+msgstr "Neuer Ordnertyp"
+
+#: includes/Views/modal-folder-type.php:8
+msgid "Edit Folder Type"
+msgstr "Ordnertyp bearbeiten"
+
+#: includes/Views/modal-folder-type.php:17
+#: includes/Views/modal-security-profile-rights.php:20
+#: includes/Views/modal-select-folder-type.php:14
+#: includes/Views/modal-select-role.php:14
+#: includes/Views/modal-select-security-profile.php:14
+#: includes/Views/modal-select-user.php:14
+msgid "None"
+msgstr "Nichts"
+
+#: includes/Views/modal-folder-type.php:23
+#: includes/Views/modal-security-profile-rights.php:32
+#: includes/Views/modal-security-profile.php:77
+#: includes/Views/modal-select-folder-type.php:19
+#: includes/Views/modal-select-role.php:19
+#: includes/Views/modal-select-security-profile.php:19
+#: includes/Views/modal-select-user.php:19 includes/Views/sidebar.php:148
+msgid "Close"
+msgstr "Schließen"
+
+#: includes/Views/modal-folder-type.php:24
+#: includes/Views/modal-security-profile-rights.php:33
+#: includes/Views/modal-security-profile.php:78
+msgid "Submit"
+msgstr "Senden"
+
+#: includes/Views/modal-security-profile-rights.php:7
+msgid "New Security Rights"
+msgstr "Neue Sicherungsrechte"
+
+#: includes/Views/modal-security-profile-rights.php:8
+msgid "Edit Security Rights"
+msgstr "Sicherheitsrechte bearbeiten"
+
+#: includes/Views/modal-security-profile-rights.php:14
+msgid "Select user or role"
+msgstr "Benutzer oder Rolle auswählen"
+
+#: includes/Views/modal-security-profile-rights.php:15
+msgid "Select user"
+msgstr "Benutzer wählen"
+
+#: includes/Views/modal-security-profile-rights.php:16
+msgid "Select role"
+msgstr "Benutzerrolle auswählen"
+
+#: includes/Views/modal-security-profile-rights.php:24
+#: includes/Views/modal-security-profile.php:50 includes/Views/sidebar.php:45
+msgid "Create"
+msgstr "Erstellen"
+
+#: includes/Views/modal-security-profile-rights.php:24
+msgid ""
+"users can create folders and subfolders, don't forget to give the view "
+"permission too"
+msgstr ""
+"Benutzer können Ordner und Unterordner erstellen, vergessen Sie nicht, auch "
+"die Ansichtsberechtigung zu erteilen"
+
+#: includes/Views/modal-security-profile-rights.php:25
+#: includes/Views/modal-security-profile.php:51
+msgid "View"
+msgstr "Anzeigen"
+
+#: includes/Views/modal-security-profile-rights.php:25
+msgid "users can view the folder tree"
+msgstr "Benutzer können die Ordnerstruktur anzeigen"
+
+#: includes/Views/modal-security-profile-rights.php:26
+#: includes/Views/modal-security-profile.php:52
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: includes/Views/modal-security-profile-rights.php:26
+msgid "users can edit folders (rename, drag & drop)"
+msgstr "Benutzer können Ordner bearbeiten (Umbenennen, Drag & Drop)"
+
+#: includes/Views/modal-security-profile-rights.php:27
+msgid "users can delete folders"
+msgstr "Benutzer können Ordner löschen"
+
+#: includes/Views/modal-security-profile-rights.php:28
+#: includes/Views/modal-security-profile.php:54
+msgid "Attach"
+msgstr "Anhängen"
+
+#: includes/Views/modal-security-profile-rights.php:28
+msgid "users can attach items to folders, like media files, posts, pages, etc."
+msgstr ""
+"Benutzer können Elemente an Ordner wie Mediendateien, Beiträge, Seiten usw. "
+"anhängen."
+
+#: includes/Views/modal-security-profile.php:7
+msgid "New Security Profile"
+msgstr "Neues Sicherheitsprofil"
+
+#: includes/Views/modal-security-profile.php:8
+msgid "Edit Security Profile"
+msgstr "Sicherheitsprofil bearbeiten"
+
+#: includes/Views/modal-security-profile.php:16 includes/Views/settings.php:179
+#: includes/Views/settings.php:304
+msgid "Description"
+msgstr "Beschreibung"
+
+#: includes/Views/modal-security-profile.php:20
+msgid "Add new profile"
+msgstr "Neues Profil hinzufügen"
+
+#: includes/Views/modal-security-profile.php:23
+msgid "Edit rights"
+msgstr "Rechte bearbeiten"
+
+#: includes/Views/modal-security-profile.php:26
+msgid "Delete selected rights"
+msgstr "Ausgewählte Rechte löschen"
+
+#: includes/Views/modal-security-profile.php:48
+msgid "User / Role"
+msgstr "Benutzer / Rolle"
+
+#: includes/Views/modal-security-profile.php:49
+msgid "Access Type"
+msgstr "Zugangstyp"
+
+#: includes/Views/modal-security-profile.php:72 includes/Views/settings.php:254
+#: includes/Views/settings.php:317
+msgid "The table is empty"
+msgstr "Die Tabelle ist leer"
+
+#: includes/Views/modal-select-folder-type.php:7
+msgid "Select Folder Type"
+msgstr "Wählen Sie den Ordnertyp aus"
+
+#: includes/Views/modal-select-folder-type.php:12
+msgid ""
+"Select a registered built-in or custom WordPress post type from the list "
+"below if you want to create a new folder type item."
+msgstr ""
+"Wählen Sie einen registrierten integrierten oder benutzerdefinierten "
+"WordPress-Beitragstyp aus der Liste unten aus, wenn Sie ein neues Element "
+"vom Typ Ordner erstellen möchten."
+
+#: includes/Views/modal-select-folder-type.php:20
+#: includes/Views/modal-select-role.php:20
+#: includes/Views/modal-select-security-profile.php:20
+#: includes/Views/modal-select-user.php:20
+msgid "Select"
+msgstr "Auswählen"
+
+#: includes/Views/modal-select-role.php:7
+msgid "Select Role"
+msgstr "Rolle auswählen"
+
+#: includes/Views/modal-select-role.php:12
+msgid ""
+"To create a new profile entry, select a registered WordPress role from the "
+"list below."
+msgstr ""
+"Um einen neuen Profileintrag zu erstellen, wählen Sie eine registrierte "
+"WordPress-Rolle aus der folgenden Liste aus."
+
+#: includes/Views/modal-select-security-profile.php:7
+msgid "Select Security"
+msgstr "Wählen Sie Sicherheit"
+
+#: includes/Views/modal-select-security-profile.php:12
+msgid ""
+"Select a registered security role from the list below if you want to change "
+"it."
+msgstr ""
+"Wählen Sie eine registrierte Sicherheitsrolle aus der Liste unten aus, wenn "
+"Sie sie ändern möchten."
+
+#: includes/Views/modal-select-user.php:7
+msgid "Select User"
+msgstr "Benutzer auswählen"
+
+#: includes/Views/modal-select-user.php:12
+msgid ""
+"To create a new profile entry, select a registered WordPress user from the "
+"list below."
+msgstr ""
+"Um einen neuen Profileintrag zu erstellen, wählen Sie einen registrierten "
+"WordPress-Benutzer aus der Liste unten aus."
+
+#: includes/Views/proposal.php:5
+msgid ""
+"The folders are not available in the free version of the plugin. To access "
+"this feature and even more functionality, you will need to purchase the pro "
+"version."
+msgstr ""
+"Die Ordner sind in der kostenlosen Version des Plugins nicht verfügbar. Um "
+"auf diese Funktion und noch mehr Funktionen zugreifen zu können, müssen Sie "
+"die Pro-Version erwerben."
+
+#: includes/Views/proposal.php:7 includes/Views/settings.php:411
+msgid "Buy Now"
+msgstr "Jetzt kaufen"
+
+#: includes/Views/settings.php:9
+msgid "General"
+msgstr "Allgemein"
+
+#: includes/Views/settings.php:10
+msgid "Permissions"
+msgstr "Berechtigungen"
+
+#: includes/Views/settings.php:11
+msgid "Tools"
+msgstr "Werkzeuge"
+
+#: includes/Views/settings.php:12
+msgid "Go Pro"
+msgstr "Pro erwerben"
+
+#: includes/Views/settings.php:67
+msgid "Purchase Code"
+msgstr "Purchase Code"
+
+#: includes/Views/settings.php:68
+msgid ""
+"To enable all the professional features of the plugin, enter your purchase "
+"code and activate it."
+msgstr ""
+"Um alle professionellen Funktionen des Plugins zu aktivieren, geben Sie "
+"Ihren Kaufcode ein und aktivieren Sie ihn."
+
+#: includes/Views/settings.php:74
+msgid "Activate License"
+msgstr "Lizenz aktivieren"
+
+#: includes/Views/settings.php:75
+msgid "Deactivate License"
+msgstr "Lizenz deaktivieren"
+
+#: includes/Views/settings.php:82
+msgid "The license is active and valid for this domain"
+msgstr "Die Lizenz ist aktiv und gültig für diese Domain"
+
+#: includes/Views/settings.php:86
+msgid ""
+"Note: If you're on a development site and you want to activate this license "
+"later on the production domain, please deactivate it first."
+msgstr ""
+"Hinweis: Wenn Sie sich auf einer Entwicklungsseite befinden und diese Lizenz "
+"später in der Produktionsdomäne aktivieren möchten, deaktivieren Sie sie "
+"zunächst."
+
+#: includes/Views/settings.php:93
+msgid "Default folder color"
+msgstr "Standardmäßige Ordnerfarbe"
+
+#: includes/Views/settings.php:94
+msgid "Set the default color for all folders that don't have their own colors."
+msgstr ""
+"Legen Sie die Standardfarbe für alle Ordner fest, die keine eigenen Farben "
+"haben."
+
+#: includes/Views/settings.php:104
+msgid "Disable folder counter"
+msgstr "Ordnerzähler deaktivieren"
+
+#: includes/Views/settings.php:105
+msgid "Disable the display of the number of items attached to each folder."
+msgstr ""
+"Deaktivieren Sie die Anzeige der Anzahl der Elemente, die an jeden Ordner "
+"angehängt sind."
+
+#: includes/Views/settings.php:115
+msgid "Disable ajax refresh"
+msgstr "Ajax-Aktualisierung deaktivieren"
+
+#: includes/Views/settings.php:116
+msgid ""
+"Disable ajax refresh in list view. Set when there are problems with using "
+"plugins along with iFolders that change the media library list view."
+msgstr ""
+"Deaktivieren Sie die Ajax-Aktualisierung in der Listenansicht. Wird "
+"festgelegt, wenn es Probleme bei der Verwendung von Plug-ins zusammen mit "
+"iOrdnern gibt, die die Listenansicht der Medienbibliothek ändern."
+
+#: includes/Views/settings.php:126
+msgid "Infinite scrolling"
+msgstr "Endlos-Scrolling"
+
+#: includes/Views/settings.php:127
+msgid ""
+"Enable infinite media library scrolling instead of the 'Load More' button."
+msgstr ""
+"Aktivieren Sie das unendliche Scrollen der Medienbibliothek anstelle der "
+"Schaltfläche \"Mehr laden\"."
+
+#: includes/Views/settings.php:137
+msgid "Show media details on hover"
+msgstr "Mediendetails zu Hover anzeigen"
+
+#: includes/Views/settings.php:138
+msgid ""
+"View essential metadata, including title, size, type, date, and dimensions, "
+"by simply hovering your cursor over an image."
+msgstr ""
+"Zeigen Sie wichtige Metadaten wie Titel, Größe, Typ, Datum und Abmessungen "
+"an, indem Sie einfach den Mauszeiger über ein Bild bewegen."
+
+#: includes/Views/settings.php:151
+msgid "Disable search bar"
+msgstr "Suchleiste deaktivieren"
+
+#: includes/Views/settings.php:152
+msgid "Disable the display of the folder search bar."
+msgstr "Deaktivieren Sie die Anzeige der Ordnersuchleiste."
+
+#: includes/Views/settings.php:161
+msgid "Replace media"
+msgstr "Medien ersetzen"
+
+#: includes/Views/settings.php:162
+msgid ""
+"Adds tools to the 'Attachment details' screen that can be used to select or "
+"upload an image to replace the current image while preserving its URL and "
+"properties."
+msgstr ""
+"Fügt dem Bildschirm \"Anhangsdetails\" Werkzeuge hinzu, mit denen ein Bild "
+"ausgewählt oder hochgeladen werden kann, um das aktuelle Bild zu ersetzen, "
+"während seine URL und Eigenschaften beibehalten werden."
+
+#: includes/Views/settings.php:167
+msgid ""
+"Note: Disable your browser cache and any WordPress caching plugins before "
+"use. Otherwise, you may find that this feature is not working properly."
+msgstr ""
+"Hinweis: Deaktivieren Sie vor der Verwendung Ihren Browser-Cache und alle "
+"WordPress-Caching-Plugins. Andernfalls kann es sein, dass diese Funktion "
+"nicht ordnungsgemäß funktioniert."
+
+#: includes/Views/settings.php:175
+msgid "Save"
+msgstr "Speichern"
+
+#: includes/Views/settings.php:180
+msgid ""
+"Use this section to control who can view and edit folders. Simply create "
+"specific permissions for users and roles, then select a security profile for "
+"each folder type and apply it."
+msgstr ""
+"In diesem Abschnitt können Sie steuern, wer Ordner anzeigen und bearbeiten "
+"kann. Erstellen Sie einfach spezifische Berechtigungen für Benutzer und "
+"Rollen, wählen Sie dann für jeden Ordnertyp ein Sicherheitsprofil aus und "
+"wenden Sie es an."
+
+#: includes/Views/settings.php:185
+msgid "Access roles"
+msgstr "Zugang zu Rollen"
+
+#: includes/Views/settings.php:186
+msgid ""
+"Only selected user roles have access to folders. These are general settings, "
+"use the permissions tab to grant users additional personal or general "
+"permissions."
+msgstr ""
+"Nur ausgewählte Benutzerrollen haben Zugriff auf Ordner. Dies sind "
+"allgemeine Einstellungen, verwenden Sie die Registerkarte Berechtigungen, um "
+"Benutzern zusätzliche persönliche oder allgemeine Berechtigungen zu erteilen."
+
+#: includes/Views/settings.php:198
+msgid "Folder Types"
+msgstr "Ordnertypen"
+
+#: includes/Views/settings.php:199
+msgid ""
+"This table shows the types of folders (media, pages, posts, etc.) supported "
+"by the plugin. To allow a user to create and edit folders of a specific "
+"folder type, you must select a security profile for that type from the list. "
+"If you don't find the desired folder type, try adding it manually."
+msgstr ""
+"Diese Tabelle zeigt die Arten von Ordnern (Medien, Seiten, Beiträge usw.), "
+"die vom Plugin unterstützt werden. Damit ein Benutzer Ordner eines "
+"bestimmten Ordnertyps erstellen und bearbeiten kann, müssen Sie ein "
+"Sicherheitsprofil für diesen Typ aus der Liste auswählen. Wenn Sie den "
+"gewünschten Ordnertyp nicht finden, versuchen Sie, ihn manuell hinzuzufügen."
+
+#: includes/Views/settings.php:205
+msgid "Add new folder type"
+msgstr "Neuen Ordnertyp hinzufügen"
+
+#: includes/Views/settings.php:208
+msgid "Edit folder type"
+msgstr "Ordnertyp bearbeiten"
+
+#: includes/Views/settings.php:211
+msgid "Delete selected folder types"
+msgstr "Ausgewählte Ordnertypen löschen"
+
+#: includes/Views/settings.php:222 includes/Views/settings.php:288
+msgid "Refresh"
+msgstr "Aktualisieren"
+
+#: includes/Views/settings.php:238
+msgid "Folder type"
+msgstr "Verzeichnistype"
+
+#: includes/Views/settings.php:239 includes/Views/settings.php:303
+msgid "Security profile"
+msgstr "Sicherheitsprofil"
+
+#: includes/Views/settings.php:240
+msgid "Status"
+msgstr "Status"
+
+#: includes/Views/settings.php:248
+msgid "enabled"
+msgstr "aktiviert"
+
+#: includes/Views/settings.php:248
+msgid "disabled"
+msgstr "deaktiviert"
+
+#: includes/Views/settings.php:264
+msgid "Security profiles"
+msgstr "Sicherheitsprofile"
+
+#: includes/Views/settings.php:265
+msgid ""
+"This table is used to create and manage security profiles that can be "
+"selected and linked in the table above. Custom security profiles allow you "
+"to set permissions for each user or role to work with folders, including "
+"creating, viewing, editing, deleting, and attaching items to a folder."
+msgstr ""
+"Diese Tabelle wird verwendet, um Sicherheitsprofile zu erstellen und zu "
+"verwalten, die in der obigen Tabelle ausgewählt und verknüpft werden können. "
+"Mit benutzerdefinierten Sicherheitsprofilen können Sie Berechtigungen für "
+"jeden Benutzer oder jede Rolle festlegen, um mit Ordnern zu arbeiten, "
+"einschließlich des Erstellens, Anzeigens, Bearbeitens, Löschens und Anfügens "
+"von Elementen an einen Ordner."
+
+#: includes/Views/settings.php:271
+msgid "Add new security profile"
+msgstr "Neues Sicherheitsprofil hinzufügen"
+
+#: includes/Views/settings.php:274
+msgid "Edit security profile"
+msgstr "Sicherheitsprofil bearbeiten"
+
+#: includes/Views/settings.php:277
+msgid "Delete selected security profiles"
+msgstr "Ausgewählte Sicherheitsprofile löschen"
+
+#: includes/Views/settings.php:329
+msgid "Import from other plugins"
+msgstr "Import aus anderen Plugins"
+
+#: includes/Views/settings.php:330
+msgid ""
+"Import folders and attachments from third-party plugins for the media "
+"library."
+msgstr ""
+"Importieren Sie Ordner und Anhänge aus Plug-ins von Drittanbietern für die "
+"Medienbibliothek."
+
+#: includes/Views/settings.php:339
+msgid "Import now"
+msgstr "Jetzt importieren"
+
+#: includes/Views/settings.php:347
+msgid "Export"
+msgstr "Export"
+
+#: includes/Views/settings.php:348
+msgid ""
+"The current folder structure with attachments will be exported to a CSV file."
+msgstr ""
+"Die aktuelle Ordnerstruktur mit Anhängen wird in eine CSV-Datei exportiert."
+
+#: includes/Views/settings.php:351
+msgid "Export Now"
+msgstr "Jetzt exportieren"
+
+#: includes/Views/settings.php:352
+msgid "Download file"
+msgstr "Datei herunterladen"
+
+#: includes/Views/settings.php:358
+msgid "Import"
+msgstr "Importieren"
+
+#: includes/Views/settings.php:359
+msgid "Select a CSV file with the folder structure and attachments to import."
+msgstr ""
+"Wählen Sie eine CSV-Datei mit der Ordnerstruktur und den zu importierenden "
+"Anhängen aus."
+
+#: includes/Views/settings.php:365
+msgid "Clearing all existing folders before import"
+msgstr "Löschen aller vorhandenen Ordner vor dem Import"
+
+#: includes/Views/settings.php:366
+msgid "Import attachments"
+msgstr "Anhänge importieren"
+
+#: includes/Views/settings.php:368
+msgid "Import Now"
+msgstr "Jetzt importieren"
+
+#: includes/Views/settings.php:375
+msgid "Folder counters recalculation"
+msgstr "Neuberechnung von Ordnerzählern"
+
+#: includes/Views/settings.php:376
+msgid ""
+"This action will completely recalculate all item counters that are attached "
+"to folders."
+msgstr ""
+"Durch diese Aktion werden alle Elementzähler, die an Ordner angehängt sind, "
+"vollständig neu berechnet."
+
+#: includes/Views/settings.php:379
+msgid "Recalculate"
+msgstr "Neu berechnen"
+
+#: includes/Views/settings.php:385
+msgid "Clear data"
+msgstr "Daten löschen"
+
+#: includes/Views/settings.php:386
+msgid ""
+"This action will deactivate the plugin iFolders and delete all its data and "
+"settings and return you to the default WordPress state before installing the "
+"plugin."
+msgstr ""
+"Diese Aktion deaktiviert das Plugin iFolders und löscht alle seine Daten und "
+"Einstellungen und Sie kehren zum Standardzustand von WordPress zurück, bevor "
+"Sie das Plugin installieren."
+
+#: includes/Views/settings.php:389
+msgid "Clear now"
+msgstr "Jetzt löschen"
+
+#: includes/Views/settings.php:400 includes/Views/settings.php:429
+msgid "Get iFolders Pro"
+msgstr "Holen Sie sich iFolders Pro"
+
+#: includes/Views/settings.php:401
+msgid "Unlock all features and premium support"
+msgstr "Schalten Sie alle Funktionen und den Premium-Support frei"
+
+#: includes/Views/settings.php:403
+msgid "Sort Options"
+msgstr "Sortieroptionen"
+
+#: includes/Views/settings.php:404
+msgid "Advanced User Rights"
+msgstr "Erweiterte Benutzerrechte"
+
+#: includes/Views/settings.php:405
+msgid "Organize Pages, Posts and Custom Post Types"
+msgstr "Organisieren Sie Seiten, Beiträge und benutzerdefinierte Beitragstypen"
+
+#: includes/Views/settings.php:406
+msgid "Page Builders: Elementor, Beaver, Divi, Brizy etc."
+msgstr "Page Builder: Elementor, Beaver, Divi, Brizy usw."
+
+#: includes/Views/settings.php:407
+msgid "Lifetime License"
+msgstr "Lebenslange Lizenz"
+
+#: includes/Views/settings.php:408
+msgid "VIP Support"
+msgstr "VIP Support"
+
+#: includes/Views/settings.php:420
+msgid "Congratulations!!!"
+msgstr "Herzlichen Glückwunsch!"
+
+#: includes/Views/settings.php:421
+msgid "You are using the iFolders Pro version."
+msgstr "Sie verwenden die iFolders Pro-Version."
+
+#: includes/Views/settings.php:430
+msgid "Unlock all features and premium support."
+msgstr "Schalten Sie alle Funktionen und den Premium-Support frei."
+
+#: includes/Views/settings.php:438
+msgid "YouTube Channel"
+msgstr "YouTube Kanal"
+
+#: includes/Views/settings.php:439
+msgid "Watch our video to learn about all the features of iFolders."
+msgstr ""
+"Sehen Sie sich unser Video an, um mehr über alle Funktionen von iFolders zu "
+"erfahren."
+
+#: includes/Views/settings.php:447
+msgid "Support"
+msgstr "Support"
+
+#: includes/Views/settings.php:448
+msgid "Quickly get direct help from our qualified support team."
+msgstr ""
+"Holen Sie sich schnell direkte Hilfe von unserem qualifizierten Support-Team."
+
+#: includes/Views/settings.php:456
+msgid "Suggest a Feature"
+msgstr "Feature vorschlagen"
+
+#: includes/Views/settings.php:457
+msgid "Do you have ideas or suggestions for iFolders? We'd love to hear them."
+msgstr ""
+"Haben Sie Ideen oder Vorschläge für iFolders? Wir würden uns freuen, sie zu "
+"hören."
+
+#: includes/Views/settings.php:464
+msgid "HappyVR"
+msgstr "HappyVR"
+
+#: includes/Views/settings.php:465
+msgid ""
+"Creates immersive 360 virtual tours for WordPress for real estate, museums, "
+"hotels and etc."
+msgstr ""
+"Erstellt immersive 360-Grad-Virtual-Touren für WordPress zu Immobilien, "
+"Museen, Hotels usw."
+
+#: includes/Views/sidebar.php:6
+msgid "create folder"
+msgstr "Ordner erstellen"
+
+#: includes/Views/sidebar.php:13
+msgid "sort folder items"
+msgstr "Ordnerelemente sortieren"
+
+#: includes/Views/sidebar.php:22
+msgid ""
+"Click the \"Create\" button above to add your first folder, then start drag "
+"& drop items."
+msgstr ""
+"Klicken Sie oben auf die Schaltfläche \"Erstellen\", um Ihren ersten Ordner "
+"hinzuzufügen, und starten Sie dann Drag & Drop-Elemente."
+
+#: includes/Views/sidebar.php:27
+msgid "Add New Folders"
+msgstr "Neue Ordner hinzufügen"
+
+#: includes/Views/sidebar.php:51
+msgid "Delete Folders"
+msgstr "Ordner löschen"
+
+#: includes/Views/sidebar.php:60
+msgid "Are you sure you want to delete selected folders and all subfolders?"
+msgstr ""
+"Sind Sie sicher, dass Sie ausgewählte Ordner und alle Unterordner löschen "
+"möchten?"
+
+#: includes/Views/sidebar.php:61
+msgid "Delete items attached to selected folders too"
+msgstr "Löschen Sie auch Elemente, die an ausgewählte Ordner angehängt sind"
+
+#: includes/Views/sidebar.php:78
+msgid "Upload a new file"
+msgstr "Neue Datei hochladen"
+
+#: includes/Views/sidebar.php:93
+msgid "Drop file here"
+msgstr "Datei hierher ziehen"
+
+#: includes/Views/sidebar.php:94
+msgid "or"
+msgstr "oder"
+
+#: includes/Views/sidebar.php:95
+msgid "Select file"
+msgstr "Datei auswählen"
+
+#: includes/Views/sidebar.php:102
+msgid "Replace"
+msgstr "Ersetzen"
+
+#: includes/Views/sidebar.php:108
+msgid "Sort Folder Items"
+msgstr "Ordnerelemente sortieren"
+
+#: includes/Views/sidebar.php:118
+msgid "By Name"
+msgstr "Nach Name"
+
+#: includes/Views/sidebar.php:125
+msgid "By Date"
+msgstr "Nach Datum"
+
+#: includes/Views/sidebar.php:132
+msgid "By Modified"
+msgstr "Nach Geändert"
+
+#: includes/Views/sidebar.php:139
+msgid "By Author"
+msgstr "Nach Autor"
+
+#: includes/Views/sidebar.php:163
+msgid "All items"
+msgstr "Alle Einträge"
+
+#: includes/Views/sidebar.php:175
+msgid "Uncategorized"
+msgstr "Nicht kategorisiert"
+
+#: includes/Views/sidebar.php:185
+msgid "Search folders..."
+msgstr "Suche Ordner…"
+
+#. Plugin Name of the plugin/theme
+msgid ""
+"iFolders - Ultimate Folder Organizer for Media Library, Pages, Posts and "
+"Users"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://1.envato.market/getifolders"
+msgstr "https://1.envato.market/getifolders"
+
+#. Description of the plugin/theme
+msgid ""
+"A better way to organize WordPress media library, posts, pages, users & "
+"custom post types in a logical way. Just drag & drop items into folders you "
+"and use them easely."
+msgstr ""
+"Eine bessere Möglichkeit, WordPress-Medienbibliothek, Posts, Seiten, "
+"Benutzer und benutzerdefinierte Beitragstypen logisch zu organisieren. "
+"Ziehen Sie Elemente einfach per Drag & Drop in Ordner und verwenden Sie sie "
+"einfach."
+
+#. Author of the plugin/theme
+msgid "Avirtum"
+msgstr "Avirtum"
+
+#. Author URI of the plugin/theme
+msgid "https://1.envato.market/avirtum"
+msgstr "https://1.envato.market/avirtum"
+
+#~ msgid "It looks like you have an old version of iFolders installed."
+#~ msgstr ""
+#~ "Es sieht so aus, als hätten Sie eine alte Version von iFolders "
+#~ "installiert."
+
+#~ msgid ""
+#~ "To use this new version, you must uninstall the old version completely "
+#~ "and delete it with all data, because the new version is incompatible with "
+#~ "the previous ones. Don't forget to back up your plugin data if necessary."
+#~ msgstr ""
+#~ "Um diese neue Version nutzen zu können, müssen Sie die alte Version "
+#~ "vollständig deinstallieren und mit allen Daten löschen, da die neue "
+#~ "Version mit den vorherigen nicht kompatibel ist. Vergiss nicht, deine "
+#~ "Plugin-Daten bei Bedarf zu sichern."
+
+#~ msgid ""
+#~ "You can delete these data here right now or if you have any questions, "
+#~ "please contact our support team."
+#~ msgstr ""
+#~ "Sie können diese Daten jetzt hier löschen oder bei Fragen wenden Sie sich "
+#~ "bitte an unser Support-Team."
+
+#~ msgid ""
+#~ "Delete all data of the old version of iFolders and activate the new "
+#~ "version."
+#~ msgstr ""
+#~ "Löschen Sie alle Daten der alten Version von iFolders und aktivieren Sie "
+#~ "die neue Version."
+
+#~ msgid ""
+#~ "Are you sure you want to delete all data of the old version of iFolders?"
+#~ msgstr ""
+#~ "Sind Sie sicher, dass Sie alle Daten der alten Version von iFolders "
+#~ "löschen möchten?"
+
+#~ msgid "Delete fully"
+#~ msgstr "Vollständig löschen"
+
+#~ msgid ""
+#~ "Enable full uninstall mode, the plugin will clear all its options and "
+#~ "database tables after clicking the delete link in the WordPress plugins "
+#~ "area."
+#~ msgstr ""
+#~ "Aktivieren Sie den vollständigen Deinstallationsmodus, das Plugin löscht "
+#~ "alle seine Optionen und Datenbanktabellen, nachdem Sie auf den Löschlink "
+#~ "im WordPress-Plugin-Bereich geklickt haben."
+
+#~ msgid "Create Subfolders"
+#~ msgstr "Erstellen von Unterordnern"
+
+#~ msgid "iFolders"
+#~ msgstr "iFolders"
+
+#~ msgid "Note: all items inside those folders will not be deleted."
+#~ msgstr "Hinweis: Alle Elemente in diesen Ordnern werden nicht gelöscht."
+
+#~ msgid "This feature is for 'pro' users only."
+#~ msgstr "Diese Funktion ist nur für \"Pro\"-Benutzer verfügbar."
+
+#~ msgid "This feature is for \"pro\" users only."
+#~ msgstr "Diese Funktion ist nur für \"Pro\"-Benutzer verfügbar."
+
+#~ msgid "Duplicate"
+#~ msgstr "Duplizieren"
+
+#~ msgid "Duplicate Folder"
+#~ msgstr "Ordner duplizieren"
+
+#~ msgid ""
+#~ "Are you sure you want to duplicate the selected folder and all subfolders?"
+#~ msgstr ""
+#~ "Sind Sie sicher, dass Sie den ausgewählten Ordner und alle Unterordner "
+#~ "duplizieren möchten?"
+
+#~ msgid ""
+#~ "Note: all items inside those folders will not be copied to a new "
+#~ "destination."
+#~ msgstr ""
+#~ "Hinweis: Alle Elemente in diesen Ordnern werden nicht an ein neues Ziel "
+#~ "kopiert."
+
+#~ msgid "Source folder"
+#~ msgstr "Quellordner"
+
+#~ msgid "Destination folder"
+#~ msgstr "Zielordner"
+
+#~ msgid "Don't forget to back up your plugin data if necessary."
+#~ msgstr "Vergiss nicht, deine Plugin-Daten bei Bedarf zu sichern."
+
+#~ msgid "Upgrade to PRO and unlock all features"
+#~ msgstr "Upgrade auf PRO und Schalten Sie alle Funktionen frei"
+
+#~ msgid "You do not have permissions to duplicate folders"
+#~ msgstr "Sie haben keine Berechtigung zum Duplizieren von Ordnern"
+
+#~ msgid "You do not have permissions to move folders"
+#~ msgstr "Sie haben keine Berechtigungen zum Verschieben von Ordnern"
+
+#~ msgid "You do not have permissions to attach items to a folder"
+#~ msgstr ""
+#~ "Sie verfügen nicht über Berechtigungen zum Anfügen von Elementen an einen "
+#~ "Ordner"
+
+#~ msgid "Cannot create: item with the same folder type already exists."
+#~ msgstr ""
+#~ "Erstellen nicht möglich: Element mit demselben Ordnertyp existiert "
+#~ "bereits."
+
+#~ msgid "Cannot update: item with the same folder type already exists."
+#~ msgstr ""
+#~ "Aktualisierung nicht möglich: Element mit demselben Ordnertyp existiert "
+#~ "bereits."
+
+#~ msgid "Cannot import: the DB is not compatible with the package version."
+#~ msgstr ""
+#~ "Import nicht möglich: Die Datenbank ist nicht mit der Paketversion "
+#~ "kompatibel."
+
+#~ msgid "Ok"
+#~ msgstr "Ok"
+
+#~ msgid ""
+#~ "To enable the folder manager for a custom post type, enter its identifier "
+#~ "below."
+#~ msgstr ""
+#~ "Um den Ordnermanager für einen benutzerdefinierten Beitragstyp zu "
+#~ "aktivieren, geben Sie seine Kennung unten ein."
+
+#~ msgid "Custom Post Type"
+#~ msgstr "Benutzerdefinierter Beitragstyp"
+
+#~ msgid "Add or delete a group for access to this folder type"
+#~ msgstr ""
+#~ "Hinzufügen oder Löschen einer Gruppe für den Zugriff auf diesen Ordnertyp"
+
+#~ msgid "Add groups"
+#~ msgstr "Gruppen hinzufügen"
+
+#~ msgid "Delete selected groups"
+#~ msgstr "Ausgewählte Gruppen löschen"
+
+#~ msgid "Group Name"
+#~ msgstr "Gruppenname"
+
+#~ msgid "User Group"
+#~ msgstr "Benutzergruppe"
+
+#~ msgid "Group name"
+#~ msgstr "Gruppenname"
+
+#~ msgid "Shared (users of this group will see each other's folders)"
+#~ msgstr "Freigegeben (Benutzer dieser Gruppe sehen die Ordner der anderen)"
+
+#~ msgid "Add a user to the group and set rights."
+#~ msgstr ""
+#~ "Fügen Sie der Gruppe einen Benutzer hinzu und legen Sie Rechte fest."
+
+#~ msgid "Add user"
+#~ msgstr "Benutzer hinzufügen"
+
+#~ msgid "User"
+#~ msgstr "Benutzer"
+
+#~ msgid "Groups"
+#~ msgstr "Gruppen"
+
+#~ msgid "Thanks for using our plugin!"
+#~ msgstr "Vielen Dank für die Verwendung unseres Plugins!"
+
+#~ msgid "Please rate iFolders"
+#~ msgstr "Bitte bewerten Sie iFolders"
+
+#~ msgid ""
+#~ "Get started with the free version of our plugin, which includes full "
+#~ "access for selected users to organize your WordPress Pages list and Media "
+#~ "library. For even more functionality, get the full power with the Pro "
+#~ "version! Upgrade today and take your website to the next level!"
+#~ msgstr ""
+#~ "Beginnen Sie mit der kostenlosen Version unseres Plugins, die vollen "
+#~ "Zugriff für ausgewählte Benutzer bietet, um Ihre WordPress-Seitenliste "
+#~ "und Medienbibliothek zu organisieren. Für noch mehr Funktionalität, holen "
+#~ "Sie sich die volle Leistung mit der Pro-Version! Aktualisieren Sie noch "
+#~ "heute und bringen Sie Ihre Website auf die nächste Stufe!"
+
+#~ msgid "Data"
+#~ msgstr "Daten"
+
+#~ msgid "Use this section to set main plugin options."
+#~ msgstr ""
+#~ "Verwenden Sie diesen Abschnitt, um die wichtigsten Plugin-Optionen "
+#~ "festzulegen."
+
+#~ msgid "Only selected user roles have access to the folders"
+#~ msgstr "Nur ausgewählte Benutzerrollen haben Zugriff auf die Ordner"
+
+#~ msgid ""
+#~ "(these are general settings, use the \"permissions\" tab to give the "
+#~ "final rights to users)"
+#~ msgstr ""
+#~ "(Dies sind allgemeine Einstellungen, verwenden Sie die Registerkarte "
+#~ "\"Berechtigungen\", um Benutzern die endgültigen Rechte zu erteilen)"
+
+#~ msgid "Disable ajax refresh in list view"
+#~ msgstr "Deaktivieren der AJAX-Aktualisierung in der Listenansicht"
+
+#~ msgid "Uninstall fully"
+#~ msgstr "Vollständig deinstallieren"
+
+#~ msgid "User Groups"
+#~ msgstr "Benutzergruppen"
+
+#~ msgid "Add user group"
+#~ msgstr "Benutzergruppe hinzufügen"
+
+#~ msgid "Shared"
+#~ msgstr "Geteilt"
+
+#~ msgid "Created"
+#~ msgstr "Erstellt"
+
+#~ msgid "Modified"
+#~ msgstr "Geändert"
+
+#~ msgid ""
+#~ "This section presents the types of folders (media, pages, posts, etc.) "
+#~ "supported by the plugin. In order for a user to access these folders, you "
+#~ "must add a group in which that user will have the specified rights. "
+#~ "Simply double-click on the folder type and add the selected group. After "
+#~ "this action the users of this group will have access to this folder type "
+#~ "depends on their rights."
+#~ msgstr ""
+#~ "In diesem Abschnitt werden die Ordnertypen (Medien, Seiten, Beiträge "
+#~ "usw.) vorgestellt, die vom Plugin unterstützt werden. Damit ein Benutzer "
+#~ "auf diese Ordner zugreifen kann, müssen Sie eine Gruppe hinzufügen, in "
+#~ "der dieser Benutzer über die angegebenen Rechte verfügt. Doppelklicken "
+#~ "Sie einfach auf den Ordnertyp und fügen Sie die ausgewählte Gruppe hinzu. "
+#~ "Nach dieser Aktion haben die Benutzer dieser Gruppe Zugriff auf diesen "
+#~ "Ordnertyp, abhängig von ihren Rechten."
+
+#~ msgid "Folder Type Name"
+#~ msgstr "Name des Ordnertyps"
+
+#~ msgid "Attached Groups"
+#~ msgstr "Angehängte Gruppen"
+
+#~ msgid "Users Info"
+#~ msgstr "Benutzer-Info"
+
+#~ msgid ""
+#~ "This section shows brief information on users and their access to folders."
+#~ msgstr ""
+#~ "Dieser Abschnitt enthält kurze Informationen zu Benutzern und deren "
+#~ "Zugriff auf Ordner."
+
+#~ msgid ""
+#~ "Use this section to view all existed folders and delete them if it's "
+#~ "needed, all sub folders are also will be deleted."
+#~ msgstr ""
+#~ "Verwenden Sie diesen Abschnitt, um alle vorhandenen Ordner anzuzeigen und "
+#~ "sie bei Bedarf zu löschen, alle Unterordner werden ebenfalls gelöscht."
+
+#~ msgid "Loading data..."
+#~ msgstr "Lade Daten..."
+
+#~ msgid "Folder Title"
+#~ msgstr "Titel des Ordners"
+
+#~ msgid "Owner"
+#~ msgstr "Eigentümer"
+
+#~ msgid "Group"
+#~ msgstr "Gruppe"
+
+#~ msgid "Delete All Folders"
+#~ msgstr "Alle Ordner löschen"
+
+#~ msgid "Backup and Restore"
+#~ msgstr "Sichern und Wiederherstellen"
+
+#~ msgid "Use this section to import / export plugin data."
+#~ msgstr ""
+#~ "Verwenden Sie diesen Abschnitt, um Plugin-Daten zu importieren / zu "
+#~ "exportieren."
+
+#~ msgid "All data will be exported from this plugin tables."
+#~ msgstr "Alle Daten werden aus diesen Plugin-Tabellen exportiert."
+
+#~ msgid "Choose a json file to import."
+#~ msgstr "Wählen Sie eine JSON-Datei aus, die importiert werden soll."
+
+#~ msgid ""
+#~ "This action will delete data from this plugin tables, then import new "
+#~ "ones from a selected file."
+#~ msgstr ""
+#~ "Diese Aktion löscht Daten aus diesen Plugin-Tabellen und importiert dann "
+#~ "neue aus einer ausgewählten Datei."
+
+#~ msgid "This action will delete data from this plugin tables."
+#~ msgstr ""
+#~ "Durch diese Aktion werden Daten aus diesen Plugin-Tabellen gelöscht."
+
+#~ msgid "Enter folder name..."
+#~ msgstr "Ordner Name eingeben..."
+
+#~ msgid "Edit Folder"
+#~ msgstr "Order bearbeiten"

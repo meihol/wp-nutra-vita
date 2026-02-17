@@ -1,0 +1,20 @@
+.elementor-control-qrc_premiumdemos span.elementor-control-title, .elementor-control-qrc_premiumdemosd span.elementor-control-title, .elementor-control-qrc_premiumdemosg span.elementor-control-title {
+    border-radius: 10px;
+    font-weight: 500;
+    color: #7c052e;
+    margin-top: 14px;
+    margin-bottom: 16px;
+    text-align: center;
+    border-left: 5px solid #4CAF50;
+    background: #fff7b0;
+    padding: 5px;
+    border-right: 5px solid #4CAF50;
+}
+.elementor-control-qrc_premiumdemos span.elementor-control-title i.icon-element.eicon-upgrade-crown, .elementor-control-qrc_premiumdemosd span.elementor-control-title i.icon-element.eicon-upgrade-crown, .elementor-control-qrc_premiumdemosg span.elementor-control-title i.icon-element.eicon-upgrade-crown {
+    margin-left: 10px;
+}
+.elementor-control-raw-html.qrc_premkumverd p {
+    border: 1px solid #ccc;
+    line-height: 21px;
+    padding: 6px;
+}

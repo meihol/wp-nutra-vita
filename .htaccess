@@ -1,0 +1,49 @@
+# RewriteEngine On
+# RewriteCond %{REQUEST_URI} !/404\.php$ [NC]
+# RewriteRule ^.*$ /404.php [L,R=404]
+
+# BEGIN LSCACHE
+# END LSCACHE
+# BEGIN NON_LSCACHE
+# END NON_LSCACHE
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# Restrict access to wp-admin
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{REQUEST_URI} ^(.*)?wp-admin$
+#     RewriteCond %{REMOTE_ADDR} !^116.74.103.216$
+#     RewriteCond %{REMOTE_ADDR} !^203.109.70.160$
+#     RewriteCond %{REMOTE_ADDR} !^49.34.254.127$
+#     RewriteCond %{REMOTE_ADDR} !^60.254.92.142$
+
+#     RewriteRule ^(.*)$ - [R=403,L]
+# </IfModule>
+
+# # Restrict access to wp-login.php
+# <Files wp-login.php>
+#     order deny,allow
+#     deny from all
+#     allow from 116.74.103.216
+#     allow from 203.109.70.160
+#     allow from 49.34.254.127
+#     allow from 116.72.21.215
+#     allow from 60.254.92.142
+# </Files>
+
+# Redirect 301 / https://www.nutra-vita.com/404/

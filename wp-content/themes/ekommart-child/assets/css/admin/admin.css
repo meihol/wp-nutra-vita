@@ -1,0 +1,6 @@
+/* Add a print icon after the button text */
+a.button.tips.print-invoice-button::after {
+    content: "\f02f"; /* Unicode for Font Awesome print icon */
+    font-family: 'Font Awesome 6 Free'; /* Make sure Font Awesome is loaded */
+    font-weight: 900; /* Use the solid style */
+}

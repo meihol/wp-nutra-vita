@@ -1,0 +1,1342 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: iFolders\n"
+"POT-Creation-Date: 2025-12-12 12:15+0300\n"
+"PO-Revision-Date: 2025-12-12 12:16+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 2.4.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: ifolders.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: assets/blocks/galleryblock/index.js:74
+msgid "Gallery Settings"
+msgstr "Galleri Indstillinger"
+
+#: assets/blocks/galleryblock/index.js:76
+msgid "Folder"
+msgstr "Mappe"
+
+#: assets/blocks/galleryblock/index.js:85
+msgid "Columns"
+msgstr "Kolonner"
+
+#: assets/blocks/galleryblock/index.js:94
+msgid "Max Items"
+msgstr "Maks. antal varer"
+
+#: assets/blocks/galleryblock/index.js:102
+msgid "Image Size"
+msgstr "Billedstørrelse"
+
+#: includes/Blocks/GalleryBlock.php:19
+msgid "Thumbnail"
+msgstr "Miniature"
+
+#: includes/Blocks/GalleryBlock.php:20
+msgid "Medium"
+msgstr "Medium"
+
+#: includes/Blocks/GalleryBlock.php:21
+msgid "Large"
+msgstr "Stor"
+
+#: includes/Blocks/GalleryBlock.php:22
+msgid "Full size"
+msgstr "Fuld størrelse"
+
+#: includes/Blocks/GalleryBlock.php:72
+msgid "No folder selected."
+msgstr "Ingen mappe valgt."
+
+#: includes/Blocks/GalleryBlock.php:78
+msgid "The selected folder has no items."
+msgstr "Den valgte mappe indeholder ingen elementer."
+
+#: includes/Fallbacks/plugin-exist.php:14
+msgid ""
+"It looks like you have another version of iFolders installed, please "
+"uninstall it before activating this new version."
+msgstr ""
+"Det ser ud til, at du har en anden version af iFolders installeret, skal du "
+"afinstallere den, før du aktiverer denne nye version."
+
+#: includes/Models/FoldersModel.php:9
+msgid "Media"
+msgstr "Medier"
+
+#: includes/Models/FoldersModel.php:10
+msgid "Posts"
+msgstr "Indlæg"
+
+#: includes/Models/FoldersModel.php:11
+msgid "Pages"
+msgstr "Sider"
+
+#: includes/Models/FoldersModel.php:12
+msgid "Users"
+msgstr "Brugere"
+
+#: includes/Models/HelperModel.php:76 includes/System/Folders.php:277
+#: includes/Views/modal-folder-type.php:14
+#: includes/Views/modal-security-profile.php:14
+msgid "Title"
+msgstr "Titel"
+
+#: includes/Models/HelperModel.php:77 includes/System/Folders.php:280
+msgid "Alternative text"
+msgstr "Alternativ tekst"
+
+#: includes/Models/HelperModel.php:78 includes/System/Folders.php:284
+msgid "File URL"
+msgstr "Fil URL"
+
+#: includes/Models/HelperModel.php:79 includes/System/Folders.php:290
+msgid "Dimension"
+msgstr "Dimension"
+
+#: includes/Models/HelperModel.php:80 includes/System/Folders.php:295
+msgid "Size"
+msgstr "Størrelse"
+
+#: includes/Models/HelperModel.php:81 includes/System/Folders.php:299
+msgid "Filename"
+msgstr "Filnavn"
+
+#: includes/Models/HelperModel.php:82 includes/System/Folders.php:303
+msgid "Type"
+msgstr "Type"
+
+#: includes/Models/HelperModel.php:83 includes/System/Folders.php:307
+msgid "Date"
+msgstr "Dato"
+
+#: includes/Models/HelperModel.php:84 includes/System/Folders.php:311
+msgid "Uploaded by"
+msgstr "Uploadet af"
+
+#: includes/Models/HelperModel.php:114 includes/Models/HelperModel.php:127
+msgid "The operation completed successfully"
+msgstr "Operationen blev gennemført med succes"
+
+#: includes/Models/HelperModel.php:115 includes/Models/HelperModel.php:128
+msgid "The operation failed"
+msgstr "Operationen mislykkedes"
+
+#: includes/Models/HelperModel.php:116 includes/Models/HelperModel.php:130
+msgid "This is the pro feature."
+msgstr "Dette er pro-funktionen."
+
+#: includes/Models/HelperModel.php:116 includes/Models/HelperModel.php:130
+msgid "Upgrade to get the full power."
+msgstr "Opgrader for at få den fulde effekt."
+
+#: includes/Models/HelperModel.php:117
+msgid "Parent Folder"
+msgstr "Overordnet mappe"
+
+#: includes/Models/HelperModel.php:118 includes/Models/HelperModel.php:168
+msgid "New Folder"
+msgstr "Ny mappe"
+
+#: includes/Models/HelperModel.php:129
+msgid "These plugin settings are built-in and cannot be modified"
+msgstr "Disse plugin-indstillinger er indbyggede og kan ikke ændres"
+
+#: includes/Models/HelperModel.php:132
+msgid "The license is already registered for other domain"
+msgstr "Licensen er allerede registreret for et andet domæne"
+
+#: includes/Models/HelperModel.php:133
+msgid "Failed to connect to license server"
+msgstr "Der kunne ikke oprettes forbindelse til licensserveren"
+
+#: includes/Models/HelperModel.php:134
+msgid "The personal token is invalid or has been deleted"
+msgstr "Det personlige token er ugyldigt eller er blevet slettet"
+
+#: includes/Models/HelperModel.php:135
+msgid ""
+"The personal token is missing the required permission for license server"
+msgstr ""
+"Det personlige token mangler den nødvendige tilladelse til licensserveren"
+
+#: includes/Models/HelperModel.php:136
+msgid "Invalid purchase code"
+msgstr "Ugyldig købskode"
+
+#: includes/Models/HelperModel.php:137
+msgid "Something goes wrong, try again shortly"
+msgstr "Noget går galt, prøv igen om lidt"
+
+#: includes/Models/HelperModel.php:138
+msgid "Parsing error, try again shortly"
+msgstr "Parsing fejl, prøv igen snart"
+
+#: includes/Models/HelperModel.php:139
+msgid "Error updating license data"
+msgstr "Fejl ved opdatering af licensdata"
+
+#: includes/Models/HelperModel.php:174
+msgid "Color"
+msgstr "Farve"
+
+#: includes/Models/HelperModel.php:180
+msgid "Rename"
+msgstr "Omdøb"
+
+#: includes/Models/HelperModel.php:186
+msgid "Copy"
+msgstr "Kopier"
+
+#: includes/Models/HelperModel.php:192
+msgid "Paste"
+msgstr "Indsæt"
+
+#: includes/Models/HelperModel.php:198
+#: includes/Views/modal-confirm-clear-all.php:16
+#: includes/Views/modal-confirm-delete.php:16
+#: includes/Views/modal-security-profile-rights.php:27
+#: includes/Views/modal-security-profile.php:53 includes/Views/sidebar.php:66
+msgid "Delete"
+msgstr "Slet"
+
+#: includes/Models/HelperModel.php:204
+msgid "Download"
+msgstr "Download"
+
+#: includes/Models/SecurityProfilesModel.php:38
+msgid "Common Folders"
+msgstr "Almindelige mapper"
+
+#: includes/Models/SecurityProfilesModel.php:41
+msgid "Personal Folders"
+msgstr "Private mapper"
+
+#: includes/Models/SecurityProfilesModel.php:50
+msgid ""
+"Users can create, view, and edit each other's folders if they are granted "
+"such access."
+msgstr ""
+"Brugere kan oprette, se og redigere hinandens mapper, hvis de får en sådan "
+"adgang."
+
+#: includes/Models/SecurityProfilesModel.php:53
+msgid ""
+"Users can only create, view and edit their personal folders if they are "
+"granted such access."
+msgstr ""
+"Brugere kan kun oprette, se og redigere deres personlige mapper, hvis de får "
+"en sådan adgang."
+
+#: includes/System/Notice.php:26
+msgid "Thanks for start using the plugin iFolders. Let's create first folders."
+msgstr ""
+"Tak, fordi du begyndte at bruge plugin iFolders. Lad os oprette de første "
+"mapper."
+
+#: includes/System/Notice.php:26
+msgid "Go to WordPress Media Library."
+msgstr "Gå til WordPress Media Library."
+
+#: includes/Views/feedback.php:6
+msgid "I do not need this plugin anymore"
+msgstr "Jeg har ikke brug for dette plugin længere"
+
+#: includes/Views/feedback.php:9
+msgid "I found another plugin that do the job better"
+msgstr "Jeg fandt et andet plugin, der gør jobbet bedre"
+
+#: includes/Views/feedback.php:10
+msgid "Please tell us which one"
+msgstr "Fortæl os venligst hvilken"
+
+#: includes/Views/feedback.php:13
+msgid "I don't know how to use it"
+msgstr "Jeg ved ikke, hvordan man bruger det"
+
+#: includes/Views/feedback.php:16
+msgid "This's temporary deactivation"
+msgstr "Dette er midlertidig deaktivering"
+
+#: includes/Views/feedback.php:19
+msgid "It's not working on my website"
+msgstr "Det virker ikke på min hjemmeside"
+
+#: includes/Views/feedback.php:22
+msgid "Other"
+msgstr "Andet"
+
+#: includes/Views/feedback.php:23
+msgid "Please share a reason..."
+msgstr "Del gerne en grund..."
+
+#: includes/Views/feedback.php:30
+msgid "Quick Feedback"
+msgstr "Hurtig feedback"
+
+#: includes/Views/feedback.php:34
+msgid ""
+"Before you deactivate iFolders could you let us know why? Your feedback will "
+"help us improve the product, please tell us why did you decide to deactivate "
+"iFolders. Thank you!"
+msgstr ""
+"Før du deaktiverer iFolders, kan du fortælle os hvorfor? Din feedback vil "
+"hjælpe os med at forbedre produktet, fortæl os hvorfor besluttede du at "
+"deaktivere iFolders. Tak!"
+
+#: includes/Views/feedback.php:50
+msgid "Submit & Deactivate"
+msgstr "Indsend & Deaktiver"
+
+#: includes/Views/feedback.php:51
+msgid "Skip & Deactivate"
+msgstr "Spring over og deaktiver"
+
+#: includes/Views/modal-confirm-clear-all.php:7
+#: includes/Views/modal-confirm-delete.php:7
+msgid "Confirm"
+msgstr "Bekræft"
+
+#: includes/Views/modal-confirm-clear-all.php:12
+msgid "Are you sure you want to deactivate the plugin and delete all its data?"
+msgstr ""
+"Er du sikker på, at du vil deaktivere pluginet og slette alle dets data?"
+
+#: includes/Views/modal-confirm-clear-all.php:15
+#: includes/Views/modal-confirm-delete.php:15 includes/Views/sidebar.php:44
+#: includes/Views/sidebar.php:65 includes/Views/sidebar.php:101
+msgid "Cancel"
+msgstr "Annuller"
+
+#: includes/Views/modal-confirm-delete.php:12
+msgid "Are you sure you want to delete {{Modal.data.count}} items?"
+msgstr "Er du sikker på, at du vil slette {{Modal.data.count}} elementer?"
+
+#: includes/Views/modal-folder-type.php:7
+msgid "New Folder Type"
+msgstr "Ny mappetype"
+
+#: includes/Views/modal-folder-type.php:8
+msgid "Edit Folder Type"
+msgstr "Rediger mappetype"
+
+#: includes/Views/modal-folder-type.php:17
+#: includes/Views/modal-security-profile-rights.php:20
+#: includes/Views/modal-select-folder-type.php:14
+#: includes/Views/modal-select-role.php:14
+#: includes/Views/modal-select-security-profile.php:14
+#: includes/Views/modal-select-user.php:14
+msgid "None"
+msgstr "Ingen"
+
+#: includes/Views/modal-folder-type.php:23
+#: includes/Views/modal-security-profile-rights.php:32
+#: includes/Views/modal-security-profile.php:77
+#: includes/Views/modal-select-folder-type.php:19
+#: includes/Views/modal-select-role.php:19
+#: includes/Views/modal-select-security-profile.php:19
+#: includes/Views/modal-select-user.php:19 includes/Views/sidebar.php:148
+msgid "Close"
+msgstr "Luk"
+
+#: includes/Views/modal-folder-type.php:24
+#: includes/Views/modal-security-profile-rights.php:33
+#: includes/Views/modal-security-profile.php:78
+msgid "Submit"
+msgstr "Send"
+
+#: includes/Views/modal-security-profile-rights.php:7
+msgid "New Security Rights"
+msgstr "Nye sikkerhedsrettigheder"
+
+#: includes/Views/modal-security-profile-rights.php:8
+msgid "Edit Security Rights"
+msgstr "Rediger sikkerhedsrettigheder"
+
+#: includes/Views/modal-security-profile-rights.php:14
+msgid "Select user or role"
+msgstr "Vælg bruger eller rolle"
+
+#: includes/Views/modal-security-profile-rights.php:15
+msgid "Select user"
+msgstr "Vælg bruger"
+
+#: includes/Views/modal-security-profile-rights.php:16
+msgid "Select role"
+msgstr "Vælg rolle"
+
+#: includes/Views/modal-security-profile-rights.php:24
+#: includes/Views/modal-security-profile.php:50 includes/Views/sidebar.php:45
+msgid "Create"
+msgstr "Opret"
+
+#: includes/Views/modal-security-profile-rights.php:24
+msgid ""
+"users can create folders and subfolders, don't forget to give the view "
+"permission too"
+msgstr ""
+"Brugere kan oprette mapper og undermapper, glem ikke at give "
+"visningstilladelsen også"
+
+#: includes/Views/modal-security-profile-rights.php:25
+#: includes/Views/modal-security-profile.php:51
+msgid "View"
+msgstr "Vis"
+
+#: includes/Views/modal-security-profile-rights.php:25
+msgid "users can view the folder tree"
+msgstr "Brugere kan se mappetræet"
+
+#: includes/Views/modal-security-profile-rights.php:26
+#: includes/Views/modal-security-profile.php:52
+msgid "Edit"
+msgstr "Rediger"
+
+#: includes/Views/modal-security-profile-rights.php:26
+msgid "users can edit folders (rename, drag & drop)"
+msgstr "Brugere kan redigere mapper (omdøbe, trække og slippe)"
+
+#: includes/Views/modal-security-profile-rights.php:27
+msgid "users can delete folders"
+msgstr "Brugere kan slette mapper"
+
+#: includes/Views/modal-security-profile-rights.php:28
+#: includes/Views/modal-security-profile.php:54
+msgid "Attach"
+msgstr "Vedhæft"
+
+#: includes/Views/modal-security-profile-rights.php:28
+msgid "users can attach items to folders, like media files, posts, pages, etc."
+msgstr ""
+"Brugere kan vedhæfte emner til mapper, som mediefiler, indlæg, sider osv."
+
+#: includes/Views/modal-security-profile.php:7
+msgid "New Security Profile"
+msgstr "Ny sikkerhedsprofil"
+
+#: includes/Views/modal-security-profile.php:8
+msgid "Edit Security Profile"
+msgstr "Rediger sikkerhedsprofil"
+
+#: includes/Views/modal-security-profile.php:16 includes/Views/settings.php:179
+#: includes/Views/settings.php:304
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: includes/Views/modal-security-profile.php:20
+msgid "Add new profile"
+msgstr "Tilføj ny profil"
+
+#: includes/Views/modal-security-profile.php:23
+msgid "Edit rights"
+msgstr "Redigeringsrettigheder"
+
+#: includes/Views/modal-security-profile.php:26
+msgid "Delete selected rights"
+msgstr "Slet valgte rettigheder"
+
+#: includes/Views/modal-security-profile.php:48
+msgid "User / Role"
+msgstr "Bruger / rolle"
+
+#: includes/Views/modal-security-profile.php:49
+msgid "Access Type"
+msgstr "Adgangstype"
+
+#: includes/Views/modal-security-profile.php:72 includes/Views/settings.php:254
+#: includes/Views/settings.php:317
+msgid "The table is empty"
+msgstr "Bordet er tomt"
+
+#: includes/Views/modal-select-folder-type.php:7
+msgid "Select Folder Type"
+msgstr "Vælg mappetype"
+
+#: includes/Views/modal-select-folder-type.php:12
+msgid ""
+"Select a registered built-in or custom WordPress post type from the list "
+"below if you want to create a new folder type item."
+msgstr ""
+"Vælg en registreret indbygget eller brugerdefineret WordPress-posttype fra "
+"listen nedenfor, hvis du vil oprette et nyt mappetypeelement."
+
+#: includes/Views/modal-select-folder-type.php:20
+#: includes/Views/modal-select-role.php:20
+#: includes/Views/modal-select-security-profile.php:20
+#: includes/Views/modal-select-user.php:20
+msgid "Select"
+msgstr "Vælg"
+
+#: includes/Views/modal-select-role.php:7
+msgid "Select Role"
+msgstr "Vælg rolle"
+
+#: includes/Views/modal-select-role.php:12
+msgid ""
+"To create a new profile entry, select a registered WordPress role from the "
+"list below."
+msgstr ""
+"For at oprette en ny profilpost skal du vælge en registreret WordPress-rolle "
+"fra listen nedenfor."
+
+#: includes/Views/modal-select-security-profile.php:7
+msgid "Select Security"
+msgstr "Vælg Sikkerhed"
+
+#: includes/Views/modal-select-security-profile.php:12
+msgid ""
+"Select a registered security role from the list below if you want to change "
+"it."
+msgstr ""
+"Vælg en registreret sikkerhedsrolle på listen nedenfor, hvis du vil ændre "
+"den."
+
+#: includes/Views/modal-select-user.php:7
+msgid "Select User"
+msgstr "Vælg bruger"
+
+#: includes/Views/modal-select-user.php:12
+msgid ""
+"To create a new profile entry, select a registered WordPress user from the "
+"list below."
+msgstr ""
+"For at oprette en ny profilpost skal du vælge en registreret WordPress-"
+"bruger fra listen nedenfor."
+
+#: includes/Views/proposal.php:5
+msgid ""
+"The folders are not available in the free version of the plugin. To access "
+"this feature and even more functionality, you will need to purchase the pro "
+"version."
+msgstr ""
+"Mapperne er ikke tilgængelige i den gratis version af pluginet. For at få "
+"adgang til denne funktion og endnu mere funktionalitet skal du købe pro-"
+"versionen."
+
+#: includes/Views/proposal.php:7 includes/Views/settings.php:411
+msgid "Buy Now"
+msgstr "Køb Nu"
+
+#: includes/Views/settings.php:9
+msgid "General"
+msgstr "Generelt"
+
+#: includes/Views/settings.php:10
+msgid "Permissions"
+msgstr "Tilladelser"
+
+#: includes/Views/settings.php:11
+msgid "Tools"
+msgstr "Værktøjer"
+
+#: includes/Views/settings.php:12
+msgid "Go Pro"
+msgstr "Go Pro"
+
+#: includes/Views/settings.php:67
+msgid "Purchase Code"
+msgstr "Købs Kode"
+
+#: includes/Views/settings.php:68
+msgid ""
+"To enable all the professional features of the plugin, enter your purchase "
+"code and activate it."
+msgstr ""
+"For at aktivere alle de professionelle funktioner i pluginet skal du "
+"indtaste din købskode og aktivere den."
+
+#: includes/Views/settings.php:74
+msgid "Activate License"
+msgstr "Aktiver licens"
+
+#: includes/Views/settings.php:75
+msgid "Deactivate License"
+msgstr "Deaktiver licens"
+
+#: includes/Views/settings.php:82
+msgid "The license is active and valid for this domain"
+msgstr "Licensen er aktiv og gyldig for dette domæne"
+
+#: includes/Views/settings.php:86
+msgid ""
+"Note: If you're on a development site and you want to activate this license "
+"later on the production domain, please deactivate it first."
+msgstr ""
+"Bemærk: Hvis du er på et udviklingswebsted, og du vil aktivere denne licens "
+"senere på produktionsdomænet, skal du først deaktivere den."
+
+#: includes/Views/settings.php:93
+msgid "Default folder color"
+msgstr "Standardmappefarve"
+
+#: includes/Views/settings.php:94
+msgid "Set the default color for all folders that don't have their own colors."
+msgstr ""
+"Indstil standardfarven for alle mapper, der ikke har deres egne farver."
+
+#: includes/Views/settings.php:104
+msgid "Disable folder counter"
+msgstr "Deaktiver mappetæller"
+
+#: includes/Views/settings.php:105
+msgid "Disable the display of the number of items attached to each folder."
+msgstr ""
+"Deaktiver visningen af antallet af elementer, der er knyttet til hver mappe."
+
+#: includes/Views/settings.php:115
+msgid "Disable ajax refresh"
+msgstr "Deaktiver ajax-opdatering"
+
+#: includes/Views/settings.php:116
+msgid ""
+"Disable ajax refresh in list view. Set when there are problems with using "
+"plugins along with iFolders that change the media library list view."
+msgstr ""
+"Deaktiver ajax-opdatering i listevisning. Indstil, hvornår der er problemer "
+"med at bruge plugins sammen med iFolders, der ændrer mediebibliotekets "
+"listevisning."
+
+#: includes/Views/settings.php:126
+msgid "Infinite scrolling"
+msgstr "Uendelig rulning"
+
+#: includes/Views/settings.php:127
+msgid ""
+"Enable infinite media library scrolling instead of the 'Load More' button."
+msgstr ""
+"Aktivér uendelig rulning af mediebibliotek i stedet for knappen 'Indlæs "
+"mere'."
+
+#: includes/Views/settings.php:137
+msgid "Show media details on hover"
+msgstr "Vis medieoplysninger på Hover"
+
+#: includes/Views/settings.php:138
+msgid ""
+"View essential metadata, including title, size, type, date, and dimensions, "
+"by simply hovering your cursor over an image."
+msgstr ""
+"Se vigtige metadata, herunder titel, størrelse, type, dato og dimensioner, "
+"ved blot at holde markøren over et billede."
+
+#: includes/Views/settings.php:151
+msgid "Disable search bar"
+msgstr "Deaktiver søgefeltet"
+
+#: includes/Views/settings.php:152
+msgid "Disable the display of the folder search bar."
+msgstr "Deaktiver visningen af mappens søgelinje."
+
+#: includes/Views/settings.php:161
+msgid "Replace media"
+msgstr "Udskift medier"
+
+#: includes/Views/settings.php:162
+msgid ""
+"Adds tools to the 'Attachment details' screen that can be used to select or "
+"upload an image to replace the current image while preserving its URL and "
+"properties."
+msgstr ""
+"Føjer værktøjer til skærmen \"Oplysninger om vedhæftede filer\", der kan "
+"bruges til at vælge eller uploade et billede for at erstatte det aktuelle "
+"billede, samtidig med at dets webadresse og egenskaber bevares."
+
+#: includes/Views/settings.php:167
+msgid ""
+"Note: Disable your browser cache and any WordPress caching plugins before "
+"use. Otherwise, you may find that this feature is not working properly."
+msgstr ""
+"Bemærk: Deaktiver din browsercache og eventuelle WordPress-cache-plugins før "
+"brug. Ellers kan du opleve, at denne funktion ikke fungerer korrekt."
+
+#: includes/Views/settings.php:175
+msgid "Save"
+msgstr "Gem"
+
+#: includes/Views/settings.php:180
+msgid ""
+"Use this section to control who can view and edit folders. Simply create "
+"specific permissions for users and roles, then select a security profile for "
+"each folder type and apply it."
+msgstr ""
+"Brug dette afsnit til at styre, hvem der kan se og redigere mapper. Du skal "
+"blot oprette specifikke tilladelser for brugere og roller og derefter vælge "
+"en sikkerhedsprofil for hver mappetype og anvende den."
+
+#: includes/Views/settings.php:185
+msgid "Access roles"
+msgstr "Få adgang til roller"
+
+#: includes/Views/settings.php:186
+msgid ""
+"Only selected user roles have access to folders. These are general settings, "
+"use the permissions tab to grant users additional personal or general "
+"permissions."
+msgstr ""
+"Kun udvalgte brugerroller har adgang til mapper. Dette er generelle "
+"indstillinger, brug fanen tilladelser til at give brugerne yderligere "
+"personlige eller generelle tilladelser."
+
+#: includes/Views/settings.php:198
+msgid "Folder Types"
+msgstr "Mappetyper"
+
+#: includes/Views/settings.php:199
+msgid ""
+"This table shows the types of folders (media, pages, posts, etc.) supported "
+"by the plugin. To allow a user to create and edit folders of a specific "
+"folder type, you must select a security profile for that type from the list. "
+"If you don't find the desired folder type, try adding it manually."
+msgstr ""
+"Denne tabel viser de typer mapper (medier, sider, indlæg osv.), Der "
+"understøttes af pluginet. Hvis du vil give en bruger tilladelse til at "
+"oprette og redigere mapper af en bestemt mappetype, skal du vælge en "
+"sikkerhedsprofil for den pågældende type på listen. Hvis du ikke kan finde "
+"den ønskede mappetype, kan du prøve at tilføje den manuelt."
+
+#: includes/Views/settings.php:205
+msgid "Add new folder type"
+msgstr "Tilføj ny mappetype"
+
+#: includes/Views/settings.php:208
+msgid "Edit folder type"
+msgstr "Rediger mappetype"
+
+#: includes/Views/settings.php:211
+msgid "Delete selected folder types"
+msgstr "Slet valgte mappetyper"
+
+#: includes/Views/settings.php:222 includes/Views/settings.php:288
+msgid "Refresh"
+msgstr "Opdater"
+
+#: includes/Views/settings.php:238
+msgid "Folder type"
+msgstr "Mappetype"
+
+#: includes/Views/settings.php:239 includes/Views/settings.php:303
+msgid "Security profile"
+msgstr "Sikkerhedsprofil"
+
+#: includes/Views/settings.php:240
+msgid "Status"
+msgstr "Status"
+
+#: includes/Views/settings.php:248
+msgid "enabled"
+msgstr "aktiveret"
+
+#: includes/Views/settings.php:248
+msgid "disabled"
+msgstr "deaktiveret"
+
+#: includes/Views/settings.php:264
+msgid "Security profiles"
+msgstr "Sikkerhedsprofiler"
+
+#: includes/Views/settings.php:265
+msgid ""
+"This table is used to create and manage security profiles that can be "
+"selected and linked in the table above. Custom security profiles allow you "
+"to set permissions for each user or role to work with folders, including "
+"creating, viewing, editing, deleting, and attaching items to a folder."
+msgstr ""
+"Denne tabel bruges til at oprette og administrere sikkerhedsprofiler, der "
+"kan vælges og sammenkædes i tabellen ovenfor. Med brugerdefinerede "
+"sikkerhedsprofiler kan du angive tilladelser for hver bruger eller rolle til "
+"at arbejde med mapper, herunder oprettelse, visning, redigering, sletning og "
+"vedhæftning af elementer til en mappe."
+
+#: includes/Views/settings.php:271
+msgid "Add new security profile"
+msgstr "Tilføj ny sikkerhedsprofil"
+
+#: includes/Views/settings.php:274
+msgid "Edit security profile"
+msgstr "Rediger sikkerhedsprofil"
+
+#: includes/Views/settings.php:277
+msgid "Delete selected security profiles"
+msgstr "Slet markerede sikkerhedsprofiler"
+
+#: includes/Views/settings.php:329
+msgid "Import from other plugins"
+msgstr "Import fra andre plugins"
+
+#: includes/Views/settings.php:330
+msgid ""
+"Import folders and attachments from third-party plugins for the media "
+"library."
+msgstr ""
+"Importer mapper og vedhæftede filer fra tredjeparts plugins til "
+"mediebiblioteket."
+
+#: includes/Views/settings.php:339
+msgid "Import now"
+msgstr "Importer nu"
+
+#: includes/Views/settings.php:347
+msgid "Export"
+msgstr "Eksporter"
+
+#: includes/Views/settings.php:348
+msgid ""
+"The current folder structure with attachments will be exported to a CSV file."
+msgstr ""
+"Den aktuelle mappestruktur med vedhæftede filer eksporteres til en CSV-fil."
+
+#: includes/Views/settings.php:351
+msgid "Export Now"
+msgstr "Eksportér nu"
+
+#: includes/Views/settings.php:352
+msgid "Download file"
+msgstr "Download fil"
+
+#: includes/Views/settings.php:358
+msgid "Import"
+msgstr "Importer"
+
+#: includes/Views/settings.php:359
+msgid "Select a CSV file with the folder structure and attachments to import."
+msgstr ""
+"Vælg en CSV-fil med mappestrukturen og vedhæftede filer, der skal importeres."
+
+#: includes/Views/settings.php:365
+msgid "Clearing all existing folders before import"
+msgstr "Rydning af alle eksisterende mapper før import"
+
+#: includes/Views/settings.php:366
+msgid "Import attachments"
+msgstr "Importer vedhæftninger"
+
+#: includes/Views/settings.php:368
+msgid "Import Now"
+msgstr "Importer nu"
+
+#: includes/Views/settings.php:375
+msgid "Folder counters recalculation"
+msgstr "Genberegning af mappetællere"
+
+#: includes/Views/settings.php:376
+msgid ""
+"This action will completely recalculate all item counters that are attached "
+"to folders."
+msgstr ""
+"Denne handling genberegner fuldstændigt alle elementtællere, der er knyttet "
+"til mapper."
+
+#: includes/Views/settings.php:379
+msgid "Recalculate"
+msgstr "Genberegn"
+
+#: includes/Views/settings.php:385
+msgid "Clear data"
+msgstr "Ryd data"
+
+#: includes/Views/settings.php:386
+msgid ""
+"This action will deactivate the plugin iFolders and delete all its data and "
+"settings and return you to the default WordPress state before installing the "
+"plugin."
+msgstr ""
+"Denne handling deaktiverer plugin-iFolders og sletter alle dens data og "
+"indstillinger og returnerer dig til standard WordPress-tilstanden, før du "
+"installerer pluginet."
+
+#: includes/Views/settings.php:389
+msgid "Clear now"
+msgstr "Ryd nu"
+
+#: includes/Views/settings.php:400 includes/Views/settings.php:429
+msgid "Get iFolders Pro"
+msgstr "Hent iFolders Pro"
+
+#: includes/Views/settings.php:401
+msgid "Unlock all features and premium support"
+msgstr "Lås op for alle funktioner og premium support"
+
+#: includes/Views/settings.php:403
+msgid "Sort Options"
+msgstr "Sorteringsindstillinger"
+
+#: includes/Views/settings.php:404
+msgid "Advanced User Rights"
+msgstr "Avancerede brugerrettigheder"
+
+#: includes/Views/settings.php:405
+msgid "Organize Pages, Posts and Custom Post Types"
+msgstr "Organiser sider, indlæg og tilpassede posttyper"
+
+#: includes/Views/settings.php:406
+msgid "Page Builders: Elementor, Beaver, Divi, Brizy etc."
+msgstr "Sidebygere: Elementor, Beaver, Divi, Brizy osv."
+
+#: includes/Views/settings.php:407
+msgid "Lifetime License"
+msgstr "Livstidslicens"
+
+#: includes/Views/settings.php:408
+msgid "VIP Support"
+msgstr "VIP-support"
+
+#: includes/Views/settings.php:420
+msgid "Congratulations!!!"
+msgstr "Tillykke!!!"
+
+#: includes/Views/settings.php:421
+msgid "You are using the iFolders Pro version."
+msgstr "Du bruger iFolders Pro-versionen."
+
+#: includes/Views/settings.php:430
+msgid "Unlock all features and premium support."
+msgstr "Lås op for alle funktioner og premium support."
+
+#: includes/Views/settings.php:438
+msgid "YouTube Channel"
+msgstr "YouTube kanal"
+
+#: includes/Views/settings.php:439
+msgid "Watch our video to learn about all the features of iFolders."
+msgstr "Se vores video for at lære om alle funktionerne i iFolders."
+
+#: includes/Views/settings.php:447
+msgid "Support"
+msgstr "Support"
+
+#: includes/Views/settings.php:448
+msgid "Quickly get direct help from our qualified support team."
+msgstr "Få hurtigt direkte hjælp fra vores kvalificerede supportteam."
+
+#: includes/Views/settings.php:456
+msgid "Suggest a Feature"
+msgstr "Foreslå en funktion"
+
+#: includes/Views/settings.php:457
+msgid "Do you have ideas or suggestions for iFolders? We'd love to hear them."
+msgstr "Har du ideer eller forslag til iFolders? Vi vil meget gerne høre dem."
+
+#: includes/Views/settings.php:464
+msgid "HappyVR"
+msgstr "HappyVR"
+
+#: includes/Views/settings.php:465
+msgid ""
+"Creates immersive 360 virtual tours for WordPress for real estate, museums, "
+"hotels and etc."
+msgstr ""
+"Skaber immersive 360 virtuelle rundvisninger til WordPress for ejendomme, "
+"museer, hoteller osv."
+
+#: includes/Views/sidebar.php:6
+msgid "create folder"
+msgstr "Opret mappe"
+
+#: includes/Views/sidebar.php:13
+msgid "sort folder items"
+msgstr "Sortere mappeelementer"
+
+#: includes/Views/sidebar.php:22
+msgid ""
+"Click the \"Create\" button above to add your first folder, then start drag "
+"& drop items."
+msgstr ""
+"Klik på knappen \"Opret\" ovenfor for at tilføje din første mappe, og start "
+"derefter træk og slip emner."
+
+#: includes/Views/sidebar.php:27
+msgid "Add New Folders"
+msgstr "Tilføj nye mapper"
+
+#: includes/Views/sidebar.php:51
+msgid "Delete Folders"
+msgstr "Slet mapper"
+
+#: includes/Views/sidebar.php:60
+msgid "Are you sure you want to delete selected folders and all subfolders?"
+msgstr "Er du sikker på, at du vil slette valgte mapper og alle undermapper?"
+
+#: includes/Views/sidebar.php:61
+msgid "Delete items attached to selected folders too"
+msgstr "Slet også elementer, der er vedhæftet valgte mapper"
+
+#: includes/Views/sidebar.php:78
+msgid "Upload a new file"
+msgstr "Upload en ny fil"
+
+#: includes/Views/sidebar.php:93
+msgid "Drop file here"
+msgstr "Træk fil hertil"
+
+#: includes/Views/sidebar.php:94
+msgid "or"
+msgstr "eller"
+
+#: includes/Views/sidebar.php:95
+msgid "Select file"
+msgstr "Vælg fil"
+
+#: includes/Views/sidebar.php:102
+msgid "Replace"
+msgstr "Erstat"
+
+#: includes/Views/sidebar.php:108
+msgid "Sort Folder Items"
+msgstr "Sortere mappeelementer"
+
+#: includes/Views/sidebar.php:118
+msgid "By Name"
+msgstr "Efter navn"
+
+#: includes/Views/sidebar.php:125
+msgid "By Date"
+msgstr "Efter dato"
+
+#: includes/Views/sidebar.php:132
+msgid "By Modified"
+msgstr "Af ændret"
+
+#: includes/Views/sidebar.php:139
+msgid "By Author"
+msgstr "Af skribent"
+
+#: includes/Views/sidebar.php:163
+msgid "All items"
+msgstr "Alle elementer"
+
+#: includes/Views/sidebar.php:175
+msgid "Uncategorized"
+msgstr "Ikke kategoriseret"
+
+#: includes/Views/sidebar.php:185
+msgid "Search folders..."
+msgstr "Søg i mapper..."
+
+#. Plugin Name of the plugin/theme
+msgid ""
+"iFolders - Ultimate Folder Organizer for Media Library, Pages, Posts and "
+"Users"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://1.envato.market/getifolders"
+msgstr "https://1.envato.market/getifolders"
+
+#. Description of the plugin/theme
+msgid ""
+"A better way to organize WordPress media library, posts, pages, users & "
+"custom post types in a logical way. Just drag & drop items into folders you "
+"and use them easely."
+msgstr ""
+"En bedre måde at organisere WordPress mediebibliotek, indlæg, sider, brugere "
+"& brugerdefinerede posttyper på en logisk måde. Bare træk og slip elementer "
+"i mapper, du og brug dem let."
+
+#. Author of the plugin/theme
+msgid "Avirtum"
+msgstr "Avirtum"
+
+#. Author URI of the plugin/theme
+msgid "https://1.envato.market/avirtum"
+msgstr "https://1.envato.market/avirtum"
+
+#~ msgid "It looks like you have an old version of iFolders installed."
+#~ msgstr ""
+#~ "Det ser ud til, at du har en gammel version af iFolders installeret."
+
+#~ msgid ""
+#~ "To use this new version, you must uninstall the old version completely "
+#~ "and delete it with all data, because the new version is incompatible with "
+#~ "the previous ones. Don't forget to back up your plugin data if necessary."
+#~ msgstr ""
+#~ "For at bruge denne nye version skal du afinstallere den gamle version "
+#~ "fuldstændigt og slette den med alle data, fordi den nye version er "
+#~ "uforenelig med de tidligere. Glem ikke at sikkerhedskopiere dine plugin-"
+#~ "data, hvis det er nødvendigt."
+
+#~ msgid ""
+#~ "You can delete these data here right now or if you have any questions, "
+#~ "please contact our support team."
+#~ msgstr ""
+#~ "Du kan slette disse data her lige nu, eller hvis du har spørgsmål, bedes "
+#~ "du kontakte vores supportteam."
+
+#~ msgid ""
+#~ "Delete all data of the old version of iFolders and activate the new "
+#~ "version."
+#~ msgstr ""
+#~ "Slet alle data i den gamle version af iFolders, og aktiver den nye "
+#~ "version."
+
+#~ msgid ""
+#~ "Are you sure you want to delete all data of the old version of iFolders?"
+#~ msgstr ""
+#~ "Er du sikker på, at du vil slette alle data i den gamle version af "
+#~ "iFolders?"
+
+#~ msgid "Delete fully"
+#~ msgstr "Slet fuldt ud"
+
+#~ msgid ""
+#~ "Enable full uninstall mode, the plugin will clear all its options and "
+#~ "database tables after clicking the delete link in the WordPress plugins "
+#~ "area."
+#~ msgstr ""
+#~ "Aktivér fuld afinstallationstilstand, pluginet rydder alle dets "
+#~ "muligheder og databasetabeller efter at have klikket på sletningslinket i "
+#~ "WordPress-plugins-området."
+
+#~ msgid "Create Subfolders"
+#~ msgstr "Opret undermapper"
+
+#~ msgid "iFolders"
+#~ msgstr "iFolders"
+
+#~ msgid "Note: all items inside those folders will not be deleted."
+#~ msgstr "Bemærk: Alle elementer i disse mapper slettes ikke."
+
+#~ msgid "This feature is for 'pro' users only."
+#~ msgstr "Denne funktion er kun for 'pro'-brugere."
+
+#~ msgid "This feature is for \"pro\" users only."
+#~ msgstr "Denne funktion er kun for \"pro\"-brugere."
+
+#~ msgid "Duplicate"
+#~ msgstr "Kopier"
+
+#~ msgid "Duplicate Folder"
+#~ msgstr "Dupliker mappe"
+
+#~ msgid ""
+#~ "Are you sure you want to duplicate the selected folder and all subfolders?"
+#~ msgstr ""
+#~ "Er du sikker på, at du vil duplikere den valgte mappe og alle undermapper?"
+
+#~ msgid ""
+#~ "Note: all items inside those folders will not be copied to a new "
+#~ "destination."
+#~ msgstr ""
+#~ "Bemærk: Alle elementer i disse mapper kopieres ikke til en ny destination."
+
+#~ msgid "Source folder"
+#~ msgstr "Kildemappe"
+
+#~ msgid "Destination folder"
+#~ msgstr "Målmappe"
+
+#~ msgid "Don't forget to back up your plugin data if necessary."
+#~ msgstr ""
+#~ "Glem ikke at sikkerhedskopiere dine plugin-data, hvis det er nødvendigt."
+
+#~ msgid "You do not have permissions to duplicate folders"
+#~ msgstr "Du har ikke tilladelse til at duplikere mapper"
+
+#~ msgid "You do not have permissions to move folders"
+#~ msgstr "Du har ikke tilladelse til at flytte mapper"
+
+#~ msgid "You do not have permissions to attach items to a folder"
+#~ msgstr "Du har ikke tilladelse til at vedhæfte elementer til en mappe"
+
+#~ msgid "Cannot create: item with the same folder type already exists."
+#~ msgstr "Kan ikke oprette: element med samme mappetype findes allerede."
+
+#~ msgid "Cannot update: item with the same folder type already exists."
+#~ msgstr "Kan ikke opdatere: element med samme mappetype findes allerede."
+
+#~ msgid "Cannot import: the DB is not compatible with the package version."
+#~ msgstr "Kan ikke importere: DB er ikke kompatibel med pakkeversionen."
+
+#~ msgid "Ok"
+#~ msgstr "Ok"
+
+#~ msgid ""
+#~ "To enable the folder manager for a custom post type, enter its identifier "
+#~ "below."
+#~ msgstr ""
+#~ "For at aktivere mappehåndteringen for en brugerdefineret posttype skal du "
+#~ "indtaste dens identifikator nedenfor."
+
+#~ msgid "Custom Post Type"
+#~ msgstr "Tilpasset indlægstype"
+
+#~ msgid "Add or delete a group for access to this folder type"
+#~ msgstr "Tilføj eller slet en gruppe for at få adgang til denne mappetype"
+
+#~ msgid "Add groups"
+#~ msgstr "Tilføj grupper"
+
+#~ msgid "Delete selected groups"
+#~ msgstr "Slet markerede grupper"
+
+#~ msgid "Group Name"
+#~ msgstr "Gruppenavn"
+
+#~ msgid "User Group"
+#~ msgstr "Bruger gruppe"
+
+#~ msgid "Group name"
+#~ msgstr "Gruppenavn"
+
+#~ msgid "Shared (users of this group will see each other's folders)"
+#~ msgstr "Delt (brugere af denne gruppe kan se hinandens mapper)"
+
+#~ msgid "Add a user to the group and set rights."
+#~ msgstr "Føj en bruger til gruppen, og angiv rettigheder."
+
+#~ msgid "Add user"
+#~ msgstr "Tilføj bruger"
+
+#~ msgid "User"
+#~ msgstr "Bruger"
+
+#~ msgid "Groups"
+#~ msgstr "Grupper"
+
+#~ msgid "Thanks for using our plugin!"
+#~ msgstr "Tak, fordi du bruger vores plugin!"
+
+#~ msgid "Please rate iFolders"
+#~ msgstr "Bedøm venligst iFolders"
+
+#~ msgid ""
+#~ "Get started with the free version of our plugin, which includes full "
+#~ "access for selected users to organize your WordPress Pages list and Media "
+#~ "library. For even more functionality, get the full power with the Pro "
+#~ "version! Upgrade today and take your website to the next level!"
+#~ msgstr ""
+#~ "Kom i gang med den gratis version af vores plugin, som inkluderer fuld "
+#~ "adgang for udvalgte brugere til at organisere din WordPress-sideliste og "
+#~ "mediebibliotek. For endnu mere funktionalitet, få den fulde kraft med Pro-"
+#~ "versionen! Opgrader i dag og tag dit websted til det næste niveau!"
+
+#~ msgid "Data"
+#~ msgstr "Data"
+
+#~ msgid "Use this section to set main plugin options."
+#~ msgstr ""
+#~ "Brug dette afsnit til at indstille de vigtigste plugin-indstillinger."
+
+#~ msgid "Only selected user roles have access to the folders"
+#~ msgstr "Kun udvalgte brugerroller har adgang til mapperne"
+
+#~ msgid ""
+#~ "(these are general settings, use the \"permissions\" tab to give the "
+#~ "final rights to users)"
+#~ msgstr ""
+#~ "(disse er generelle indstillinger, brug fanen \"Tilladelser\" til at give "
+#~ "de endelige rettigheder til brugerne)"
+
+#~ msgid "Disable ajax refresh in list view"
+#~ msgstr "Deaktiver ajax-opdatering i listevisning"
+
+#~ msgid "Uninstall fully"
+#~ msgstr "Afinstaller fuldt ud"
+
+#~ msgid "User Groups"
+#~ msgstr "Brugergrupper"
+
+#~ msgid "Add user group"
+#~ msgstr "Tilføj brugergruppe"
+
+#~ msgid "Shared"
+#~ msgstr "Delt"
+
+#~ msgid "Created"
+#~ msgstr "Oprettet"
+
+#~ msgid "Modified"
+#~ msgstr "Ændret"
+
+#~ msgid ""
+#~ "This section presents the types of folders (media, pages, posts, etc.) "
+#~ "supported by the plugin. In order for a user to access these folders, you "
+#~ "must add a group in which that user will have the specified rights. "
+#~ "Simply double-click on the folder type and add the selected group. After "
+#~ "this action the users of this group will have access to this folder type "
+#~ "depends on their rights."
+#~ msgstr ""
+#~ "Dette afsnit præsenterer de typer mapper (medier, sider, indlæg osv.), "
+#~ "Der understøttes af pluginet. Hvis en bruger skal have adgang til disse "
+#~ "mapper, skal du tilføje en gruppe, hvor brugeren har de angivne "
+#~ "rettigheder. Du skal blot dobbeltklikke på mappetypen og tilføje den "
+#~ "valgte gruppe. Efter denne handling vil brugerne af denne gruppe have "
+#~ "adgang til denne mappetype afhænger af deres rettigheder."
+
+#~ msgid "Folder Type Name"
+#~ msgstr "Navn på mappetype"
+
+#~ msgid "Attached Groups"
+#~ msgstr "Tilknyttede grupper"
+
+#~ msgid "Users Info"
+#~ msgstr "Oplysninger om brugere"
+
+#~ msgid ""
+#~ "This section shows brief information on users and their access to folders."
+#~ msgstr ""
+#~ "Dette afsnit indeholder korte oplysninger om brugere og deres adgang til "
+#~ "mapper."
+
+#~ msgid ""
+#~ "Use this section to view all existed folders and delete them if it's "
+#~ "needed, all sub folders are also will be deleted."
+#~ msgstr ""
+#~ "Brug dette afsnit til at se alle eksisterende mapper og slette dem, hvis "
+#~ "det er nødvendigt, alle undermapper slettes også."
+
+#~ msgid "Loading data..."
+#~ msgstr "Indlæser data..."
+
+#~ msgid "Folder Title"
+#~ msgstr "Mappe titel"
+
+#~ msgid "Owner"
+#~ msgstr "Ejer"
+
+#~ msgid "Group"
+#~ msgstr "Gruppe"
+
+#~ msgid "Delete All Folders"
+#~ msgstr "Slet alle mapper"
+
+#~ msgid "Backup and Restore"
+#~ msgstr "Sikkerhedskopiering og gendannelse"
+
+#~ msgid "Use this section to import / export plugin data."
+#~ msgstr "Brug dette afsnit til at importere / eksportere plugin-data."
+
+#~ msgid "All data will be exported from this plugin tables."
+#~ msgstr "Alle data eksporteres fra disse plugin-tabeller."
+
+#~ msgid "Choose a json file to import."
+#~ msgstr "Vælg en json-fil, der skal importeres."
+
+#~ msgid ""
+#~ "This action will delete data from this plugin tables, then import new "
+#~ "ones from a selected file."
+#~ msgstr ""
+#~ "Denne handling sletter data fra disse plugin-tabeller og importerer "
+#~ "derefter nye fra en valgt fil."
+
+#~ msgid "This action will delete data from this plugin tables."
+#~ msgstr "Denne handling sletter data fra disse plugin-tabeller."
+
+#~ msgid "Enter folder name..."
+#~ msgstr "Indtast mappenavn..."
+
+#~ msgid "Edit Folder"
+#~ msgstr "Rediger Mappe"

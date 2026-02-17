@@ -1,0 +1,324 @@
+2026-01-21T05:13:50+00:00 INFO Array
+(
+    [Webhook Delivery] => Array
+        (
+            [Delivery ID] => a1039d88a2b17ec2af313df3ed6f2c9b
+            [Date] => Jan 21, 2026 @ 5:13
+            [URL] => https://sr-go.shiprocket.in/wc/order/5499100
+            [Duration] => 0.13756
+            [Request] => Array
+                (
+                    [Method] => POST
+                    [Headers] => Array
+                        (
+                            [User-Agent] => WooCommerce/10.4.3 Hookshot (WordPress/6.9)
+                            [Content-Type] => application/json
+                            [X-WC-Webhook-Source] => https://nutra-vita.com/
+                            [X-WC-Webhook-Topic] => order.created
+                            [X-WC-Webhook-Resource] => order
+                            [X-WC-Webhook-Event] => created
+                            [X-WC-Webhook-Signature] => 6xGZoG9KQWiz+q97TTYMW4Y+N+U8Dsurer5uLrdYQxY=
+                            [X-WC-Webhook-ID] => 1
+                            [X-WC-Webhook-Delivery-ID] => a1039d88a2b17ec2af313df3ed6f2c9b
+                        )
+
+                )
+
+            [Body] => {\"id\":10426,\"parent_id\":0,\"status\":\"failed\",\"currency\":\"INR\",\"version\":\"10.4.3\",\"prices_include_tax\":false,\"date_created\":\"2026-01-05T11:04:32\",\"date_modified\":\"2026-01-05T11:05:04\",\"discount_total\":\"0.00\",\"discount_tax\":\"0.00\",\"shipping_total\":\"45.20\",\"shipping_tax\":\"0.00\",\"cart_tax\":\"40.46\",\"total\":\"894.66\",\"total_tax\":\"40.46\",\"customer_id\":1,\"order_key\":\"wc_order_TwYCRmZKLXyTq\",\"billing\":{\"first_name\":\"K\",\"last_name\":\"M\",\"company\":\"Vortex India\",\"address_1\":\"204 Mahan Terrace\",\"address_2\":\"Adajan road\",\"city\":\"surat\",\"state\":\"GJ\",\"postcode\":\"395009\",\"country\":\"IN\",\"email\":\"harsh@vortex.in\",\"phone\":\"+919898079319\"},\"shipping\":{\"first_name\":\"Harsh\",\"last_name\":\"Mehta\",\"company\":\"Vortex India\",\"address_1\":\"204 Mahan Terrace\",\"address_2\":\"Adajan road\",\"city\":\"surat\",\"state\":\"GJ\",\"postcode\":\"395009\",\"country\":\"IN\",\"phone\":\"\"},\"payment_method\":\"PhonePe Payment Solutions\",\"payment_method_title\":\"phonepe\",\"transaction_id\":\"1042620260105053434\",\"customer_ip_address\":\"116.72.15.169\",\"customer_user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36 Edg\\/143.0.0.0\",\"created_via\":\"checkout\",\"customer_note\":\"\",\"date_completed\":null,\"date_paid\":null,\"cart_hash\":\"3721d67bf56977e57cafeba54d3a04b2\",\"number\":\"10426\",\"meta_data\":[{\"id\":54881,\"key\":\"_billing_gst_number\",\"value\":\"1234567890\"},{\"id\":54882,\"key\":\"is_vat_exempt\",\"value\":\"no\"},{\"id\":54883,\"key\":\"_wc_order_attribution_source_type\",\"value\":\"typein\"},{\"id\":54884,\"key\":\"_wc_order_attribution_utm_source\",\"value\":\"(direct)\"},{\"id\":54885,\"key\":\"_wc_order_attribution_session_entry\",\"value\":\"https:\\/\\/nutra-vita.com\\/\"},{\"id\":54886,\"key\":\"_wc_order_attribution_session_start_time\",\"value\":\"2026-01-05 05:04:12\"},{\"id\":54887,\"key\":\"_wc_order_attribution_session_pages\",\"value\":\"2\"},{\"id\":54888,\"key\":\"_wc_order_attribution_session_count\",\"value\":\"1\"},{\"id\":54889,\"key\":\"_wc_order_attribution_user_agent\",\"value\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36 Edg\\/143.0.0.0\"},{\"id\":54890,\"key\":\"_wc_order_attribution_device_type\",\"value\":\"Desktop\"},{\"id\":54893,\"key\":\"_debug_log_source_pending_deletion\",\"value\":\"place-order-debug-d02fd743\"}],\"line_items\":[{\"id\":538,\"name\":\"Kaju Vanila Shrikhand\",\"product_id\":8666,\"variation_id\":0,\"quantity\":2,\"tax_class\":\"gst-5\",\"subtotal\":\"340.00\",\"subtotal_tax\":\"17.00\",\"total\":\"340.00\",\"total_tax\":\"17.00\",\"taxes\":[{\"id\":10,\"total\":\"8.50\",\"subtotal\":\"8.50\"},{\"id\":11,\"total\":\"8.50\",\"subtotal\":\"8.50\"}],\"meta_data\":[],\"sku\":\"1062P-125\",\"global_unique_id\":\"\",\"price\":170,\"image\":{\"id\":\"10038\",\"src\":\"https:\\/\\/nutra-vita.com\\/wp-content\\/uploads\\/2023\\/03\\/KV1.jpg\"},\"parent_name\":null},{\"id\":539,\"name\":\"Camel Milk Powder - 100 Gram\",\"product_id\":8608,\"variation_id\":9250,\"quantity\":1,\"tax_class\":\"gst-5\",\"subtotal\":\"469.00\",\"subtotal_tax\":\"23.46\",\"total\":\"469.00\",\"total_tax\":\"23.46\",\"taxes\":[{\"id\":10,\"total\":\"11.73\",\"subtotal\":\"11.73\"},{\"id\":11,\"total\":\"11.73\",\"subtotal\":\"11.73\"}],\"meta_data\":[{\"id\":3902,\"key\":\"pa_grams\",\"value\":\"100-gram\",\"display_key\":\"Grams\",\"display_value\":\"100 Gram\"}],\"sku\":\"1029P-100\",\"global_unique_id\":\"\",\"price\":469,\"image\":{\"id\":10023,\"src\":\"https:\\/\\/nutra-vita.com\\/wp-content\\/uploads\\/2023\\/03\\/CM-01-CROP.jpg\"},\"parent_name\":\"Camel Milk Powder\"}],\"tax_lines\":[{\"id\":541,\"rate_code\":\"IN-GJ-CGST 2.5%-1\",\"rate_id\":10,\"label\":\"CGST 2.5%\",\"compound\":false,\"tax_total\":\"20.23\",\"shipping_tax_total\":\"0.00\",\"rate_percent\":2.5,\"meta_data\":[]},{\"id\":542,\"rate_code\":\"IN-GJ-SGST 2.5%-2\",\"rate_id\":11,\"label\":\"SGST 2.5%\",\"compound\":false,\"tax_total\":\"20.23\",\"shipping_tax_total\":\"0.00\",\"rate_percent\":2.5,\"meta_data\":[]}],\"shipping_lines\":[{\"id\":540,\"method_title\":\"Xpressbees Surface ( Delivery By Jan 07, 2026)\",\"method_id\":\"shiprocket_woocommerce_shipping\",\"instance_id\":\"6\",\"total\":\"45.20\",\"total_tax\":\"0.00\",\"taxes\":[],\"tax_status\":\"taxable\",\"meta_data\":[{\"id\":3908,\"key\":\"ph_shiprocket_shipping_rates\",\"value\":{\"courier_company_id\":\"51\",\"uniqueId\":\"695b4d61567f1\",\"serviceId\":\"Xpressbees Surface\",\"carrierId\":\"51\",\"shiprocketTransactionId\":null},\"display_key\":\"ph_shiprocket_shipping_rates\",\"display_value\":{\"courier_company_id\":\"51\",\"uniqueId\":\"695b4d61567f1\",\"serviceId\":\"Xpressbees Surface\",\"carrierId\":\"51\",\"shiprocketTransactionId\":null}}]}],\"fee_lines\":[],\"coupon_lines\":[],\"refunds\":[],\"payment_url\":\"https:\\/\\/nutra-vita.com\\/checkout\\/order-pay\\/10426\\/?pay_for_order=true&key=wc_order_TwYCRmZKLXyTq\",\"is_editable\":false,\"needs_payment\":true,\"needs_processing\":true,\"date_created_gmt\":\"2026-01-05T05:34:32\",\"date_modified_gmt\":\"2026-01-05T05:35:04\",\"date_completed_gmt\":null,\"date_paid_gmt\":null,\"currency_symbol\":\"\\u20b9\",\"_links\":{\"self\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\\/10426\",\"targetHints\":{\"allow\":[\"GET\",\"POST\",\"PUT\",\"PATCH\",\"DELETE\"]}}],\"collection\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\"}],\"email_templates\":[{\"embeddable\":true,\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\\/10426\\/actions\\/email_templates\"}],\"customer\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/customers\\/1\"}]}}
+            [Response] => Array
+                (
+                    [Code] => 200
+                    [Message] => OK
+                    [Headers] => WpOrg\Requests\Utility\CaseInsensitiveDictionary Object
+                        (
+                            [data:protected] => Array
+                                (
+                                    [date] => Wed, 21 Jan 2026 05:13:50 GMT
+                                    [content-type] => text/plain; charset=utf-8
+                                    [server] => istio-envoy
+                                    [vary] => Accept-Encoding,Origin
+                                    [access-control-allow-credentials] => true
+                                    [access-control-allow-headers] => Content-Type, Authorization, Accept, Accept-Encoding, Accept-Language, Origin, Referer, Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site, User-Agent, Priority, Cookiie, No-Auth,X-Requested-With, Content-Type
+                                    [access-control-allow-methods] => GET, POST, PUT, PATCH, DELETE, OPTIONS
+                                    [content-encoding] => gzip
+                                    [x-envoy-upstream-service-time] => 14
+                                )
+
+                        )
+
+                    [Body] => {"response":"webhook received successfully","status":200}
+                )
+
+        )
+
+)
+2026-01-21T05:13:50+00:00 INFO Array
+(
+    [Webhook Delivery] => Array
+        (
+            [Delivery ID] => 57dfda0ca0bbb4dd8076f90e06896a56
+            [Date] => Jan 21, 2026 @ 5:13
+            [URL] => https://sr-go.shiprocket.in/wc/order/5499100
+            [Duration] => 0.04881
+            [Request] => Array
+                (
+                    [Method] => POST
+                    [Headers] => Array
+                        (
+                            [User-Agent] => WooCommerce/10.4.3 Hookshot (WordPress/6.9)
+                            [Content-Type] => application/json
+                            [X-WC-Webhook-Source] => https://nutra-vita.com/
+                            [X-WC-Webhook-Topic] => order.updated
+                            [X-WC-Webhook-Resource] => order
+                            [X-WC-Webhook-Event] => updated
+                            [X-WC-Webhook-Signature] => lHHSqzaoBPGeDRTQTqGG0t3PIJUrL1/uGjiiZ2Z1inQ=
+                            [X-WC-Webhook-ID] => 2
+                            [X-WC-Webhook-Delivery-ID] => 57dfda0ca0bbb4dd8076f90e06896a56
+                        )
+
+                )
+
+            [Body] => {\"id\":10426,\"parent_id\":0,\"status\":\"failed\",\"currency\":\"INR\",\"version\":\"10.4.3\",\"prices_include_tax\":false,\"date_created\":\"2026-01-05T11:04:32\",\"date_modified\":\"2026-01-05T11:05:04\",\"discount_total\":\"0.00\",\"discount_tax\":\"0.00\",\"shipping_total\":\"45.20\",\"shipping_tax\":\"0.00\",\"cart_tax\":\"40.46\",\"total\":\"894.66\",\"total_tax\":\"40.46\",\"customer_id\":1,\"order_key\":\"wc_order_TwYCRmZKLXyTq\",\"billing\":{\"first_name\":\"K\",\"last_name\":\"M\",\"company\":\"Vortex India\",\"address_1\":\"204 Mahan Terrace\",\"address_2\":\"Adajan road\",\"city\":\"surat\",\"state\":\"GJ\",\"postcode\":\"395009\",\"country\":\"IN\",\"email\":\"harsh@vortex.in\",\"phone\":\"+919898079319\"},\"shipping\":{\"first_name\":\"Harsh\",\"last_name\":\"Mehta\",\"company\":\"Vortex India\",\"address_1\":\"204 Mahan Terrace\",\"address_2\":\"Adajan road\",\"city\":\"surat\",\"state\":\"GJ\",\"postcode\":\"395009\",\"country\":\"IN\",\"phone\":\"\"},\"payment_method\":\"PhonePe Payment Solutions\",\"payment_method_title\":\"phonepe\",\"transaction_id\":\"1042620260105053434\",\"customer_ip_address\":\"116.72.15.169\",\"customer_user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36 Edg\\/143.0.0.0\",\"created_via\":\"checkout\",\"customer_note\":\"\",\"date_completed\":null,\"date_paid\":null,\"cart_hash\":\"3721d67bf56977e57cafeba54d3a04b2\",\"number\":\"10426\",\"meta_data\":[{\"id\":54881,\"key\":\"_billing_gst_number\",\"value\":\"1234567890\"},{\"id\":54882,\"key\":\"is_vat_exempt\",\"value\":\"no\"},{\"id\":54883,\"key\":\"_wc_order_attribution_source_type\",\"value\":\"typein\"},{\"id\":54884,\"key\":\"_wc_order_attribution_utm_source\",\"value\":\"(direct)\"},{\"id\":54885,\"key\":\"_wc_order_attribution_session_entry\",\"value\":\"https:\\/\\/nutra-vita.com\\/\"},{\"id\":54886,\"key\":\"_wc_order_attribution_session_start_time\",\"value\":\"2026-01-05 05:04:12\"},{\"id\":54887,\"key\":\"_wc_order_attribution_session_pages\",\"value\":\"2\"},{\"id\":54888,\"key\":\"_wc_order_attribution_session_count\",\"value\":\"1\"},{\"id\":54889,\"key\":\"_wc_order_attribution_user_agent\",\"value\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36 Edg\\/143.0.0.0\"},{\"id\":54890,\"key\":\"_wc_order_attribution_device_type\",\"value\":\"Desktop\"},{\"id\":54893,\"key\":\"_debug_log_source_pending_deletion\",\"value\":\"place-order-debug-d02fd743\"}],\"line_items\":[{\"id\":538,\"name\":\"Kaju Vanila Shrikhand\",\"product_id\":8666,\"variation_id\":0,\"quantity\":2,\"tax_class\":\"gst-5\",\"subtotal\":\"340.00\",\"subtotal_tax\":\"17.00\",\"total\":\"340.00\",\"total_tax\":\"17.00\",\"taxes\":[{\"id\":10,\"total\":\"8.50\",\"subtotal\":\"8.50\"},{\"id\":11,\"total\":\"8.50\",\"subtotal\":\"8.50\"}],\"meta_data\":[],\"sku\":\"1062P-125\",\"global_unique_id\":\"\",\"price\":170,\"image\":{\"id\":\"10038\",\"src\":\"https:\\/\\/nutra-vita.com\\/wp-content\\/uploads\\/2023\\/03\\/KV1.jpg\"},\"parent_name\":null},{\"id\":539,\"name\":\"Camel Milk Powder - 100 Gram\",\"product_id\":8608,\"variation_id\":9250,\"quantity\":1,\"tax_class\":\"gst-5\",\"subtotal\":\"469.00\",\"subtotal_tax\":\"23.46\",\"total\":\"469.00\",\"total_tax\":\"23.46\",\"taxes\":[{\"id\":10,\"total\":\"11.73\",\"subtotal\":\"11.73\"},{\"id\":11,\"total\":\"11.73\",\"subtotal\":\"11.73\"}],\"meta_data\":[{\"id\":3902,\"key\":\"pa_grams\",\"value\":\"100-gram\",\"display_key\":\"Grams\",\"display_value\":\"100 Gram\"}],\"sku\":\"1029P-100\",\"global_unique_id\":\"\",\"price\":469,\"image\":{\"id\":10023,\"src\":\"https:\\/\\/nutra-vita.com\\/wp-content\\/uploads\\/2023\\/03\\/CM-01-CROP.jpg\"},\"parent_name\":\"Camel Milk Powder\"}],\"tax_lines\":[{\"id\":541,\"rate_code\":\"IN-GJ-CGST 2.5%-1\",\"rate_id\":10,\"label\":\"CGST 2.5%\",\"compound\":false,\"tax_total\":\"20.23\",\"shipping_tax_total\":\"0.00\",\"rate_percent\":2.5,\"meta_data\":[]},{\"id\":542,\"rate_code\":\"IN-GJ-SGST 2.5%-2\",\"rate_id\":11,\"label\":\"SGST 2.5%\",\"compound\":false,\"tax_total\":\"20.23\",\"shipping_tax_total\":\"0.00\",\"rate_percent\":2.5,\"meta_data\":[]}],\"shipping_lines\":[{\"id\":540,\"method_title\":\"Xpressbees Surface ( Delivery By Jan 07, 2026)\",\"method_id\":\"shiprocket_woocommerce_shipping\",\"instance_id\":\"6\",\"total\":\"45.20\",\"total_tax\":\"0.00\",\"taxes\":[],\"tax_status\":\"taxable\",\"meta_data\":[{\"id\":3908,\"key\":\"ph_shiprocket_shipping_rates\",\"value\":{\"courier_company_id\":\"51\",\"uniqueId\":\"695b4d61567f1\",\"serviceId\":\"Xpressbees Surface\",\"carrierId\":\"51\",\"shiprocketTransactionId\":null},\"display_key\":\"ph_shiprocket_shipping_rates\",\"display_value\":{\"courier_company_id\":\"51\",\"uniqueId\":\"695b4d61567f1\",\"serviceId\":\"Xpressbees Surface\",\"carrierId\":\"51\",\"shiprocketTransactionId\":null}}]}],\"fee_lines\":[],\"coupon_lines\":[],\"refunds\":[],\"payment_url\":\"https:\\/\\/nutra-vita.com\\/checkout\\/order-pay\\/10426\\/?pay_for_order=true&key=wc_order_TwYCRmZKLXyTq\",\"is_editable\":false,\"needs_payment\":true,\"needs_processing\":true,\"date_created_gmt\":\"2026-01-05T05:34:32\",\"date_modified_gmt\":\"2026-01-05T05:35:04\",\"date_completed_gmt\":null,\"date_paid_gmt\":null,\"currency_symbol\":\"\\u20b9\",\"_links\":{\"self\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\\/10426\",\"targetHints\":{\"allow\":[\"GET\",\"POST\",\"PUT\",\"PATCH\",\"DELETE\"]}}],\"collection\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\"}],\"email_templates\":[{\"embeddable\":true,\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\\/10426\\/actions\\/email_templates\"}],\"customer\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/customers\\/1\"}]}}
+            [Response] => Array
+                (
+                    [Code] => 200
+                    [Message] => OK
+                    [Headers] => WpOrg\Requests\Utility\CaseInsensitiveDictionary Object
+                        (
+                            [data:protected] => Array
+                                (
+                                    [date] => Wed, 21 Jan 2026 05:13:50 GMT
+                                    [content-type] => text/plain; charset=utf-8
+                                    [server] => istio-envoy
+                                    [vary] => Accept-Encoding,Origin
+                                    [access-control-allow-credentials] => true
+                                    [access-control-allow-headers] => Content-Type, Authorization, Accept, Accept-Encoding, Accept-Language, Origin, Referer, Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site, User-Agent, Priority, Cookiie, No-Auth,X-Requested-With, Content-Type
+                                    [access-control-allow-methods] => GET, POST, PUT, PATCH, DELETE, OPTIONS
+                                    [content-encoding] => gzip
+                                    [x-envoy-upstream-service-time] => 11
+                                )
+
+                        )
+
+                    [Body] => {"response":"webhook received successfully","status":200}
+                )
+
+        )
+
+)
+2026-01-21T05:13:51+00:00 INFO Array
+(
+    [Webhook Delivery] => Array
+        (
+            [Delivery ID] => b3dee4c0abd17f371bd662bcb14bc62c
+            [Date] => Jan 21, 2026 @ 5:13
+            [URL] => https://sr-go.shiprocket.in/wc/order/5499100
+            [Duration] => 0.04866
+            [Request] => Array
+                (
+                    [Method] => POST
+                    [Headers] => Array
+                        (
+                            [User-Agent] => WooCommerce/10.4.3 Hookshot (WordPress/6.9)
+                            [Content-Type] => application/json
+                            [X-WC-Webhook-Source] => https://nutra-vita.com/
+                            [X-WC-Webhook-Topic] => order.created
+                            [X-WC-Webhook-Resource] => order
+                            [X-WC-Webhook-Event] => created
+                            [X-WC-Webhook-Signature] => xnjT+0TmaMmyu7yZtz8ALE1EFdDGuAGmwLXpH0ahJEk=
+                            [X-WC-Webhook-ID] => 1
+                            [X-WC-Webhook-Delivery-ID] => b3dee4c0abd17f371bd662bcb14bc62c
+                        )
+
+                )
+
+            [Body] => {\"id\":10427,\"parent_id\":0,\"status\":\"completed\",\"currency\":\"INR\",\"version\":\"10.4.3\",\"prices_include_tax\":false,\"date_created\":\"2026-01-08T18:12:59\",\"date_modified\":\"2026-01-09T18:34:21\",\"discount_total\":\"0.00\",\"discount_tax\":\"0.00\",\"shipping_total\":\"40.00\",\"shipping_tax\":\"0.00\",\"cart_tax\":\"12.80\",\"total\":\"308.80\",\"total_tax\":\"12.80\",\"customer_id\":98,\"order_key\":\"wc_order_UkWbedzds56lV\",\"billing\":{\"first_name\":\"Rajendra\",\"last_name\":\"verma\",\"company\":\"Aroamtic India\",\"address_1\":\"271, vikas Nagar, Nai Basti, Belaka, delhi Road, Alwar\",\"address_2\":\"\",\"city\":\"Alwar\",\"state\":\"RJ\",\"postcode\":\"301001\",\"country\":\"IN\",\"email\":\"aromaticdelight@outlook.com\",\"phone\":\"+918112243626\"},\"shipping\":{\"first_name\":\"Rajendra\",\"last_name\":\"verma\",\"company\":\"Aroamtic India\",\"address_1\":\"271, vikas Nagar, Nai Basti, Belaka, delhi Road, Alwar\",\"address_2\":\"\",\"city\":\"Alwar\",\"state\":\"RJ\",\"postcode\":\"301001\",\"country\":\"IN\",\"phone\":\"\"},\"payment_method\":\"PhonePe Payment Solutions\",\"payment_method_title\":\"phonepe\",\"transaction_id\":\"1042720260108124300\",\"customer_ip_address\":\"47.15.103.207\",\"customer_user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\",\"created_via\":\"checkout\",\"customer_note\":\"\",\"date_completed\":\"2026-01-09T18:34:21\",\"date_paid\":\"2026-01-08T18:13:35\",\"cart_hash\":\"90eb0aae177837f0004327938e5e6579\",\"number\":\"10427\",\"meta_data\":[{\"id\":55460,\"key\":\"_billing_gst_number\",\"value\":\"08CCMPK2314M1ZD\"},{\"id\":55461,\"key\":\"is_vat_exempt\",\"value\":\"no\"},{\"id\":55462,\"key\":\"_wc_order_attribution_source_type\",\"value\":\"typein\"},{\"id\":55463,\"key\":\"_wc_order_attribution_utm_source\",\"value\":\"(direct)\"},{\"id\":55464,\"key\":\"_wc_order_attribution_session_entry\",\"value\":\"https:\\/\\/nutra-vita.com\\/\"},{\"id\":55465,\"key\":\"_wc_order_attribution_session_start_time\",\"value\":\"2026-01-08 12:04:39\"},{\"id\":55466,\"key\":\"_wc_order_attribution_session_pages\",\"value\":\"5\"},{\"id\":55467,\"key\":\"_wc_order_attribution_session_count\",\"value\":\"1\"},{\"id\":55468,\"key\":\"_wc_order_attribution_user_agent\",\"value\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\"},{\"id\":55469,\"key\":\"_wc_order_attribution_device_type\",\"value\":\"Desktop\"},{\"id\":55472,\"key\":\"_debug_log_source_pending_deletion\",\"value\":\"place-order-debug-306c46c7\"}],\"line_items\":[{\"id\":543,\"name\":\"Vegan Parmesan Cheese Powder - 100 Gram\",\"product_id\":10207,\"variation_id\":10209,\"quantity\":1,\"tax_class\":\"gst-5\",\"subtotal\":\"256.00\",\"subtotal_tax\":\"12.80\",\"total\":\"256.00\",\"total_tax\":\"12.80\",\"taxes\":[{\"id\":12,\"total\":\"12.80\",\"subtotal\":\"12.80\"}],\"meta_data\":[{\"id\":3930,\"key\":\"pa_grams\",\"value\":\"100-gram\",\"display_key\":\"Grams\",\"display_value\":\"100 Gram\"}],\"sku\":\"1073P-100\",\"global_unique_id\":\"\",\"price\":256,\"image\":{\"id\":10210,\"src\":\"https:\\/\\/nutra-vita.com\\/wp-content\\/uploads\\/2025\\/04\\/Vegan-PMP-2.jpg\"},\"parent_name\":\"Vegan Parmesan Cheese Powder\"}],\"tax_lines\":[{\"id\":545,\"rate_code\":\"IN-IGST 5%-1\",\"rate_id\":12,\"label\":\"IGST 5%\",\"compound\":false,\"tax_total\":\"12.80\",\"shipping_tax_total\":\"0.00\",\"rate_percent\":5,\"meta_data\":[]}],\"shipping_lines\":[{\"id\":544,\"method_title\":\"Shipping Rate\",\"method_id\":\"shiprocket_woocommerce_shipping\",\"instance_id\":\"6\",\"total\":\"40.00\",\"total_tax\":\"0.00\",\"taxes\":[],\"tax_status\":\"taxable\",\"meta_data\":[{\"id\":3936,\"key\":\"ph_shiprocket_shipping_rates\",\"value\":{\"courier_company_id\":\"0\",\"uniqueId\":\"695fa6534657b\",\"serviceId\":\"\",\"carrierId\":\"0\",\"shiprocketTransactionId\":null},\"display_key\":\"ph_shiprocket_shipping_rates\",\"display_value\":{\"courier_company_id\":\"0\",\"uniqueId\":\"695fa6534657b\",\"serviceId\":\"\",\"carrierId\":\"0\",\"shiprocketTransactionId\":null}}]}],\"fee_lines\":[],\"coupon_lines\":[],\"refunds\":[],\"payment_url\":\"https:\\/\\/nutra-vita.com\\/checkout\\/order-pay\\/10427\\/?pay_for_order=true&key=wc_order_UkWbedzds56lV\",\"is_editable\":false,\"needs_payment\":false,\"needs_processing\":true,\"date_created_gmt\":\"2026-01-08T12:42:59\",\"date_modified_gmt\":\"2026-01-09T13:04:21\",\"date_completed_gmt\":\"2026-01-09T13:04:21\",\"date_paid_gmt\":\"2026-01-08T12:43:35\",\"currency_symbol\":\"\\u20b9\",\"_links\":{\"self\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\\/10427\",\"targetHints\":{\"allow\":[\"GET\",\"POST\",\"PUT\",\"PATCH\",\"DELETE\"]}}],\"collection\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\"}],\"email_templates\":[{\"embeddable\":true,\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\\/10427\\/actions\\/email_templates\"}],\"customer\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/customers\\/98\"}]}}
+            [Response] => Array
+                (
+                    [Code] => 200
+                    [Message] => OK
+                    [Headers] => WpOrg\Requests\Utility\CaseInsensitiveDictionary Object
+                        (
+                            [data:protected] => Array
+                                (
+                                    [date] => Wed, 21 Jan 2026 05:13:51 GMT
+                                    [content-type] => text/plain; charset=utf-8
+                                    [server] => istio-envoy
+                                    [vary] => Accept-Encoding,Origin
+                                    [access-control-allow-credentials] => true
+                                    [access-control-allow-headers] => Content-Type, Authorization, Accept, Accept-Encoding, Accept-Language, Origin, Referer, Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site, User-Agent, Priority, Cookiie, No-Auth,X-Requested-With, Content-Type
+                                    [access-control-allow-methods] => GET, POST, PUT, PATCH, DELETE, OPTIONS
+                                    [content-encoding] => gzip
+                                    [x-envoy-upstream-service-time] => 11
+                                )
+
+                        )
+
+                    [Body] => {"response":"webhook received successfully","status":200}
+                )
+
+        )
+
+)
+2026-01-21T05:13:51+00:00 INFO Array
+(
+    [Webhook Delivery] => Array
+        (
+            [Delivery ID] => 014f9e68f3c1160ecb35da907ebb9bc1
+            [Date] => Jan 21, 2026 @ 5:13
+            [URL] => https://sr-go.shiprocket.in/wc/order/5499100
+            [Duration] => 0.05946
+            [Request] => Array
+                (
+                    [Method] => POST
+                    [Headers] => Array
+                        (
+                            [User-Agent] => WooCommerce/10.4.3 Hookshot (WordPress/6.9)
+                            [Content-Type] => application/json
+                            [X-WC-Webhook-Source] => https://nutra-vita.com/
+                            [X-WC-Webhook-Topic] => order.updated
+                            [X-WC-Webhook-Resource] => order
+                            [X-WC-Webhook-Event] => updated
+                            [X-WC-Webhook-Signature] => vRvmJibi7YRG7tew1uUn+J6c0UlZSl63L2ePVbxt9oo=
+                            [X-WC-Webhook-ID] => 2
+                            [X-WC-Webhook-Delivery-ID] => 014f9e68f3c1160ecb35da907ebb9bc1
+                        )
+
+                )
+
+            [Body] => {\"id\":10427,\"parent_id\":0,\"status\":\"completed\",\"currency\":\"INR\",\"version\":\"10.4.3\",\"prices_include_tax\":false,\"date_created\":\"2026-01-08T18:12:59\",\"date_modified\":\"2026-01-09T18:34:21\",\"discount_total\":\"0.00\",\"discount_tax\":\"0.00\",\"shipping_total\":\"40.00\",\"shipping_tax\":\"0.00\",\"cart_tax\":\"12.80\",\"total\":\"308.80\",\"total_tax\":\"12.80\",\"customer_id\":98,\"order_key\":\"wc_order_UkWbedzds56lV\",\"billing\":{\"first_name\":\"Rajendra\",\"last_name\":\"verma\",\"company\":\"Aroamtic India\",\"address_1\":\"271, vikas Nagar, Nai Basti, Belaka, delhi Road, Alwar\",\"address_2\":\"\",\"city\":\"Alwar\",\"state\":\"RJ\",\"postcode\":\"301001\",\"country\":\"IN\",\"email\":\"aromaticdelight@outlook.com\",\"phone\":\"+918112243626\"},\"shipping\":{\"first_name\":\"Rajendra\",\"last_name\":\"verma\",\"company\":\"Aroamtic India\",\"address_1\":\"271, vikas Nagar, Nai Basti, Belaka, delhi Road, Alwar\",\"address_2\":\"\",\"city\":\"Alwar\",\"state\":\"RJ\",\"postcode\":\"301001\",\"country\":\"IN\",\"phone\":\"\"},\"payment_method\":\"PhonePe Payment Solutions\",\"payment_method_title\":\"phonepe\",\"transaction_id\":\"1042720260108124300\",\"customer_ip_address\":\"47.15.103.207\",\"customer_user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\",\"created_via\":\"checkout\",\"customer_note\":\"\",\"date_completed\":\"2026-01-09T18:34:21\",\"date_paid\":\"2026-01-08T18:13:35\",\"cart_hash\":\"90eb0aae177837f0004327938e5e6579\",\"number\":\"10427\",\"meta_data\":[{\"id\":55460,\"key\":\"_billing_gst_number\",\"value\":\"08CCMPK2314M1ZD\"},{\"id\":55461,\"key\":\"is_vat_exempt\",\"value\":\"no\"},{\"id\":55462,\"key\":\"_wc_order_attribution_source_type\",\"value\":\"typein\"},{\"id\":55463,\"key\":\"_wc_order_attribution_utm_source\",\"value\":\"(direct)\"},{\"id\":55464,\"key\":\"_wc_order_attribution_session_entry\",\"value\":\"https:\\/\\/nutra-vita.com\\/\"},{\"id\":55465,\"key\":\"_wc_order_attribution_session_start_time\",\"value\":\"2026-01-08 12:04:39\"},{\"id\":55466,\"key\":\"_wc_order_attribution_session_pages\",\"value\":\"5\"},{\"id\":55467,\"key\":\"_wc_order_attribution_session_count\",\"value\":\"1\"},{\"id\":55468,\"key\":\"_wc_order_attribution_user_agent\",\"value\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\"},{\"id\":55469,\"key\":\"_wc_order_attribution_device_type\",\"value\":\"Desktop\"},{\"id\":55472,\"key\":\"_debug_log_source_pending_deletion\",\"value\":\"place-order-debug-306c46c7\"}],\"line_items\":[{\"id\":543,\"name\":\"Vegan Parmesan Cheese Powder - 100 Gram\",\"product_id\":10207,\"variation_id\":10209,\"quantity\":1,\"tax_class\":\"gst-5\",\"subtotal\":\"256.00\",\"subtotal_tax\":\"12.80\",\"total\":\"256.00\",\"total_tax\":\"12.80\",\"taxes\":[{\"id\":12,\"total\":\"12.80\",\"subtotal\":\"12.80\"}],\"meta_data\":[{\"id\":3930,\"key\":\"pa_grams\",\"value\":\"100-gram\",\"display_key\":\"Grams\",\"display_value\":\"100 Gram\"}],\"sku\":\"1073P-100\",\"global_unique_id\":\"\",\"price\":256,\"image\":{\"id\":10210,\"src\":\"https:\\/\\/nutra-vita.com\\/wp-content\\/uploads\\/2025\\/04\\/Vegan-PMP-2.jpg\"},\"parent_name\":\"Vegan Parmesan Cheese Powder\"}],\"tax_lines\":[{\"id\":545,\"rate_code\":\"IN-IGST 5%-1\",\"rate_id\":12,\"label\":\"IGST 5%\",\"compound\":false,\"tax_total\":\"12.80\",\"shipping_tax_total\":\"0.00\",\"rate_percent\":5,\"meta_data\":[]}],\"shipping_lines\":[{\"id\":544,\"method_title\":\"Shipping Rate\",\"method_id\":\"shiprocket_woocommerce_shipping\",\"instance_id\":\"6\",\"total\":\"40.00\",\"total_tax\":\"0.00\",\"taxes\":[],\"tax_status\":\"taxable\",\"meta_data\":[{\"id\":3936,\"key\":\"ph_shiprocket_shipping_rates\",\"value\":{\"courier_company_id\":\"0\",\"uniqueId\":\"695fa6534657b\",\"serviceId\":\"\",\"carrierId\":\"0\",\"shiprocketTransactionId\":null},\"display_key\":\"ph_shiprocket_shipping_rates\",\"display_value\":{\"courier_company_id\":\"0\",\"uniqueId\":\"695fa6534657b\",\"serviceId\":\"\",\"carrierId\":\"0\",\"shiprocketTransactionId\":null}}]}],\"fee_lines\":[],\"coupon_lines\":[],\"refunds\":[],\"payment_url\":\"https:\\/\\/nutra-vita.com\\/checkout\\/order-pay\\/10427\\/?pay_for_order=true&key=wc_order_UkWbedzds56lV\",\"is_editable\":false,\"needs_payment\":false,\"needs_processing\":true,\"date_created_gmt\":\"2026-01-08T12:42:59\",\"date_modified_gmt\":\"2026-01-09T13:04:21\",\"date_completed_gmt\":\"2026-01-09T13:04:21\",\"date_paid_gmt\":\"2026-01-08T12:43:35\",\"currency_symbol\":\"\\u20b9\",\"_links\":{\"self\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\\/10427\",\"targetHints\":{\"allow\":[\"GET\",\"POST\",\"PUT\",\"PATCH\",\"DELETE\"]}}],\"collection\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\"}],\"email_templates\":[{\"embeddable\":true,\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\\/10427\\/actions\\/email_templates\"}],\"customer\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/customers\\/98\"}]}}
+            [Response] => Array
+                (
+                    [Code] => 200
+                    [Message] => OK
+                    [Headers] => WpOrg\Requests\Utility\CaseInsensitiveDictionary Object
+                        (
+                            [data:protected] => Array
+                                (
+                                    [date] => Wed, 21 Jan 2026 05:13:51 GMT
+                                    [content-type] => text/plain; charset=utf-8
+                                    [server] => istio-envoy
+                                    [vary] => Accept-Encoding,Origin
+                                    [access-control-allow-credentials] => true
+                                    [access-control-allow-headers] => Content-Type, Authorization, Accept, Accept-Encoding, Accept-Language, Origin, Referer, Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site, User-Agent, Priority, Cookiie, No-Auth,X-Requested-With, Content-Type
+                                    [access-control-allow-methods] => GET, POST, PUT, PATCH, DELETE, OPTIONS
+                                    [content-encoding] => gzip
+                                    [x-envoy-upstream-service-time] => 3
+                                )
+
+                        )
+
+                    [Body] => {"response":"webhook received successfully","status":200}
+                )
+
+        )
+
+)
+2026-01-21T05:13:51+00:00 INFO Array
+(
+    [Webhook Delivery] => Array
+        (
+            [Delivery ID] => b3dee4c0abd17f371bd662bcb14bc62c
+            [Date] => Jan 21, 2026 @ 5:13
+            [URL] => https://sr-go.shiprocket.in/wc/order/5499100
+            [Duration] => 0.10593
+            [Request] => Array
+                (
+                    [Method] => POST
+                    [Headers] => Array
+                        (
+                            [User-Agent] => WooCommerce/10.4.3 Hookshot (WordPress/6.9)
+                            [Content-Type] => application/json
+                            [X-WC-Webhook-Source] => https://nutra-vita.com/
+                            [X-WC-Webhook-Topic] => order.created
+                            [X-WC-Webhook-Resource] => order
+                            [X-WC-Webhook-Event] => created
+                            [X-WC-Webhook-Signature] => cZ7V1lzE5bGUFE/5x3k2BZQkj7k2DTHJ+iti64XB47I=
+                            [X-WC-Webhook-ID] => 1
+                            [X-WC-Webhook-Delivery-ID] => b3dee4c0abd17f371bd662bcb14bc62c
+                        )
+
+                )
+
+            [Body] => {\"id\":10428,\"parent_id\":0,\"status\":\"completed\",\"currency\":\"INR\",\"version\":\"10.4.3\",\"prices_include_tax\":false,\"date_created\":\"2026-01-09T18:13:44\",\"date_modified\":\"2026-01-12T16:40:46\",\"discount_total\":\"0.00\",\"discount_tax\":\"0.00\",\"shipping_total\":\"206.60\",\"shipping_tax\":\"0.00\",\"cart_tax\":\"351.50\",\"total\":\"7588.10\",\"total_tax\":\"351.50\",\"customer_id\":99,\"order_key\":\"wc_order_a5aukejCZI14x\",\"billing\":{\"first_name\":\"Export Inspection Agency Chennai\",\"last_name\":\"PTP\",\"company\":\"Export Inspection Agency-Chennai\",\"address_1\":\"No.1 Gandhi Irwin Road\",\"address_2\":\"6th Floor, CMDA Tower II,\",\"city\":\"Chennai\",\"state\":\"TN\",\"postcode\":\"600008\",\"country\":\"IN\",\"email\":\"divyaharilaleia@gmail.com\",\"phone\":\"+919567351777\"},\"shipping\":{\"first_name\":\"Export Inspection Agency Chennai\",\"last_name\":\"PTP\",\"company\":\"Export Inspection Agency-Chennai\",\"address_1\":\"No.1 Gandhi Irwin Road\",\"address_2\":\"6th Floor, CMDA Tower II,\",\"city\":\"Chennai\",\"state\":\"TN\",\"postcode\":\"600008\",\"country\":\"IN\",\"phone\":\"\"},\"payment_method\":\"PhonePe Payment Solutions\",\"payment_method_title\":\"phonepe\",\"transaction_id\":\"1042820260109124346\",\"customer_ip_address\":\"115.99.15.74\",\"customer_user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\",\"created_via\":\"checkout\",\"customer_note\":\"\",\"date_completed\":\"2026-01-12T16:40:46\",\"date_paid\":\"2026-01-09T18:15:19\",\"cart_hash\":\"63e7fbc1a3472feb7e11e61f198f4ec9\",\"number\":\"10428\",\"meta_data\":[{\"id\":55584,\"key\":\"_billing_gst_number\",\"value\":\"33AAAGE0060R1ZI\"},{\"id\":55585,\"key\":\"is_vat_exempt\",\"value\":\"no\"},{\"id\":55586,\"key\":\"_wc_order_attribution_source_type\",\"value\":\"organic\"},{\"id\":55587,\"key\":\"_wc_order_attribution_referrer\",\"value\":\"https:\\/\\/www.google.com\\/\"},{\"id\":55588,\"key\":\"_wc_order_attribution_utm_source\",\"value\":\"google\"},{\"id\":55589,\"key\":\"_wc_order_attribution_utm_medium\",\"value\":\"organic\"},{\"id\":55590,\"key\":\"_wc_order_attribution_session_entry\",\"value\":\"https:\\/\\/nutra-vita.com\\/shop\\/\"},{\"id\":55591,\"key\":\"_wc_order_attribution_session_start_time\",\"value\":\"2026-01-09 11:57:23\"},{\"id\":55592,\"key\":\"_wc_order_attribution_session_pages\",\"value\":\"22\"},{\"id\":55593,\"key\":\"_wc_order_attribution_session_count\",\"value\":\"1\"},{\"id\":55594,\"key\":\"_wc_order_attribution_user_agent\",\"value\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\"},{\"id\":55595,\"key\":\"_wc_order_attribution_device_type\",\"value\":\"Desktop\"},{\"id\":55598,\"key\":\"_debug_log_source_pending_deletion\",\"value\":\"place-order-debug-22df5a76\"}],\"line_items\":[{\"id\":546,\"name\":\"Paneer Cubes - 100 Gram\",\"product_id\":8637,\"variation_id\":10266,\"quantity\":10,\"tax_class\":\"gst-5\",\"subtotal\":\"2370.00\",\"subtotal_tax\":\"118.50\",\"total\":\"2370.00\",\"total_tax\":\"118.50\",\"taxes\":[{\"id\":12,\"total\":\"118.50\",\"subtotal\":\"118.50\"}],\"meta_data\":[{\"id\":3952,\"key\":\"pa_grams\",\"value\":\"100-gram\",\"display_key\":\"Grams\",\"display_value\":\"100 Gram\"},{\"id\":3975,\"key\":\"_reduced_stock\",\"value\":\"10\",\"display_key\":\"_reduced_stock\",\"display_value\":\"10\"}],\"sku\":\"1044C-100\",\"global_unique_id\":\"\",\"price\":237,\"image\":{\"id\":9514,\"src\":\"https:\\/\\/nutra-vita.com\\/wp-content\\/uploads\\/2023\\/03\\/1044C-100-01-1.jpg\"},\"parent_name\":\"Paneer Cubes\"},{\"id\":547,\"name\":\"Paneer Cubes - 200 Gram\",\"product_id\":8637,\"variation_id\":10265,\"quantity\":10,\"tax_class\":\"gst-5\",\"subtotal\":\"4660.00\",\"subtotal_tax\":\"233.00\",\"total\":\"4660.00\",\"total_tax\":\"233.00\",\"taxes\":[{\"id\":12,\"total\":\"233.00\",\"subtotal\":\"233.00\"}],\"meta_data\":[{\"id\":3962,\"key\":\"pa_grams\",\"value\":\"200-gram\",\"display_key\":\"Grams\",\"display_value\":\"200 Gram\"},{\"id\":3976,\"key\":\"_reduced_stock\",\"value\":\"10\",\"display_key\":\"_reduced_stock\",\"display_value\":\"10\"}],\"sku\":\"1044C-200\",\"global_unique_id\":\"\",\"price\":466,\"image\":{\"id\":9514,\"src\":\"https:\\/\\/nutra-vita.com\\/wp-content\\/uploads\\/2023\\/03\\/1044C-100-01-1.jpg\"},\"parent_name\":\"Paneer Cubes\"}],\"tax_lines\":[{\"id\":549,\"rate_code\":\"IN-IGST 5%-1\",\"rate_id\":12,\"label\":\"IGST 5%\",\"compound\":false,\"tax_total\":\"351.50\",\"shipping_tax_total\":\"0.00\",\"rate_percent\":5,\"meta_data\":[]}],\"shipping_lines\":[{\"id\":548,\"method_title\":\"Ekart Surface 2kg ( Delivery By Jan 14, 2026)\",\"method_id\":\"shiprocket_woocommerce_shipping\",\"instance_id\":\"6\",\"total\":\"206.60\",\"total_tax\":\"0.00\",\"taxes\":[],\"tax_status\":\"taxable\",\"meta_data\":[{\"id\":3968,\"key\":\"ph_shiprocket_shipping_rates\",\"value\":{\"courier_company_id\":\"170\",\"uniqueId\":\"6960f7c2c20e0\",\"serviceId\":\"Ekart Surface 2kg\",\"carrierId\":\"170\",\"shiprocketTransactionId\":null},\"display_key\":\"ph_shiprocket_shipping_rates\",\"display_value\":{\"courier_company_id\":\"170\",\"uniqueId\":\"6960f7c2c20e0\",\"serviceId\":\"Ekart Surface 2kg\",\"carrierId\":\"170\",\"shiprocketTransactionId\":null}}]}],\"fee_lines\":[],\"coupon_lines\":[],\"refunds\":[],\"payment_url\":\"https:\\/\\/nutra-vita.com\\/checkout\\/order-pay\\/10428\\/?pay_for_order=true&key=wc_order_a5aukejCZI14x\",\"is_editable\":false,\"needs_payment\":false,\"needs_processing\":true,\"date_created_gmt\":\"2026-01-09T12:43:44\",\"date_modified_gmt\":\"2026-01-12T11:10:46\",\"date_completed_gmt\":\"2026-01-12T11:10:46\",\"date_paid_gmt\":\"2026-01-09T12:45:19\",\"currency_symbol\":\"\\u20b9\",\"_links\":{\"self\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\\/10428\",\"targetHints\":{\"allow\":[\"GET\",\"POST\",\"PUT\",\"PATCH\",\"DELETE\"]}}],\"collection\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\"}],\"email_templates\":[{\"embeddable\":true,\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\\/10428\\/actions\\/email_templates\"}],\"customer\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/customers\\/99\"}]}}
+            [Response] => Array
+                (
+                    [Code] => 200
+                    [Message] => OK
+                    [Headers] => WpOrg\Requests\Utility\CaseInsensitiveDictionary Object
+                        (
+                            [data:protected] => Array
+                                (
+                                    [date] => Wed, 21 Jan 2026 05:13:51 GMT
+                                    [content-type] => text/plain; charset=utf-8
+                                    [server] => istio-envoy
+                                    [vary] => Accept-Encoding,Origin
+                                    [access-control-allow-credentials] => true
+                                    [access-control-allow-headers] => Content-Type, Authorization, Accept, Accept-Encoding, Accept-Language, Origin, Referer, Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site, User-Agent, Priority, Cookiie, No-Auth,X-Requested-With, Content-Type
+                                    [access-control-allow-methods] => GET, POST, PUT, PATCH, DELETE, OPTIONS
+                                    [content-encoding] => gzip
+                                    [x-envoy-upstream-service-time] => 4
+                                )
+
+                        )
+
+                    [Body] => {"response":"webhook received successfully","status":200}
+                )
+
+        )
+
+)
+2026-01-21T05:13:51+00:00 INFO Array
+(
+    [Webhook Delivery] => Array
+        (
+            [Delivery ID] => 014f9e68f3c1160ecb35da907ebb9bc1
+            [Date] => Jan 21, 2026 @ 5:13
+            [URL] => https://sr-go.shiprocket.in/wc/order/5499100
+            [Duration] => 0.07561
+            [Request] => Array
+                (
+                    [Method] => POST
+                    [Headers] => Array
+                        (
+                            [User-Agent] => WooCommerce/10.4.3 Hookshot (WordPress/6.9)
+                            [Content-Type] => application/json
+                            [X-WC-Webhook-Source] => https://nutra-vita.com/
+                            [X-WC-Webhook-Topic] => order.updated
+                            [X-WC-Webhook-Resource] => order
+                            [X-WC-Webhook-Event] => updated
+                            [X-WC-Webhook-Signature] => KHkzZZwXBhA6Pemwlaq/Tcg/OtCkotXat1Wm5+2zPWY=
+                            [X-WC-Webhook-ID] => 2
+                            [X-WC-Webhook-Delivery-ID] => 014f9e68f3c1160ecb35da907ebb9bc1
+                        )
+
+                )
+
+            [Body] => {\"id\":10428,\"parent_id\":0,\"status\":\"completed\",\"currency\":\"INR\",\"version\":\"10.4.3\",\"prices_include_tax\":false,\"date_created\":\"2026-01-09T18:13:44\",\"date_modified\":\"2026-01-12T16:40:46\",\"discount_total\":\"0.00\",\"discount_tax\":\"0.00\",\"shipping_total\":\"206.60\",\"shipping_tax\":\"0.00\",\"cart_tax\":\"351.50\",\"total\":\"7588.10\",\"total_tax\":\"351.50\",\"customer_id\":99,\"order_key\":\"wc_order_a5aukejCZI14x\",\"billing\":{\"first_name\":\"Export Inspection Agency Chennai\",\"last_name\":\"PTP\",\"company\":\"Export Inspection Agency-Chennai\",\"address_1\":\"No.1 Gandhi Irwin Road\",\"address_2\":\"6th Floor, CMDA Tower II,\",\"city\":\"Chennai\",\"state\":\"TN\",\"postcode\":\"600008\",\"country\":\"IN\",\"email\":\"divyaharilaleia@gmail.com\",\"phone\":\"+919567351777\"},\"shipping\":{\"first_name\":\"Export Inspection Agency Chennai\",\"last_name\":\"PTP\",\"company\":\"Export Inspection Agency-Chennai\",\"address_1\":\"No.1 Gandhi Irwin Road\",\"address_2\":\"6th Floor, CMDA Tower II,\",\"city\":\"Chennai\",\"state\":\"TN\",\"postcode\":\"600008\",\"country\":\"IN\",\"phone\":\"\"},\"payment_method\":\"PhonePe Payment Solutions\",\"payment_method_title\":\"phonepe\",\"transaction_id\":\"1042820260109124346\",\"customer_ip_address\":\"115.99.15.74\",\"customer_user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\",\"created_via\":\"checkout\",\"customer_note\":\"\",\"date_completed\":\"2026-01-12T16:40:46\",\"date_paid\":\"2026-01-09T18:15:19\",\"cart_hash\":\"63e7fbc1a3472feb7e11e61f198f4ec9\",\"number\":\"10428\",\"meta_data\":[{\"id\":55584,\"key\":\"_billing_gst_number\",\"value\":\"33AAAGE0060R1ZI\"},{\"id\":55585,\"key\":\"is_vat_exempt\",\"value\":\"no\"},{\"id\":55586,\"key\":\"_wc_order_attribution_source_type\",\"value\":\"organic\"},{\"id\":55587,\"key\":\"_wc_order_attribution_referrer\",\"value\":\"https:\\/\\/www.google.com\\/\"},{\"id\":55588,\"key\":\"_wc_order_attribution_utm_source\",\"value\":\"google\"},{\"id\":55589,\"key\":\"_wc_order_attribution_utm_medium\",\"value\":\"organic\"},{\"id\":55590,\"key\":\"_wc_order_attribution_session_entry\",\"value\":\"https:\\/\\/nutra-vita.com\\/shop\\/\"},{\"id\":55591,\"key\":\"_wc_order_attribution_session_start_time\",\"value\":\"2026-01-09 11:57:23\"},{\"id\":55592,\"key\":\"_wc_order_attribution_session_pages\",\"value\":\"22\"},{\"id\":55593,\"key\":\"_wc_order_attribution_session_count\",\"value\":\"1\"},{\"id\":55594,\"key\":\"_wc_order_attribution_user_agent\",\"value\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\"},{\"id\":55595,\"key\":\"_wc_order_attribution_device_type\",\"value\":\"Desktop\"},{\"id\":55598,\"key\":\"_debug_log_source_pending_deletion\",\"value\":\"place-order-debug-22df5a76\"}],\"line_items\":[{\"id\":546,\"name\":\"Paneer Cubes - 100 Gram\",\"product_id\":8637,\"variation_id\":10266,\"quantity\":10,\"tax_class\":\"gst-5\",\"subtotal\":\"2370.00\",\"subtotal_tax\":\"118.50\",\"total\":\"2370.00\",\"total_tax\":\"118.50\",\"taxes\":[{\"id\":12,\"total\":\"118.50\",\"subtotal\":\"118.50\"}],\"meta_data\":[{\"id\":3952,\"key\":\"pa_grams\",\"value\":\"100-gram\",\"display_key\":\"Grams\",\"display_value\":\"100 Gram\"},{\"id\":3975,\"key\":\"_reduced_stock\",\"value\":\"10\",\"display_key\":\"_reduced_stock\",\"display_value\":\"10\"}],\"sku\":\"1044C-100\",\"global_unique_id\":\"\",\"price\":237,\"image\":{\"id\":9514,\"src\":\"https:\\/\\/nutra-vita.com\\/wp-content\\/uploads\\/2023\\/03\\/1044C-100-01-1.jpg\"},\"parent_name\":\"Paneer Cubes\"},{\"id\":547,\"name\":\"Paneer Cubes - 200 Gram\",\"product_id\":8637,\"variation_id\":10265,\"quantity\":10,\"tax_class\":\"gst-5\",\"subtotal\":\"4660.00\",\"subtotal_tax\":\"233.00\",\"total\":\"4660.00\",\"total_tax\":\"233.00\",\"taxes\":[{\"id\":12,\"total\":\"233.00\",\"subtotal\":\"233.00\"}],\"meta_data\":[{\"id\":3962,\"key\":\"pa_grams\",\"value\":\"200-gram\",\"display_key\":\"Grams\",\"display_value\":\"200 Gram\"},{\"id\":3976,\"key\":\"_reduced_stock\",\"value\":\"10\",\"display_key\":\"_reduced_stock\",\"display_value\":\"10\"}],\"sku\":\"1044C-200\",\"global_unique_id\":\"\",\"price\":466,\"image\":{\"id\":9514,\"src\":\"https:\\/\\/nutra-vita.com\\/wp-content\\/uploads\\/2023\\/03\\/1044C-100-01-1.jpg\"},\"parent_name\":\"Paneer Cubes\"}],\"tax_lines\":[{\"id\":549,\"rate_code\":\"IN-IGST 5%-1\",\"rate_id\":12,\"label\":\"IGST 5%\",\"compound\":false,\"tax_total\":\"351.50\",\"shipping_tax_total\":\"0.00\",\"rate_percent\":5,\"meta_data\":[]}],\"shipping_lines\":[{\"id\":548,\"method_title\":\"Ekart Surface 2kg ( Delivery By Jan 14, 2026)\",\"method_id\":\"shiprocket_woocommerce_shipping\",\"instance_id\":\"6\",\"total\":\"206.60\",\"total_tax\":\"0.00\",\"taxes\":[],\"tax_status\":\"taxable\",\"meta_data\":[{\"id\":3968,\"key\":\"ph_shiprocket_shipping_rates\",\"value\":{\"courier_company_id\":\"170\",\"uniqueId\":\"6960f7c2c20e0\",\"serviceId\":\"Ekart Surface 2kg\",\"carrierId\":\"170\",\"shiprocketTransactionId\":null},\"display_key\":\"ph_shiprocket_shipping_rates\",\"display_value\":{\"courier_company_id\":\"170\",\"uniqueId\":\"6960f7c2c20e0\",\"serviceId\":\"Ekart Surface 2kg\",\"carrierId\":\"170\",\"shiprocketTransactionId\":null}}]}],\"fee_lines\":[],\"coupon_lines\":[],\"refunds\":[],\"payment_url\":\"https:\\/\\/nutra-vita.com\\/checkout\\/order-pay\\/10428\\/?pay_for_order=true&key=wc_order_a5aukejCZI14x\",\"is_editable\":false,\"needs_payment\":false,\"needs_processing\":true,\"date_created_gmt\":\"2026-01-09T12:43:44\",\"date_modified_gmt\":\"2026-01-12T11:10:46\",\"date_completed_gmt\":\"2026-01-12T11:10:46\",\"date_paid_gmt\":\"2026-01-09T12:45:19\",\"currency_symbol\":\"\\u20b9\",\"_links\":{\"self\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\\/10428\",\"targetHints\":{\"allow\":[\"GET\",\"POST\",\"PUT\",\"PATCH\",\"DELETE\"]}}],\"collection\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\"}],\"email_templates\":[{\"embeddable\":true,\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/orders\\/10428\\/actions\\/email_templates\"}],\"customer\":[{\"href\":\"https:\\/\\/nutra-vita.com\\/wp-json\\/wc\\/v3\\/customers\\/99\"}]}}
+            [Response] => Array
+                (
+                    [Code] => 200
+                    [Message] => OK
+                    [Headers] => WpOrg\Requests\Utility\CaseInsensitiveDictionary Object
+                        (
+                            [data:protected] => Array
+                                (
+                                    [date] => Wed, 21 Jan 2026 05:13:51 GMT
+                                    [content-type] => text/plain; charset=utf-8
+                                    [server] => istio-envoy
+                                    [vary] => Accept-Encoding,Origin
+                                    [access-control-allow-credentials] => true
+                                    [access-control-allow-headers] => Content-Type, Authorization, Accept, Accept-Encoding, Accept-Language, Origin, Referer, Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site, User-Agent, Priority, Cookiie, No-Auth,X-Requested-With, Content-Type
+                                    [access-control-allow-methods] => GET, POST, PUT, PATCH, DELETE, OPTIONS
+                                    [content-encoding] => gzip
+                                    [x-envoy-upstream-service-time] => 3
+                                )
+
+                        )
+
+                    [Body] => {"response":"webhook received successfully","status":200}
+                )
+
+        )
+
+)

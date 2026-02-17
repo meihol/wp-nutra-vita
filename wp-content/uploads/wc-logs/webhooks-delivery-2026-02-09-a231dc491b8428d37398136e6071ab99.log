@@ -1,0 +1,108 @@
+2026-02-09T07:28:02+00:00 INFO Array
+(
+    [Webhook Delivery] => Array
+        (
+            [Delivery ID] => 66a39ab501dcfb7caf7b7ab62c5e1f24
+            [Date] => Feb 9, 2026 @ 7:28
+            [URL] => https://sr-go.shiprocket.in/wc/order/5499100
+            [Duration] => 0.17017
+            [Request] => Array
+                (
+                    [Method] => POST
+                    [Headers] => Array
+                        (
+                            [User-Agent] => WooCommerce/10.5.0 Hookshot (WordPress/6.9.1)
+                            [Content-Type] => application/json
+                            [X-WC-Webhook-Source] => https://nutra-vita.com/
+                            [X-WC-Webhook-Topic] => order.created
+                            [X-WC-Webhook-Resource] => order
+                            [X-WC-Webhook-Event] => created
+                            [X-WC-Webhook-Signature] => r54Zg8N+mO7v70BbUJIAJQcXKGLSqjKkIbI1Wltw2AQ=
+                            [X-WC-Webhook-ID] => 1
+                            [X-WC-Webhook-Delivery-ID] => 66a39ab501dcfb7caf7b7ab62c5e1f24
+                        )
+
+                )
+
+            [Body] => Webhook body is not logged unless WP_DEBUG mode is turned on. This is to avoid the storing of personal data in the logs.
+            [Response] => Array
+                (
+                    [Code] => 200
+                    [Message] => OK
+                    [Headers] => WpOrg\Requests\Utility\CaseInsensitiveDictionary Object
+                        (
+                            [data:protected] => Array
+                                (
+                                    [date] => Mon, 09 Feb 2026 07:28:02 GMT
+                                    [content-type] => text/plain; charset=utf-8
+                                    [server] => istio-envoy
+                                    [vary] => Accept-Encoding,Origin
+                                    [access-control-allow-credentials] => true
+                                    [access-control-allow-headers] => Content-Type, Authorization, Accept, Accept-Encoding, Accept-Language, Origin, Referer, Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site, User-Agent, Priority, Cookiie, No-Auth,X-Requested-With, Content-Type
+                                    [access-control-allow-methods] => GET, POST, PUT, PATCH, DELETE, OPTIONS
+                                    [content-encoding] => gzip
+                                    [x-envoy-upstream-service-time] => 15
+                                )
+
+                        )
+
+                    [Body] => Webhook body is not logged unless WP_DEBUG mode is turned on. This is to avoid the storing of personal data in the logs.
+                )
+
+        )
+
+)
+2026-02-09T07:28:02+00:00 INFO Array
+(
+    [Webhook Delivery] => Array
+        (
+            [Delivery ID] => a5600714ce94e9b712cb9ad79b08cb0a
+            [Date] => Feb 9, 2026 @ 7:28
+            [URL] => https://sr-go.shiprocket.in/wc/order/5499100
+            [Duration] => 0.03798
+            [Request] => Array
+                (
+                    [Method] => POST
+                    [Headers] => Array
+                        (
+                            [User-Agent] => WooCommerce/10.5.0 Hookshot (WordPress/6.9.1)
+                            [Content-Type] => application/json
+                            [X-WC-Webhook-Source] => https://nutra-vita.com/
+                            [X-WC-Webhook-Topic] => order.updated
+                            [X-WC-Webhook-Resource] => order
+                            [X-WC-Webhook-Event] => updated
+                            [X-WC-Webhook-Signature] => LMmISuNX4uOkXa7I67kDWFeWfk57glXG2ABbtkLCSmw=
+                            [X-WC-Webhook-ID] => 2
+                            [X-WC-Webhook-Delivery-ID] => a5600714ce94e9b712cb9ad79b08cb0a
+                        )
+
+                )
+
+            [Body] => Webhook body is not logged unless WP_DEBUG mode is turned on. This is to avoid the storing of personal data in the logs.
+            [Response] => Array
+                (
+                    [Code] => 200
+                    [Message] => OK
+                    [Headers] => WpOrg\Requests\Utility\CaseInsensitiveDictionary Object
+                        (
+                            [data:protected] => Array
+                                (
+                                    [date] => Mon, 09 Feb 2026 07:28:02 GMT
+                                    [content-type] => text/plain; charset=utf-8
+                                    [server] => istio-envoy
+                                    [vary] => Accept-Encoding,Origin
+                                    [access-control-allow-credentials] => true
+                                    [access-control-allow-headers] => Content-Type, Authorization, Accept, Accept-Encoding, Accept-Language, Origin, Referer, Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site, User-Agent, Priority, Cookiie, No-Auth,X-Requested-With, Content-Type
+                                    [access-control-allow-methods] => GET, POST, PUT, PATCH, DELETE, OPTIONS
+                                    [content-encoding] => gzip
+                                    [x-envoy-upstream-service-time] => 6
+                                )
+
+                        )
+
+                    [Body] => Webhook body is not logged unless WP_DEBUG mode is turned on. This is to avoid the storing of personal data in the logs.
+                )
+
+        )
+
+)

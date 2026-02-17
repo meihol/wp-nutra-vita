@@ -1,0 +1,23 @@
+{
+    "ekommart_options_social_share": "1",
+    "ekommart_options_social_share_facebook": "1",
+    "ekommart_options_social_share_twitter": "1",
+    "ekommart_options_social_share_linkedin": "1",
+    "ekommart_options_social_share_pinterest": "1",
+    "ekommart_options_show_header_sticky": "1",
+    "ekommart_options_wocommerce_product_deal_ids": [
+        "5082",
+        "5078",
+        "5076",
+        "5073",
+        "4440"
+    ],
+    "ekommart_options_discount_type": "percentage_product_discount",
+    "ekommart_options_wocommerce_product_deal_discount_rate": "10",
+    "ekommart_options_wocommerce_product_deal_time_form": "2020-10-15",
+    "ekommart_options_wocommerce_product_deal_time_to": "2020-12-03",
+    "ekommart_options_wocommerce_product_deal_discount_sold": "99",
+    "ekommart_options_woocommerce_archive_layout": "default",
+    "ekommart_options_single_product_gallery_layout": "horizontal",
+    "ekommart_options_wocommerce_block_style": "1"
+}
