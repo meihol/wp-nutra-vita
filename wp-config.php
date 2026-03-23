@@ -21,16 +21,16 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'u731710703_nuTraVtAD' );
+define( 'DB_NAME', 'wp_nutravita_d' );
 
 /** Database username */
-define( 'DB_USER', 'u731710703_nuTraVtAU' );
+define( 'DB_USER', 'wp_nutravita_u' );
 
 /** Database password */
-define( 'DB_PASSWORD', '&9SEcSN!y' );
+define( 'DB_PASSWORD', 'UGQ+0^W=yk' );
 
 /** Database hostname */
-define( 'DB_HOST', '127.0.0.1' );
+define( 'DB_HOST', 'ec2-43-205-168-50.ap-south-1.compute.amazonaws.com' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
