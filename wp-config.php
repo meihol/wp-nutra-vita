@@ -91,9 +91,9 @@ define( 'WP_DEBUG', false );
 
 define( 'FS_METHOD', 'direct' );
 define( 'WP_AUTO_UPDATE_CORE', false );
-define( 'DISALLOW_FILE_EDIT', true );
-define( 'DISABLE_WP_CRON' , true );
-define( 'DISALLOW_FILE_MODS', true );
+// define( 'DISALLOW_FILE_EDIT', true );
+// define( 'DISABLE_WP_CRON' , true );
+// define( 'DISALLOW_FILE_MODS', true );
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
