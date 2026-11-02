@@ -2,12 +2,11 @@
 Contributors: marketingfire
 Tags: widget control, blocks, blocks visibility rules, gutenberg widgets, classic widgets
 Requires at least: 5.6
-Tested up to: 6.7
+Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 4.1.3
+Stable tag: 4.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-0ddcemmihs4a843ekhaoofzosrunf4bl
 
 Widget Options gives you super powers to control your site’s sidebar widgets and all Gutenberg blocks on pages, posts & other custom post types.
 
@@ -193,6 +192,39 @@ Widget Options is a featured pack fully lightweight plugin. Using Query Monitor 
 14. Elementor Pagebuilder Integration
 
 == Changelog ==
+
+= 4.2.5 =
+
+* Improved: Updated and tested for WordPress version 7.0
+
+= 4.2.4 =
+
+* Improved: Strengthened security for Authenticated (Contributor+) Remote Code Execution vulnerability
+* Added: “Talk with AI Assistant” button on the plugin page.
+
+= 4.2.3 =
+
+* Fixed: Resolved PHP deprecated issues within the plugin.
+* Fixed: Resolved authenticated (Contributor+) remote code execution vulnerability.
+* Fixed: Resolved additional security vulnerabilities in the Display Logic feature.
+* Fixed: Validation to block additional dangerous patterns in Display Logic expressions.
+* Improved: Validation of widgetopts-settings-nonce to unauthorized settings changes.
+
+= 4.2.2 =
+
+* Fix: Resolved plugin compatibility issues with non-native WP blocks, including ACF Pro, Kadence Blocks, and others.
+
+= 4.2.1 =
+
+* Fix: Added a Dismiss button and fixed the issue with hiding the Migration Notice.
+
+= 4.2.0 =
+
+* Improved: Added the new Display Logic Snippet System
+* Fix: Resolved issues where Widget Option settings on pages were not saving
+* Fix: Resolved Authenticated (Contributor+) Remote Code Execution vulnerability in the Display Logic feature
+* Fix: Resolved Remote Code Execution (RCE) vulnerability
+* Fix: Resolved Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection') vulnerability
 
 = 4.1.3 =
 

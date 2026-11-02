@@ -15,6 +15,7 @@ use Automattic\WooCommerce\Enums\ProductType;
 use Automattic\WooCommerce\Enums\CatalogVisibility;
 use Automattic\WooCommerce\Internal\Traits\RestApiCache;
 use Automattic\WooCommerce\Utilities\I18nUtil;
+use Automattic\WooCommerce\Utilities\MetaDataUtil;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -74,6 +75,23 @@ class WC_REST_Products_V2_Controller extends WC_REST_CRUD_Controller {
 	}
 
 	/**
+	 * Get the hooks relevant to response caching.
+	 *
+	 * @param WP_REST_Request<array<string, mixed>> $request     The request object.
+	 * @param string|null                           $endpoint_id Optional endpoint identifier.
+	 * @return array Array of hook names to track for cache invalidation.
+	 */
+	protected function get_hooks_relevant_to_caching( WP_REST_Request $request, ?string $endpoint_id = null ): array { // phpcs:ignore Squiz.Commenting.FunctionComment.IncorrectTypeHint
+		return array(
+			'woocommerce_rest_prepare_product_object',
+			'woocommerce_product_type_query',
+			'woocommerce_product_class',
+			'woocommerce_short_description',
+			'woocommerce_rest_product_object_query',
+		);
+	}
+
+	/**
 	 * Get data for ETag generation, excluding fields that change on each request.
 	 *
 	 * @param array                                 $data        Response data.
@@ -122,7 +140,10 @@ class WC_REST_Products_V2_Controller extends WC_REST_CRUD_Controller {
 					'methods'             => WP_REST_Server::READABLE,
 					'callback'            => $this->with_cache(
 						array( $this, 'get_items' ),
-						array( 'endpoint_id' => 'get_products' )
+						array(
+							'endpoint_id'              => 'get_products',
+							'relevant_version_strings' => array( 'list_products' ),
+						)
 					),
 					'permission_callback' => array( $this, 'get_items_permissions_check' ),
 					'args'                => $this->get_collection_params(),
@@ -509,6 +530,11 @@ class WC_REST_Products_V2_Controller extends WC_REST_CRUD_Controller {
 
 		// Add gallery images.
 		$attachment_ids = array_merge( $attachment_ids, $product->get_gallery_image_ids() );
+
+		if ( ! empty( $attachment_ids ) ) {
+			// Prime caches to reduce future queries.
+			_prime_post_caches( $attachment_ids );
+		}
 
 		// Build image data.
 		foreach ( $attachment_ids as $position => $attachment_id ) {
@@ -1399,11 +1425,7 @@ class WC_REST_Products_V2_Controller extends WC_REST_CRUD_Controller {
 		}
 
 		// Allow set meta_data.
-		if ( is_array( $request['meta_data'] ) ) {
-			foreach ( $request['meta_data'] as $meta ) {
-				$product->update_meta_data( $meta['key'], $meta['value'], isset( $meta['id'] ) ? $meta['id'] : '' );
-			}
-		}
+		MetaDataUtil::update( $request['meta_data'], $product );
 
 		/**
 		 * Filters an object before it is inserted via the REST API.

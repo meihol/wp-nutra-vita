@@ -159,14 +159,30 @@ class PPEX_PG_Network_Manager {
    */
 
   public function handle_callback($payload, $headers, $merchant_key, $key_index) {
-    $data = base64_decode($payload);
-    $data = json_decode($data, true);
+    // Fix 1: Reject immediately if Salt Key is not configured — an empty key degrades
+    // the HMAC to an unkeyed SHA-256 that any attacker can reproduce from the payload.
+    if (empty($merchant_key)) {
+      ppLogError("Callback rejected: Salt Key is not configured. Cannot validate callback signature.");
+      return null;
+    }
 
+    // 🔒 SECURITY FIX: Verify HMAC signature BEFORE decoding untrusted payload
+    // This prevents attackers from sending malicious payloads that get processed even with invalid signatures
     $generated_checksum = PPEX_Utils::generate_checksum_for_callback($payload, $merchant_key, $key_index);
 
     if ($headers != $generated_checksum) {
-      ppLogError("Invalid callback checksum for payload:" . $data);
-      return "Invalid Checksum";
+      // Log only a safe truncated version to prevent log injection attacks
+      ppLogError("Invalid callback checksum. Payload hash: " . substr(hash('sha256', $payload), 0, 16));
+      return null;
+    }
+
+    // ✅ Signature verified - NOW safe to decode the payload
+    $data = base64_decode($payload);
+    $data = json_decode($data, true);
+
+    if (!is_array($data)) {
+      ppLogError("Callback payload decoding failed after successful signature verification");
+      return null;
     }
 
     $ppex_pg_callback = PPEX_PG_Callback::get_instance_from($data);

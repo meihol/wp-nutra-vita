@@ -3,10 +3,10 @@ Contributors: tanvirul
 Tags: buy now, buy now button, quick buy, woocommerce quick buy, woocommerce direct checkout
 Requires PHP: 7.4
 Requires at least: 4.8
-Tested up to: 6.9
+Tested up to: 7.0
 WC requires at least: 4.5
-WC tested up to: 10.4
-Stable tag: 1.1.0
+WC tested up to: 10.8
+Stable tag: 1.1.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -122,14 +122,38 @@ If you are unable to use any of the methods due to internet connectivity and fil
 
 == Changelog ==
 
+= 1.1.6 =
+* Add - WordPress 7.0+ compatibility
+* Add - WooCommerce 10.8+ compatibility
+
+= 1.1.5 =
+* Add - WordPress playground blueprint
+
+= 1.1.4 =
+* Add - AJAX add to cart notices in Block Theme
+* Fix - Mini Cart Block fragment not updating with AJAX Add to Cart on Block Theme
+
+= 1.1.3 =
+* Add - WooCommerce 10.7 compatibility
+* Fix - Sold individually products cart adding issue
+
+= 1.1.2 =
+* Add - WooCommerce 10.6 compatibility
+* Fix - Button class missing on block theme
+
+= 1.1.1 =
+* Add - WooCommerce 10.5 compatibility
+* Fix - Ajax Add to Cart trigger on buy now button
+* Fix - Button click on no variation selected
+
 = 1.1.0 =
 * Add - Shortcode
 * Add - Popup checkout
 * Add - Ajax Add to Cart
-* Update - Settings
-* Update - Codebase
 * Add - WordPress 6.9+ compatibility
 * Add - WooCommerce 10.4+ compatibility
+* Update - Settings
+* Update - Codebase
 
 = 1.0.16 =
 * Add - WooCommerce 10.1+ compatibility

@@ -2,8 +2,8 @@
 Contributors: metagauss
 Tags: plugin, plugins, download-plugin, download-plugin-zip, plugin-zip, download, zip, wordpress, admin, download-plugin-from-wordpress-admin-panel, code, development, plugin-download
 Requires at least: 2.7
-Tested up to: 6.8
-Stable tag: 2.3.1
+Tested up to: 7.0
+Stable tag: 2.4.6
 License: GPLv3
 
 Download any plugin from your WordPress admin panel's Plugins page by just one click! Now, download themes, users, blog posts, pages, custom posts, comments, attachments and much more.
@@ -12,7 +12,7 @@ Download any plugin from your WordPress admin panel's Plugins page by just one c
 
 = Download Plugin for WordPress =
  
-Download Plugin can easily download plugins, themes, users, blog posts, pages, comments, attachments, and more directly from your WordPress dashboard. Download Plugin can also download data from any plugin that uses custom post types, including WooCommerce products, Easy Digital Downloads, Portfolio Post Types, Slider Revolution, bbPress, WP Job Manager, JetPack, and many more.
+Download Plugin can easily download plugins, themes, users, blog posts, pages, comments, attachments, and more directly from your admin WordPress dashboard. Download Plugin can also download data from any plugin that uses custom post types, including WooCommerce products, Easy Digital Downloads, Portfolio Post Types, Slider Revolution, bbPress, WP Job Manager, JetPack, and many more.
  
 **Download Plugins**: A download button is placed beside each plugin, allowing you to download the plugin in a zip file format. You can also select multiple plugins and use the bulk download option to download all selected plugins with a single click.
 
@@ -33,13 +33,23 @@ Download Plugin can easily download plugins, themes, users, blog posts, pages, c
 3. Click on any of them and that plugin's zip will be downloaded to your computer.
 4. Cheers!
 
->Must-have utility plugin that allows you to download any plugin directly from WordPress Dashboard! 
+**Upload Multiple Plugins**: Upload multiple WordPress plugin from plugin admin in one go. Save time and get started quickly.  
+ 
+**Download WordPress Site [Pro]**: Download WordPress site as backup, with or without database and media files. Upload or restore the site as required.   
+
+**Upload Pages, Posts, Users, Comments [Pro]**: Upload pages, upload posts, upload users and upload comments using Download plugin pro feature.
+
+== About Download Plugin ==
+
+Download plugin is a must-have utility plugin that allows you to download any plugin directly from WordPress Dashboard! 
 
 WordPress download plugin is a utility plugin that does one thing, and does it perfectly. It may sound simple, but this feature plugs a hole in current set of WordPress plugin functionality. As a site admin you must be aware that you can search and install WordPress plugins directly from the dashboard, or you can upload the plugin as zip files, assuming you received it from another site (for example, a commercial plugin). Once installed, all plugins list themselves inside Dashboard -> Plugins page. After deactivating and deleting them, they simply disappear. All files are removed from the server instantly. WordPress does not allow you to backup or download the plugins before you jettison them from your site. If you also manage your server and are fairly comfortable doing so, you may find a more contrived way to download installed plugins via directory manager app or FTP. Obviously, this requires more than a single click and not for everyone. 
 
 What exactly are plugins and how this plugin helps you save time or bail you out from difficult situations? Plugins are files and/ or directories, which are created inside your WordPress installation (defined by WordPress) when you first install them. Both active and deactivated files reside inside them. When you upload zip package of a plugin, WordPress extracts it and places the directory inside it in the plugins folder. Our plugin allows you to reverse the process. It will convert any plugin installed on your site into a zip package ready to be reinstalled later or moved to another site. It accomplishes this by simply adding a new link "Download" under the plugin title to already existing links. It is a single click process and hardly takes any time. Our plugin does not create any other page in the dashboard or clutter menus. It is lightweight, efficient and completely invisible until you need it. 
 
 So why would you need it? While there can be many reasons, here are the primary we think you will find it useful.
+
+== Download Plugin Use Cases ==
 
 = A. Backup =
 The foremost and most common reason - when you wish to make backup of the plugin for future installation.
@@ -53,19 +63,19 @@ So you have found yourselves dependent on some specific plugins that you want to
 = D. Preserving Changes =
 If you DIY type and made modifications to plugin files to suit your requirements, you will want to make sure you have an archived copy of the plugin if the files get overwritten by an update etc.
 
-= Starter Guide =
+== Learn how to use Download Plugin == 
 
-[Checkout Download plugin guide](https://metagauss.com/download-plugin-guide/) for more information.
+[Checkout Download plugin guide](https://theeventprime.com/how-to-use-download-plugin-in-wordpress/) for more information.
 
 = Recommended Plugins (Free Download From WordPress.org) =
 
 [Download Theme Plugin:](https://wordpress.org/plugins/download-theme/) allows you to download any theme from your WordPress admin panel's Appearance page.
 
-[User Registration and Login Plugin:](https://wordpress.org/plugins/custom-registration-form-builder-with-submission-manager/) Take total control of end-to-end user registration process on your site with RegistrationMagic plugin.
+[WordPress user Registration Plugin:](https://wordpress.org/plugins/custom-registration-form-builder-with-submission-manager/) Take total control of end-to-end user registration process on your site with RegistrationMagic plugin.
 
-[User Profiles and Membership Plugin:](https://wordpress.org/plugins/profilegrid-user-profiles-groups-and-communities/) Build awesome user profiles, restrict content and launch memberships with ProfileGrid plugin.
+[WordPress User Profiles Plugin:](https://wordpress.org/plugins/profilegrid-user-profiles-groups-and-communities/) Build awesome user profiles, restrict content and launch memberships with ProfileGrid plugin.
 
-[User Events and Calendar Plugin:](https://wordpress.org/plugins/eventprime-event-calendar-management/) Manage user events, sell tickets and publish event calendar with EventPrime plugin.
+[WordPress Events Calendar Plugin:](https://wordpress.org/plugins/eventprime-event-calendar-management/) Manage user events, sell tickets and publish event calendar with EventPrime plugin.
 
 == Installation ==
 
@@ -78,7 +88,29 @@ If you DIY type and made modifications to plugin files to suit your requirements
 
 == Changelog ==
 
-= 2.3.1: September 26, 2025 =
+= 2.4.6: July 24, 2026 =
+* Fixed: Minor issue.
+
+= 2.4.5: June 11, 2026 =
+* Fixed: UI improvements.
+
+= 2.4.4: April 29, 2026 =
+* Fixed: UI improvements.
+
+= 2.4.3: April 28, 2026 =
+* Fixed: Minor issue.
+
+= 2.4.2: April 27, 2026 =
+* Fixed: Minor issue.
+
+= 2.4.1: April 17, 2026 =
+* Fixed: UI improvements.
+* Introduced Pro version support.
+
+= 2.4.0: March 6, 2026 =
+* Fixed: Downloaded theme ZIP now includes the top-level theme folder.
+
+= 2.3.1: September 27, 2025 =
 * Fixed: "headers already sent" issue when downloading plugin ZIPs in some scenarios.
 * Fixed: Invalid ZIP download caused by output buffering on some websites.
 * Enhancement: Added safer output handling before file streaming.

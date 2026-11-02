@@ -1,5 +1,13 @@
 *** Variation Swatches for WooCommerce ***
 
+2026-06-08 - version 2.3.0
+
+* Added - WP 7.0+ compatibility.
+* Added - WC 10.8+ compatibility.
+* Added - YITH WooCommerce Waitlist compatibility.
+* Added - Filter `woo_variation_swatches_add_to_cart_variation_params` added.
+* Fixed - `woo_variation_swatches_total_children` return `{}` issue.
+
 2026-02-08 - version 2.2.3
 
 * Added - WP 6.9+ compatibility.

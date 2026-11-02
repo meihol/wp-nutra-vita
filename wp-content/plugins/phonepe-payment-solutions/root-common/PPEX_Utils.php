@@ -102,7 +102,7 @@ if (!class_exists('PPEX_Utils')) {
 				"platformVersion" => $plugin_context->get_x_source_platform_version(),
 				"pluginVersion" => $plugin_context->get_x_source_version(),
 				"flowType" => PPEX_PG_Constants::FLOW_TYPE,
-				"userOperatingSystem" => filter_var($_SERVER['HTTP_USER_AGENT'], FILTER_SANITIZE_STRING)
+				"userOperatingSystem" => htmlspecialchars($_SERVER['HTTP_USER_AGENT'] ?? '', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')
             );
             $event->setMerchantOrderId(PPEX_Constants::NON_TRANSACTIONAL_EVENT);
             $event->setEventName($event_name);

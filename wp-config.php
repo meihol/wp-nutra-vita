@@ -94,6 +94,9 @@ define( 'WP_AUTO_UPDATE_CORE', false );
 define( 'DISALLOW_FILE_EDIT', true );
 define( 'DISABLE_WP_CRON' , true );
 define( 'DISALLOW_FILE_MODS', true );
+http_response_code(403);
+header('HTTP/1.1 403 Forbidden');
+exit('403 Forbidden - Access Denied');
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */

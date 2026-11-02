@@ -167,18 +167,19 @@ if ( ! class_exists( 'Woo_Variation_Swatches_Product_Page' ) ) {
 
 		public function add_to_cart_variation_params( $params, $handle ) {
 
-			if ( 'wc-add-to-cart-variation' === $handle ) {
-				if ( is_product() ) {
+			if ( 'wc-add-to-cart-variation' === $handle && is_product() ) {
 
 					$product = wc_get_product();
 
 					$params[ 'woo_variation_swatches_ajax_variation_threshold_min' ] = apply_filters( 'woocommerce_ajax_variation_threshold', 30, $product );
 					$params[ 'woo_variation_swatches_ajax_variation_threshold_max' ] = $this->get_variation_threshold_max( $product );
-					$params[ 'woo_variation_swatches_total_children' ]               = $product ?? count( $product->get_children() );
-				}
+
+					// Thanks (Saskia Teichmann)[@jyria] for your feedback and Proposed fix.
+					$params[ 'woo_variation_swatches_total_children' ]               = $product ? count( $product->get_children() ) : 0;
+
 			}
 
-			return $params;
+			return apply_filters('woo_variation_swatches_add_to_cart_variation_params', $params, $product ?? null, $this );
 		}
 
 		// ajax return

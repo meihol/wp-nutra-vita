@@ -2,9 +2,9 @@
 Contributors: wpclever
 Donate link: https://wpclever.net
 Tags: woocommerce, wpc, compare, comparison
-Tested up to: 6.9
-Version: 6.5.4
-Stable tag: 6.5.4
+Tested up to: 7.0
+Version: 6.5.9
+Stable tag: 6.5.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -85,6 +85,25 @@ Example:
 `echo do_shortcode('[woosc id="99"]');`
 
 == Changelog ==
+
+= 6.5.9 =
+* Updated: Optimized the code
+* Updated: Compatible with WP 7.0 & Woo 10.9
+
+= 6.5.8 =
+* Updated: Optimized the code
+* Updated: Compatible with WP 7.0 & Woo 10.8
+
+= 6.5.7 =
+* Fixed: Minor CSS/JS issue in the backend
+* Updated: Compatible with WP 6.9 & Woo 10.7
+
+= 6.5.6 =
+* Fixed: Notification when reaching the limit of products
+
+= 6.5.5 =
+* Fixed: Minor CSS/JS issue in the backend
+* Updated: Compatible with WP 6.9 & Woo 10.6
 
 = 6.5.4 =
 * Updated: Compatible with WP 6.9 & Woo 10.4

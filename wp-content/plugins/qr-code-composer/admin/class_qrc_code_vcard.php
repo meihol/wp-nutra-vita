@@ -27,11 +27,15 @@ public function qrc_vcard_generator_page()
     register_setting("qrc_vcard_generator", "qrc_vcard_generator", array($this ,'qr_log_option_page_sanitize'));
         
 
-        add_settings_section("qrc_vacrd_admin__section", " ", array($this ,'settting_log_sec_func'), 'qrc_vacrd_admin_sec');
+        add_settings_section("qrc_vacrd_admin__section", " ", array(), 'qrc_vacrd_admin_sec');
 
   
-        add_settings_field("qrcvacr_vcard", esc_html__("A Simple vCard (Free & Pro)", "qr-code-composer") , array($this ,"qr_code_vcard"), 'qrc_vacrd_admin_sec', "qrc_vacrd_admin__section",array(
+        add_settings_field("qrcvacr_vcard", esc_html__("Single vCard", "qr-code-composer") , array($this ,"qr_code_vcard"), 'qrc_vacrd_admin_sec', "qrc_vacrd_admin__section",array(
             'class'  =>  'qr_code_vcard',));
+
+
+        add_settings_field("qr_checkbox_vcradd","" ,array($this , "settting_log_sec_func"), 'qrc_vacrd_admin_sec', "qrc_vacrd_admin__section",array(
+            'class'  =>  'qrcbulkvcardfet',));        
         add_settings_field("qr_checkbox_vcrad", esc_html__("Enable vCard Meta Field (Pro)", "qr-code-composer") ,array($this , "qr_checkbox"), 'qrc_vacrd_admin_sec', "qrc_vacrd_admin__section" ,array(
             'class'  =>  'qr_checkbox_vcrad',
 

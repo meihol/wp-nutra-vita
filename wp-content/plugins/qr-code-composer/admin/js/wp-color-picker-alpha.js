@@ -4,7 +4,7 @@
  * Overwrite Automattic Iris for enabled Alpha Channel in wpColorPicker
  * Only run in input and is defined data alpha in true
  *
- * Version: 3.0.4
+ * Version: 3.0.5
  * https://github.com/kallookoo/wp-color-picker-alpha
  * Licensed under the GPLv2 license or later.
  */
@@ -58,7 +58,7 @@
 		/**
 		 * Alpha options
 		 *
-		 * @since 3.0.4
+		 * @since 3.0.5
 		 *
 		 * @type {Object}
 		 */
@@ -68,7 +68,7 @@
 		/**
 		 * Get the current color or the new color.
 		 *
-		 * @since 3.0.4
+		 * @since 3.0.5
 		 * @access private
 		 *
 		 * @param {Object|*} The color instance if not defined return the cuurent color.
@@ -92,7 +92,7 @@
 		/**
 		 * Create widget
 		 *
-		 * @since 3.0.4
+		 * @since 3.0.5
 		 * @access private
 		 *
 		 * @return {void}
@@ -117,7 +117,7 @@
 		/**
 		 * Binds event listeners to the Iris.
 		 *
-		 * @since 3.0.4
+		 * @since 3.0.5
 		 * @access private
 		 *
 		 * @return {void}
@@ -158,7 +158,7 @@
 		/**
 		 * Init Controls
 		 *
-		 * @since 3.0.4
+		 * @since 3.0.5
 		 * @access private
 		 *
 		 * @return {void}
@@ -204,7 +204,7 @@
 		/**
 		 * Create the controls sizes
 		 *
-		 * @since 3.0.4
+		 * @since 3.0.5
 		 * @access private
 		 *
 		 * @param {bool} reset Set to True for recreate the controls sizes.
@@ -257,7 +257,7 @@
 		/**
 		 * Callback to update the controls and the current color.
 		 *
-		 * @since 3.0.4
+		 * @since 3.0.5
 		 * @access private
 		 *
 		 * @return {void}
@@ -303,7 +303,7 @@
 		/**
 		 * Paint dimensions.
 		 *
-		 * @since 3.0.4
+		 * @since 3.0.5
 		 * @access private
 		 *
 		 * @param {string} origin  Origin (position).
@@ -332,7 +332,7 @@
 		/**
 		 * To update the options, see original source to view the available options.
 		 *
-		 * @since 3.0.4
+		 * @since 3.0.5
 		 *
 		 * @param {string} key   The Option name.
 		 * @param {mixed} value  The Option value to update.
@@ -361,7 +361,7 @@
 		 *
 		 * @param newColor {string|*} The new color to use. Can be undefined.
 		 *
-		 * @since 3.0.4
+		 * @since 3.0.5
 		 *
 		 * @return {string} The element's color.
 		 */
@@ -383,7 +383,7 @@
 		/**
 		 * Alpha options
 		 *
-		 * @since 3.0.4
+		 * @since 3.0.5
 		 *
 		 * @type {Object}
 		 */
@@ -393,7 +393,7 @@
 		/**
 		 * Get the alpha options.
 		 *
-		 * @since 3.0.4
+		 * @since 3.0.5
 		 * @access private
 		 *
 		 * @return {object} The current alpha options.
@@ -450,7 +450,7 @@
 		/**
 		 * Create widget
 		 *
-		 * @since 3.0.4
+		 * @since 3.0.5
 		 * @access private
 		 *
 		 * @return {void}
@@ -470,7 +470,7 @@
 		/**
 		 * Binds event listeners to the color picker and create options, etc...
 		 *
-		 * @since 3.0.4
+		 * @since 3.0.5
 		 * @access private
 		 *
 		 * @return {void}
@@ -531,7 +531,7 @@
 				 * Handles the onChange event if one has been defined in the options and additionally
 				 * sets the background color for the toggler element.
 				 *
-				 * @since 3.0.4
+				 * @since 3.0.5
 				 *
 				 * @param {Event} event    The event that's being called.
 				 * @param {HTMLElement} ui The HTMLElement containing the color picker.
@@ -552,7 +552,7 @@
 			/**
 			 * Prevent any clicks inside this widget from leaking to the top and closing it.
 			 *
-			 * @since 3.0.4
+			 * @since 3.0.5
 			 *
 			 * @param {Event} event The event that's being called.
 			 *
@@ -565,7 +565,7 @@
 			/**
 			 * Open or close the color picker depending on the class.
 			 *
-			 * @since 3.0.4
+			 * @since 3.0.5
 			 */
 			self.toggler.on( 'click', function() {
 				if ( self.toggler.hasClass( 'wp-picker-open' ) ) {
@@ -579,7 +579,7 @@
 			 * Checks if value is empty when changing the color in the color picker.
 			 * If so, the background color is cleared.
 			 *
-			 * @since 3.0.4
+			 * @since 3.0.5
 			 *
 			 * @param {Event} event The event that's being called.
 			 *
@@ -605,7 +605,7 @@
 			/**
 			 * Enables the user to either clear the color in the color picker or revert back to the default color.
 			 *
-			 * @since 3.0.4
+			 * @since 3.0.5
 			 *
 			 * @param {Event} event The event that's being called.
 			 *

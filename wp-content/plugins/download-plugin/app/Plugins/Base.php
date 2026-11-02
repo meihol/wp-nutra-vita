@@ -35,7 +35,7 @@ class Base
         // add bulk download link
         add_filter('bulk_actions-plugins', array($this, 'add_download_plugin_bulk_actions'));
         // loader handler
-        add_action('admin_head', array($this, 'dpwap_custom_admin_head_loader'));
+        add_action('admin_footer', array($this, 'dpwap_custom_admin_head_loader'));
         // popup in install handler
         //add_action( 'admin_footer', array( $this, 'dpwap_plugin_setting_popup_func' ) );
         // multiple download handler
@@ -141,7 +141,7 @@ class Base
 
     public function dpwap_plugin_download_link($links, $plugin_file)
     {
-        if (!current_user_can('install_plugins')) return;
+        if (!current_user_can('install_plugins')) return $links;
 
         if (strpos($plugin_file, '/') !== false) {
             $explode = explode('/', $plugin_file);
@@ -160,11 +160,9 @@ class Base
         $nonce = wp_create_nonce('bulk-plugins');
         $pluginDownloadLink = admin_url('admin.php?page=dpwap_plugin&dpwap_plugin_download=' . $path . '&f=' . $folder . '&_wpnonce=' . $nonce);
         $download_link = array(
-            '<span class="dpwap_download-wrap">
+            'dpwap_download' => '<span class="dpwap_download-wrap">
             <a href="' . esc_url($pluginDownloadLink) . '" class="dpwap_download_link">' . esc_html__('Download', 'download-plugin') . '</a></span>',
         );
-
-        
 
         return array_merge($links, $download_link);
     }
@@ -277,11 +275,11 @@ class Base
             foreach ($files as $file) {
                 // Skip hidden files and directories
                 $file_path = $file->getRealPath();
-                $relative_path = substr($file_path, strlen($root_path) + 1);
+                $relative_path = $this->dpwap_normalize_zip_path(substr($file_path, strlen($root_path) + 1));
                 // Add the base folder to the file paths inside the zip
-                $relative_path_with_slug = $plugin_slug . '/' . $relative_path;
+                $relative_path_with_slug = $this->dpwap_normalize_zip_path($plugin_slug . '/' . $relative_path);
                 // Skip any file or directory starting with a dot
-                $parts = explode(DIRECTORY_SEPARATOR, $relative_path);
+                $parts = explode('/', $relative_path);
                 $skip = false;
                 foreach ($parts as $part) {
                     if (substr($part, 0, 1) === '.') {
@@ -319,9 +317,15 @@ class Base
                 flush();
                 readfile($zip_file);
                 unlink($zip_file);
+                \DPWAP\Main::dpwap_record_free_download();
                 exit;
             }
         }
+    }
+
+    private function dpwap_normalize_zip_path($path)
+    {
+        return trim(str_replace('\\', '/', $path), '/');
     }
 
     public function dpwap_delete_temp_folder($path)
@@ -388,11 +392,12 @@ class Base
         foreach ($files as $name => $file) {
             if (!$file->isDir()) {
                 $file_path       = $file->getRealPath();
-                $relative_path = substr($file_path, strlen($root_path) + 1);
+                $relative_path = $this->dpwap_normalize_zip_path(substr($file_path, strlen($root_path) + 1));
                 $zip->addFile($file_path, $relative_path);
             }
         }
         $zip->close();
+        \DPWAP\Main::dpwap_record_free_download();
     }
 
     public function dpwap_plugin_multiple_download_action()

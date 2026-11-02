@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: Emran Ahmed <emran.bd.08@gmail.com>\n"
-"POT-Creation-Date: 2026-02-08 12:03+0000\n"
+"POT-Creation-Date: 2026-06-08 15:43+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -15,111 +15,111 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../includes/class-woo-variation-swatches-backend.php:117
+#: ../includes/class-woo-variation-swatches-backend.php:127
 msgid "View documentation"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:117, ../includes/html-settings-sidebar.php:7
+#: ../includes/class-woo-variation-swatches-backend.php:127, ../includes/html-settings-sidebar.php:7
 msgid "Documentation"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:118, ../includes/class-woo-variation-swatches-backend.php:118
+#: ../includes/class-woo-variation-swatches-backend.php:128, ../includes/class-woo-variation-swatches-backend.php:128
 msgid "Video Tutorials"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:119, ../includes/class-woo-variation-swatches-backend.php:119
+#: ../includes/class-woo-variation-swatches-backend.php:129, ../includes/class-woo-variation-swatches-backend.php:129
 msgid "Help & Support"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:127
+#: ../includes/class-woo-variation-swatches-backend.php:137
 msgid "View Swatches settings"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:127
+#: ../includes/class-woo-variation-swatches-backend.php:137
 msgid "Settings"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:132, ../includes/class-woo-variation-swatches-backend.php:132
+#: ../includes/class-woo-variation-swatches-backend.php:142, ../includes/class-woo-variation-swatches-backend.php:142
 msgid "Go Pro"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:161
+#: ../includes/class-woo-variation-swatches-backend.php:171
 msgid "Select values"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:182
+#: ../includes/class-woo-variation-swatches-backend.php:192
 msgid "Select all"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:183
+#: ../includes/class-woo-variation-swatches-backend.php:193
 msgid "Select none"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:184
+#: ../includes/class-woo-variation-swatches-backend.php:194
 msgid "Create value"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:226, ../includes/class-woo-variation-swatches-backend.php:315
+#: ../includes/class-woo-variation-swatches-backend.php:236, ../includes/class-woo-variation-swatches-backend.php:325
 msgid "Choose an Image"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:227
+#: ../includes/class-woo-variation-swatches-backend.php:237
 msgid "Add Attribute"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:228
+#: ../includes/class-woo-variation-swatches-backend.php:238
 msgid "Add"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:229
+#: ../includes/class-woo-variation-swatches-backend.php:239
 msgid "Cancel"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:230
+#: ../includes/class-woo-variation-swatches-backend.php:240
 msgid "Use Image"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:231
+#: ../includes/class-woo-variation-swatches-backend.php:241
 msgid "Add Media"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:235
+#: ../includes/class-woo-variation-swatches-backend.php:245
 msgid "Variation Swatches Settings"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:237
+#: ../includes/class-woo-variation-swatches-backend.php:247
 msgid "Are you sure you want to reset it to default setting?"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:238
+#: ../includes/class-woo-variation-swatches-backend.php:248
 msgid "Please save changed first."
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:245
+#: ../includes/class-woo-variation-swatches-backend.php:255
 msgid "Select"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:246, ../includes/class-woo-variation-swatches-backend.php:305
+#: ../includes/class-woo-variation-swatches-backend.php:256, ../includes/class-woo-variation-swatches-backend.php:315
 msgid "Color"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:247, ../includes/class-woo-variation-swatches-backend.php:314
+#: ../includes/class-woo-variation-swatches-backend.php:257, ../includes/class-woo-variation-swatches-backend.php:324
 msgid "Image"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:248
+#: ../includes/class-woo-variation-swatches-backend.php:258
 msgid "Button"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:249
+#: ../includes/class-woo-variation-swatches-backend.php:259
 msgid "Radio"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:257
+#: ../includes/class-woo-variation-swatches-backend.php:267
 msgid "Mixed"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-backend.php:306
+#: ../includes/class-woo-variation-swatches-backend.php:316
 msgid "Choose a color"
 msgstr ""
 
@@ -214,7 +214,7 @@ msgstr ""
 msgid "%s left"
 msgstr ""
 
-#: ../includes/class-woo-variation-swatches-product-page.php:830, ../includes/class-woo-variation-swatches-product-page.php:856
+#: ../includes/class-woo-variation-swatches-product-page.php:831, ../includes/class-woo-variation-swatches-product-page.php:857
 msgid "Choose an option"
 msgstr ""
 

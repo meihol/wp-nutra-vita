@@ -4,8 +4,8 @@ Contributors: WebFactory
 Tags: captcha, recaptcha, google recaptcha, comment recaptcha, login recaptcha
 Requires at least: 4.9
 Requires PHP: 5.6
-Tested up to: 6.8
-Stable tag: 1.31
+Tested up to: 7.0
+Stable tag: 5.40
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -75,6 +75,26 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 9. Plugin settings
 
 == Changelog ==
+= 5.40 - 18/07/2026 =
+* Minor JS bug fix
+
+= 5.39 - 08/06/2026 =
+* Updated the free version number to keep the free and PRO releases aligned and avoid confusion around public security advisories. The reported issue (CVE-2026-5411) affected the PRO version only (not the free one) and was already patched, but because both versions share the same plugin slug, some users and automated tools could and did misinterpret the version numbers. Aligning the free version with the PRO version makes it clearer that the installed plugin is current and helps prevent unnecessary concerns
+
+= 1.35 - 05/05/2026 =
+* Added option to customize "Are you human? Please solve:" text
+* Fixed reCaptcha v3 token expiration
+
+= 1.34 - 09/04/2026 =
+* Minor fixes
+
+= 1.33 - 26/03/2026 =
+* Wordfence compatibility fix
+
+= 1.32 - 19/03/2026 =
+* added captcha to WooCommerce payment endpoint
+* improved checkout error handling
+
 = 1.31 - 30/07/2025 =
 * minor code fixes
 
@@ -120,7 +140,7 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 * fixed reCAPTCHA bug sometimes preventing checkout form re-submission after form errors are corrected in Woo
 
 = 1.18 - 24/01/2024
-* minor bug fix for Buddypress 
+* minor bug fix for Buddypress
 
 = 1.17 - 09/12/2023 =
 * security/fatal error fix

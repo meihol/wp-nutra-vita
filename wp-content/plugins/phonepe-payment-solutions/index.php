@@ -4,9 +4,10 @@
  * Plugin Name: PhonePe Payment Solutions
  * Plugin URI: https://github.com/PhonePe/
  * Description: Using this plugin you can accept payments through PhonePe. After activating this plugin, you can see the PhonePe option linked to the checkout page of woocommerce site. On configuring with the provided Merchant credentials, you can enable this plugin in Preprod/Prod environment.
- * Version: 3.0.1
+ * Version: 3.1.0
+ * 3.0.3
  * Author: PhonePe
- * Requires PHP: 5.6
+ * Requires PHP: 8.2
  */
 
 require_once __DIR__ . '/debug.php';
@@ -319,7 +320,11 @@ function ppex_woocommerce_phonepe_init() {
               ]
           ];
           $postData = json_encode($data);
-          $webhook_respose = $ppex_wc_pg_v2_http_client::postRequest($url, $postData, $headers);
+          try {
+              $webhook_respose = $ppex_wc_pg_v2_http_client::postRequest($url, $postData, $headers);
+          } catch (Exception $exception) {
+              ppLogError(json_encode($exception));
+          }
           ppLogInfo("webhook response: ");
           ppLogInfo(json_encode($webhook_respose));
 
@@ -679,7 +684,16 @@ function ppex_woocommerce_phonepe_init() {
   function handle_callback() {
 		$wc_phonepe = new WC_PhonePe();
 
-		$merchant_id = $wc_phonepe->get_merchant_context()->get_merchant_id();
+		// Fix 3: Reject v1 callbacks for stores configured with Client Id + API Key (v2 flow).
+		// Those stores have no Salt Key, making v1 checksum validation impossible.
+		// Their callbacks are delivered to /wp-phonepe/v2/callback instead.
+		$phonepe_settings = get_option('woocommerce_phonepe_settings');
+		$is_v2_merchant = isset($phonepe_settings['clientSecret']) && !empty($phonepe_settings['clientSecret']);
+		if ($is_v2_merchant) {
+			ppLogError("V1 callback rejected: store is configured with Client Id + API Key (v2). Callbacks must target /wp-phonepe/v2/callback.");
+			return new WP_REST_Response(['error' => 'This callback endpoint is not supported for your payment configuration.'], 400);
+		}
+
 		$merchant_key = $wc_phonepe->get_merchant_context()->get_salt_key();
 		$key_index = $wc_phonepe->get_merchant_context()->get_salt_index();
 		$payload = file_get_contents('php://input');
@@ -687,6 +701,13 @@ function ppex_woocommerce_phonepe_init() {
 		$payload = json_decode($payload, true);
 		$decoded_payload = $payload['response'];
 		$ppex_pg_callback = $wc_phonepe->get_network_manager()->handle_callback($decoded_payload, $headers, $merchant_key, $key_index);
+
+		// Fix 4: Verify the callback was successfully authenticated before processing.
+		// handle_callback() returns null on any failure (empty key, bad checksum).
+		if (!($ppex_pg_callback instanceof PPEX_PG_Callback)) {
+			ppLogError("V1 callback aborted: signature validation failed or Salt Key is not configured.");
+			return new WP_REST_Response(['error' => 'Invalid callback'], 400);
+		}
 
 		$wc_phonepe->get_wc_b2b_pg_client()->handle_callback_response($ppex_pg_callback);
   }
@@ -1068,6 +1089,39 @@ function ppex_woocommerce_phonepe_init() {
   }
   add_action('restrict_manage_posts', 'dashboard_status');
 }
+
+/**
+ * Bridge function to execute the background polling from the Action Scheduler.
+ * This function is registered in the global scope so that the background worker can find it.
+ */
+function phonepe_run_reschedule_callback($merchant_transaction_id, $start_time, $backoff) {
+    if (!class_exists('WC_Payment_Gateways')) {
+        ppLogError("Action Scheduler: WooCommerce Payment Gateways class not found.");
+        return;
+    }
+
+    $gateways = WC()->payment_gateways()->payment_gateways();
+    if (!isset($gateways[PPEX_PG_Constants::PHONEPE_PG_ID])) {
+        ppLogError("Action Scheduler: Could not find the 'phonepe' payment gateway.");
+        return;
+    }
+
+    $wc_phonepe_instance = $gateways[PPEX_PG_Constants::PHONEPE_PG_ID];
+    if (!$wc_phonepe_instance || !$wc_phonepe_instance->ppex_is_pg_v2_enabled()) {
+        ppLogError("Action Scheduler: PhonePe gateway instance not found or not configured for V2.");
+        return;
+    }
+
+    $pg_v2_client = $wc_phonepe_instance->get_pg_v2_client();
+    if (!$pg_v2_client) {
+        ppLogError("Action Scheduler: Could not get V2 client instance.");
+        return;
+    }
+
+    $pg_v2_client->check_status_and_reschedule($merchant_transaction_id, $start_time, $backoff);
+}
+
+add_action('phonepe_check_status_and_reschedule', 'phonepe_run_reschedule_callback', 10, 3);
 
 
 ?>

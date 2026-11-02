@@ -42,6 +42,7 @@ class Base {
             $root_path      = realpath( $folder_path );
             $zip = new ZipArchive();
             $zip->open( $folder_path.'.zip', ZipArchive::CREATE | ZipArchive::OVERWRITE );
+            $theme_slug = basename( $root_path );
             $files = new RecursiveIteratorIterator(
                 new RecursiveDirectoryIterator($root_path),
                 RecursiveIteratorIterator::LEAVES_ONLY
@@ -49,14 +50,14 @@ class Base {
 		    foreach ( $files as $name => $file ) {
 		        if ( !$file->isDir() ) {
 		        	$file_path	   = $file->getRealPath();
-		            $relative_path = substr( $file_path, strlen( $root_path ) + 1 );
-		            $zip->addFile( $file_path, $relative_path );
-		        }
-		    }		
+                    $relative_path = $this->dtwap_normalize_zip_path( substr( $file_path, strlen( $root_path ) + 1 ) );
+                    $zip->addFile( $file_path, $this->dtwap_normalize_zip_path( $theme_slug . '/' . $relative_path ) );
+			        }
+			    }		
 		    $zip->close();		
 		    // Download Zip
 		    $zip_file = $folder_path.'.zip';
-		    if ( file_exists( $zip_file ) ) {
+            if ( file_exists( $zip_file ) ) {
                 header( 'Content-Description: File Transfer' );
                 header( 'Content-Type: application/octet-stream' );
                 header( 'Content-Disposition: attachment; filename="'.basename($zip_file).'"' );
@@ -67,8 +68,13 @@ class Base {
                 header( 'Set-Cookie:fileLoading=true' );
                 readfile( $zip_file );
                 unlink( $zip_file );
+                \DPWAP\Main::dpwap_record_free_download();
                 exit;
-            }
-        }	
+	        }	
+	    }
     }
-}
+
+    private function dtwap_normalize_zip_path( $path ) {
+        return trim( str_replace( '\\', '/', $path ), '/' );
+    }
+	}

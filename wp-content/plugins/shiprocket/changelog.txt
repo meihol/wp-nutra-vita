@@ -1,5 +1,8 @@
 
 ***Shiprocket***
+= **2026-05-20 - version 2.0.9** =
+* Update - Sign up link now points to the Shiprocket login page.
+
 = **2024-08-05 - version 2.0.6** =
 * Update - Updated Description of Plugin
 

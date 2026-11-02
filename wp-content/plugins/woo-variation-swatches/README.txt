@@ -3,10 +3,10 @@ Contributors: EmranAhmed, getwooplugins, storepress
 Tags: woocommerce variation swatches, woocommerce variation, woocommerce, variation swatches, woocommerce attributes, product attributes, product color, product size, variable product attributes, variation product swatches, color variation swatch, image variation swatch, printful color swatches
 Requires PHP: 7.4
 Requires at least: 6.4
-Tested up to: 6.9
+Tested up to: 7.0
 WC requires at least: 8.0
-WC tested up to: 10.5
-Stable tag: 2.2.3
+WC tested up to: 10.8
+Stable tag: 2.3.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -23,7 +23,6 @@ WooCommerce Variation Swatches makes selecting product options easier and more e
 This transformation turns the shopping experience into something fun and visually appealing while efficiently supporting popular WordPress themes. Plus, it seamlessly integrates with product quick views, allows you to customize shapes into <strong>round or square</strong>, and even enables you to disable the plugin’s CSS to tailor it to your theme’s stylesheet.
 
 The best part? WooCommerce Variation Swatches automatically convert all variation select dropdowns into buttons right after installation—only a quick two-step configuration is needed for color and image swatches.
-
 
 ## Key Feature Comes with Variation Swatches For WooCommerce Plugin ##
 
@@ -614,6 +613,14 @@ And your are ready to go.
 12. Global Variation Color Swatches Attribute List Preview
 
 == Changelog ==
+
+= 2.3.0 - 08-06-2026 =
+
+* Added - WP 7.0+ compatibility.
+* Added - WC 10.8+ compatibility.
+* Added - YITH WooCommerce Waitlist compatibility.
+* Added - Filter `woo_variation_swatches_add_to_cart_variation_params` added.
+* Fixed - `woo_variation_swatches_total_children` return `{}` issue.
 
 = 2.2.3 - 08-02-2026 =
 

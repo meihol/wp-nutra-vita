@@ -3,23 +3,23 @@
 Plugin Name: WPC Smart Compare for WooCommerce
 Plugin URI: https://wpclever.net/
 Description: Smart products compare for WooCommerce.
-Version: 6.5.4
+Version: 6.5.9
 Author: WPClever
 Author URI: https://wpclever.net
 Text Domain: woo-smart-compare
 Domain Path: /languages/
 Requires Plugins: woocommerce
-Requires at least: 4.0
-Tested up to: 6.9
+Requires at least: 5.9
+Tested up to: 7.0
 WC requires at least: 3.0
-WC tested up to: 10.4
+WC tested up to: 10.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 defined( 'ABSPATH' ) || exit;
 
-! defined( 'WOOSC_VERSION' ) && define( 'WOOSC_VERSION', '6.5.4' );
+! defined( 'WOOSC_VERSION' ) && define( 'WOOSC_VERSION', '6.5.9' );
 ! defined( 'WOOSC_LITE' ) && define( 'WOOSC_LITE', __FILE__ );
 ! defined( 'WOOSC_FILE' ) && define( 'WOOSC_FILE', __FILE__ );
 ! defined( 'WOOSC_URI' ) && define( 'WOOSC_URI', plugin_dir_url( __FILE__ ) );
@@ -28,11 +28,14 @@ defined( 'ABSPATH' ) || exit;
 ! defined( 'WOOSC_REVIEWS' ) && define( 'WOOSC_REVIEWS', 'https://wordpress.org/support/plugin/woo-smart-compare/reviews/' );
 ! defined( 'WOOSC_CHANGELOG' ) && define( 'WOOSC_CHANGELOG', 'https://wordpress.org/plugins/woo-smart-compare/#developers' );
 ! defined( 'WOOSC_DISCUSSION' ) && define( 'WOOSC_DISCUSSION', 'https://wordpress.org/support/plugin/woo-smart-compare' );
-! defined( 'WPC_URI' ) && define( 'WPC_URI', WOOSC_URI );
 
-include 'includes/dashboard/wpc-dashboard.php';
-include 'includes/kit/wpc-kit.php';
-include 'includes/hpos.php';
+// WPC Core
+require_once __DIR__ . '/includes/wpc-core/wpc-core.php';
+wpc_core_register( [
+        'file'    => __FILE__,
+        'version' => WOOSC_VERSION,
+        'prefix'  => 'woosc',
+] );
 
 if ( ! function_exists( 'woosc_init' ) ) {
     add_action( 'plugins_loaded', 'woosc_init', 11 );
@@ -91,6 +94,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
 
                     // settings page
                     add_action( 'admin_init', [ $this, 'register_settings' ] );
+                    add_filter( 'pre_update_option', [ $this, 'last_saved' ], 10, 2 );
                     add_action( 'admin_menu', [ $this, 'admin_menu' ] );
 
                     // backend ajax add field
@@ -155,8 +159,6 @@ if ( ! function_exists( 'woosc_init' ) ) {
                 }
 
                 function init() {
-                    // load text-domain
-                    load_plugin_textdomain( 'woo-smart-compare', false, basename( WOOSC_DIR ) . '/languages/' );
 
                     // fields
                     self::$fields = apply_filters( 'woosc_fields', [
@@ -259,7 +261,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
 
                 function enqueue_scripts() {
                     // hint
-                    wp_enqueue_style( 'hint', WOOSC_URI . 'assets/libs/hint/hint.min.css' );
+                    wp_enqueue_style( 'hint', WOOSC_URI . 'assets/libs/hint/hint.min.css', [], WOOSC_VERSION );
 
                     // print
                     if ( self::get_setting( 'bar_print', 'yes' ) === 'yes' ) {
@@ -271,14 +273,14 @@ if ( ! function_exists( 'woosc_init' ) ) {
 
                     // perfect srollbar
                     if ( self::get_setting( 'perfect_scrollbar', 'yes' ) === 'yes' ) {
-                        wp_enqueue_style( 'perfect-scrollbar', WOOSC_URI . 'assets/libs/perfect-scrollbar/css/perfect-scrollbar.min.css' );
-                        wp_enqueue_style( 'perfect-scrollbar-wpc', WOOSC_URI . 'assets/libs/perfect-scrollbar/css/custom-theme.css' );
+                        wp_enqueue_style( 'perfect-scrollbar', WOOSC_URI . 'assets/libs/perfect-scrollbar/css/perfect-scrollbar.min.css', [], WOOSC_VERSION );
+                        wp_enqueue_style( 'perfect-scrollbar-wpc', WOOSC_URI . 'assets/libs/perfect-scrollbar/css/custom-theme.css', [], WOOSC_VERSION );
                         wp_enqueue_script( 'perfect-scrollbar', WOOSC_URI . 'assets/libs/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js', [ 'jquery' ], WOOSC_VERSION, true );
                     }
 
                     // notiny
                     if ( self::get_setting( 'button_action', 'show_table' ) === 'show_message' ) {
-                        wp_enqueue_style( 'notiny', WOOSC_URI . 'assets/libs/notiny/notiny.css' );
+                        wp_enqueue_style( 'notiny', WOOSC_URI . 'assets/libs/notiny/notiny.css', [], WOOSC_VERSION );
                         wp_enqueue_script( 'notiny', WOOSC_URI . 'assets/libs/notiny/notiny.js', [ 'jquery' ], WOOSC_VERSION, true );
                     }
 
@@ -341,8 +343,8 @@ if ( ! function_exists( 'woosc_init' ) ) {
                 function admin_enqueue_scripts( $hook ) {
                     if ( str_contains( $hook, 'woosc' ) ) {
                         wp_enqueue_style( 'wp-color-picker' );
-                        wp_enqueue_style( 'fonticonpicker', WOOSC_URI . 'assets/libs/fonticonpicker/css/jquery.fonticonpicker.css' );
-                        wp_enqueue_script( 'fonticonpicker', WOOSC_URI . 'assets/libs/fonticonpicker/js/jquery.fonticonpicker.min.js', [ 'jquery' ] );
+                        wp_enqueue_style( 'fonticonpicker', WOOSC_URI . 'assets/libs/fonticonpicker/css/jquery.fonticonpicker.css', [], WOOSC_VERSION );
+                        wp_enqueue_script( 'fonticonpicker', WOOSC_URI . 'assets/libs/fonticonpicker/js/jquery.fonticonpicker.min.js', [ 'jquery' ], WOOSC_VERSION, true );
                         wp_enqueue_style( 'woosc-icons', WOOSC_URI . 'assets/css/icons.css', [], WOOSC_VERSION );
                         wp_enqueue_style( 'woosc-backend', WOOSC_URI . 'assets/css/backend.css', [ 'woocommerce_admin_styles' ], WOOSC_VERSION );
                         wp_enqueue_script( 'woosc-backend', WOOSC_URI . 'assets/js/backend.js', [
@@ -351,6 +353,9 @@ if ( ! function_exists( 'woosc_init' ) ) {
                                 'jquery-ui-sortable',
                                 'selectWoo',
                         ], WOOSC_VERSION, true );
+                        wp_localize_script( 'woosc-backend', 'woosc_backend_vars', [
+                                'nonce' => wp_create_nonce( 'woosc-security' ),
+                        ] );
                     }
                 }
 
@@ -402,6 +407,15 @@ if ( ! function_exists( 'woosc_init' ) ) {
                     ] );
                 }
 
+                function last_saved( $value, $option ) {
+                    if ( $option == 'woosc_settings' || $option == 'woosc_localization' ) {
+                        $value['_last_saved']    = current_time( 'timestamp' );
+                        $value['_last_saved_by'] = get_current_user_id();
+                    }
+
+                    return $value;
+                }
+
                 function admin_menu() {
                     add_submenu_page( 'wpclever', esc_html__( 'WPC Smart Compare', 'woo-smart-compare' ), esc_html__( 'Smart Compare', 'woo-smart-compare' ), 'manage_options', 'wpclever-woosc', [
                             $this,
@@ -411,7 +425,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
 
                 function admin_menu_content() {
                     add_thickbox();
-                    $active_tab = sanitize_key( $_GET['tab'] ?? 'settings' );
+                    $active_tab = sanitize_key( wp_unslash( $_GET['tab'] ?? 'settings' ) );
                     ?>
                     <div class="wpclever_settings_page wrap">
                         <div class="wpclever_settings_page_header">
@@ -435,7 +449,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
                             </div>
                         </div>
                         <h2></h2>
-                        <?php if ( isset( $_GET['settings-updated'] ) && $_GET['settings-updated'] ) {
+                        <?php if ( isset( $_GET['settings-updated'] ) && sanitize_key( wp_unslash( $_GET['settings-updated'] ?? '' ) ) ) {
                             flush_rewrite_rules();
                             ?>
                             <div class="notice notice-success is-dismissible">
@@ -567,7 +581,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
                                                 <label>
                                                     <input type="number" min="1" max="100" step="1"
                                                            name="woosc_settings[limit]"
-                                                           value="<?php echo self::get_setting( 'limit', '100' ); ?>"/>
+                                                           value="<?php echo esc_attr( self::get_setting( 'limit', '100' ) ); ?>"/>
                                                 </label>
                                                 <span class="description"><?php esc_html_e( 'The maximum of products can be added to the comparison table.', 'woo-smart-compare' ); ?></span>
                                             </td>
@@ -576,7 +590,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
                                             <th scope="row"><?php esc_html_e( 'Comparison page', 'woo-smart-compare' ); ?></th>
                                             <td>
                                                 <?php wp_dropdown_pages( [
-                                                        'selected'          => self::get_setting( 'page_id', '' ),
+                                                        'selected'          => absint( self::get_setting( 'page_id', 0 ) ),
                                                         'name'              => 'woosc_settings[page_id]',
                                                         'show_option_none'  => esc_html__( 'Choose a page', 'woo-smart-compare' ),
                                                         'option_none_value' => '',
@@ -629,7 +643,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
                                                     <select name="woosc_settings[button_normal_icon]"
                                                             class="woosc_icon_picker">
                                                         <?php for ( $i = 1; $i <= 79; $i ++ ) {
-                                                            echo '<option value="woosc-icon-' . $i . '" ' . selected( $button_normal_icon, 'woosc-icon-' . $i, false ) . '>woosc-icon-' . $i . '</option>';
+                                                             echo '<option value="woosc-icon-' . esc_attr( $i ) . '" ' . selected( $button_normal_icon, 'woosc-icon-' . $i, false ) . '>woosc-icon-' . esc_html( $i ) . '</option>';
                                                         } ?>
                                                     </select> </label>
                                             </td>
@@ -641,7 +655,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
                                                     <select name="woosc_settings[button_added_icon]"
                                                             class="woosc_icon_picker">
                                                         <?php for ( $i = 1; $i <= 79; $i ++ ) {
-                                                            echo '<option value="woosc-icon-' . $i . '" ' . selected( $button_added_icon, 'woosc-icon-' . $i, false ) . '>woosc-icon-' . $i . '</option>';
+                                                             echo '<option value="woosc-icon-' . esc_attr( $i ) . '" ' . selected( $button_added_icon, 'woosc-icon-' . $i, false ) . '>woosc-icon-' . esc_html( $i ) . '</option>';
                                                         } ?>
                                                     </select> </label>
                                             </td>
@@ -680,7 +694,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
                                                 <label>
                                                     <input type="text" class="regular-text"
                                                            name="woosc_settings[button_class]"
-                                                           value="<?php echo self::get_setting( 'button_class', '' ); ?>"/>
+                                                           value="<?php echo esc_attr( self::get_setting( 'button_class', '' ) ); ?>"/>
                                                 </label>
                                                 <span class="description"><?php esc_html_e( 'Add extra class for action button/link, split by one space.', 'woo-smart-compare' ); ?></span>
                                             </td>
@@ -1052,7 +1066,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
                                                 <label> <select name="woosc_settings[bar_filter]">
                                                         <option value="no" <?php selected( $bar_filter, 'no' ); ?>><?php esc_html_e( 'None (disable)', 'woo-smart-compare' ); ?></option>
                                                         <?php
-                                                        $taxonomies = get_object_taxonomies( 'product', 'objects' ); //$taxonomies = get_taxonomies( [ 'object_type' => [ 'product' ] ], 'objects' );
+                                                        $taxonomies = get_object_taxonomies( 'product', 'objects' );
 
                                                         foreach ( $taxonomies as $taxonomy ) {
                                                             echo '<option value="' . esc_attr( $taxonomy->name ) . '" ' . selected( $bar_filter, $taxonomy->name, false ) . '>' . esc_html( $taxonomy->label ) . '</option>';
@@ -1098,7 +1112,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
                                                 <label>
                                                     <input type="number" min="1" max="100"
                                                            name="woosc_settings[search_count]"
-                                                           value="<?php echo self::get_setting( 'search_count', 10 ); ?>"/>
+                                                           value="<?php echo esc_attr( self::get_setting( 'search_count', 10 ) ); ?>"/>
                                                 </label>
                                                 <span class="description"><?php esc_html_e( 'The result count of search function when clicking on "Add more" button.', 'woo-smart-compare' ); ?></span>
                                             </td>
@@ -1365,7 +1379,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
                                                 <label>
                                                     <input type="text" class="regular-text"
                                                            name="woosc_settings[open_button]"
-                                                           value="<?php echo self::get_setting( 'open_button', '' ); ?>"
+                                                           value="<?php echo esc_attr( self::get_setting( 'open_button', '' ) ); ?>"
                                                            placeholder="<?php esc_html_e( 'button class or id', 'woo-smart-compare' ); ?>"/>
                                                 </label>
                                                 <span class="description"><?php printf( /* translators: selector */ esc_html__( 'Example %1$s or %2$s', 'woo-smart-compare' ), '<code>.open-compare-btn</code>', '<code>#open-compare-btn</code>' ); ?></span>
@@ -1385,7 +1399,16 @@ if ( ! function_exists( 'woosc_init' ) ) {
                                         </tr>
                                         <tr class="submit">
                                             <th colspan="2">
-                                                <?php settings_fields( 'woosc_settings' ); ?><?php submit_button(); ?>
+                                                <div class="wpclever_submit">
+                                                    <?php
+                                                    settings_fields( 'woosc_settings' );
+                                                    submit_button( '', 'primary', 'submit', false );
+
+                                                    if ( function_exists( 'wpc_last_saved' ) ) {
+                                                        wpc_last_saved( self::get_settings() );
+                                                    }
+                                                    ?>
+                                                </div>
                                                 <a style="display: none;" class="wpclever_export"
                                                    data-key="woosc_settings"
                                                    data-name="settings"
@@ -2460,8 +2483,8 @@ if ( ! function_exists( 'woosc_init' ) ) {
                         return false;
                     }
 
-                    $product_id = absint( $_REQUEST['add_to_compare'] ?? 0 );
-                    $product_id = absint( $_REQUEST['add-to-compare'] ?? $product_id );
+                    $product_id = absint( wp_unslash( $_REQUEST['add_to_compare'] ?? 0 ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+                    $product_id = absint( $_REQUEST['add-to-compare'] ?? $product_id ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
                     if ( ! $product_id ) {
                         return false;
@@ -2497,12 +2520,12 @@ if ( ! function_exists( 'woosc_init' ) ) {
 
                 function ajax_search() {
                     if ( ! apply_filters( 'woosc_disable_nonce_check', false, 'search' ) ) {
-                        if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_key( $_POST['nonce'] ), 'woosc-security' ) ) {
+                        if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['nonce'] ) ), 'woosc-security' ) ) {
                             die( 'Permissions check failed!' );
                         }
                     }
 
-                    $keyword        = sanitize_text_field( $_POST['keyword'] );
+                    $keyword        = sanitize_text_field( wp_unslash( $_POST['keyword'] ?? '' ) );
                     $cats           = self::get_setting( 'search_cats', [] );
                     $related        = [];
                     $products       = self::get_products();
@@ -2555,16 +2578,16 @@ if ( ! function_exists( 'woosc_init' ) ) {
 
                             echo '<li>';
                             echo '<div class="item-inner">';
-                            echo '<div class="item-image">' . $pr->get_image( 'woosc-small' ) . '</div>';
-                            echo '<div class="item-name">' . $pr->get_name() . '</div>';
-                            echo '<div class="item-add woosc-item-add" data-id="' . $pr->get_id() . '"><span>+</span></div>';
+                            echo '<div class="item-image">' . wp_kses_post( $pr->get_image( 'woosc-small' ) ) . '</div>';
+                            echo '<div class="item-name">' . esc_html( $pr->get_name() ) . '</div>';
+                            echo '<div class="item-add woosc-item-add" data-id="' . absint( $pr->get_id() ) . '"><span>+</span></div>';
                             echo '</div>';
                             echo '</li>';
                         }
 
                         echo '</ul>';
                     } else {
-                        echo '<ul><span>' . sprintf( self::localization( 'bar_search_no_results', /* translators: keyword */ esc_html__( 'No results found for "%s"', 'woo-smart-compare' ) ), esc_html( $keyword ) ) . '</span></ul>';
+                        echo '<ul><span>' . wp_kses_post( sprintf( self::localization( 'bar_search_no_results', /* translators: keyword */ esc_html__( 'No results found for "%s"', 'woo-smart-compare' ) ), esc_html( $keyword ) ) ) . '</span></ul>';
                     }
 
                     wp_die();
@@ -2572,7 +2595,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
 
                 function ajax_share() {
                     if ( ! apply_filters( 'woosc_disable_nonce_check', false, 'share' ) ) {
-                        if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_key( $_POST['nonce'] ), 'woosc-security' ) ) {
+                        if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['nonce'] ) ), 'woosc-security' ) ) {
                             die( 'Permissions check failed!' );
                         }
                     }
@@ -2598,7 +2621,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
                         if ( ! empty( $url ) ) {
                             ?>
                             <div class="woosc-share-text">
-                                <?php echo self::localization( 'share_description', esc_html__( 'Share link was generated! Now you can copy below link to share.', 'woo-smart-compare' ) ); ?>
+                                <?php echo wp_kses_post( self::localization( 'share_description', esc_html__( 'Share link was generated! Now you can copy below link to share.', 'woo-smart-compare' ) ) ); ?>
                             </div>
                             <div class="woosc-share-link">
                                 <label for="woosc_copy_url"></label><input type="url" id="woosc_copy_url"
@@ -2606,10 +2629,10 @@ if ( ! function_exists( 'woosc_init' ) ) {
                                                                            readonly/>
                             </div>
                             <?php
-                            echo self::share_links( urlencode( $url ) );
+                            echo wp_kses_post( self::share_links( urlencode( $url ) ) );
                         }
                     } else {
-                        echo self::localization( 'table_empty', esc_html__( 'No product is added to the comparison table.', 'woo-smart-compare' ) );
+                        echo wp_kses_post( self::localization( 'table_empty', esc_html__( 'No product is added to the comparison table.', 'woo-smart-compare' ) ) );
                     }
 
                     wp_die();
@@ -2617,30 +2640,30 @@ if ( ! function_exists( 'woosc_init' ) ) {
 
                 function ajax_load() {
                     if ( ! apply_filters( 'woosc_disable_nonce_check', false, 'load_data' ) ) {
-                        if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_key( $_POST['nonce'] ), 'woosc-security' ) ) {
+                        if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['nonce'] ) ), 'woosc-security' ) ) {
                             die( 'Permissions check failed!' );
                         }
                     }
 
                     $data = [];
 
-                    if ( isset( $_REQUEST['get_data'] ) && ( sanitize_key( $_REQUEST['get_data'] ) === 'bar' ) ) {
+                    if ( isset( $_REQUEST['get_data'] ) && ( sanitize_key( wp_unslash( $_REQUEST['get_data'] ) ) === 'bar' ) ) {
                         $data['bar']    = self::get_bar();
                         $data['filter'] = self::get_filter();
                     }
 
-                    if ( isset( $_REQUEST['get_data'] ) && ( sanitize_key( $_REQUEST['get_data'] ) === 'table' ) ) {
+                    if ( isset( $_REQUEST['get_data'] ) && ( sanitize_key( wp_unslash( $_REQUEST['get_data'] ) ) === 'table' ) ) {
                         $data['bar']    = self::get_bar();
                         $data['table']  = self::get_table( true, null, 'table' );
                         $data['filter'] = self::get_filter();
                     }
 
-                    if ( isset( $_REQUEST['get_data'] ) && ( sanitize_key( $_REQUEST['get_data'] ) === 'sidebar' ) ) {
+                    if ( isset( $_REQUEST['get_data'] ) && ( sanitize_key( wp_unslash( $_REQUEST['get_data'] ) ) === 'sidebar' ) ) {
                         $data['sidebar'] = self::get_sidebar();
                         $data['filter']  = self::get_filter();
                     }
 
-                    if ( isset( $_REQUEST['get_data'] ) && ( sanitize_key( $_REQUEST['get_data'] ) === 'count' ) ) {
+                    if ( isset( $_REQUEST['get_data'] ) && ( sanitize_key( wp_unslash( $_REQUEST['get_data'] ) ) === 'count' ) ) {
                         $data['count'] = self::get_count();
                     }
 
@@ -2648,7 +2671,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
                 }
 
                 function add_button() {
-                    echo do_shortcode( '[woosc]' );
+                    echo wp_kses_post( do_shortcode( '[woosc]' ) );
                 }
 
                 function shortcode_btn( $attrs ) {
@@ -2807,15 +2830,15 @@ if ( ! function_exists( 'woosc_init' ) ) {
                                             <li>
                                                 <label><input type="checkbox" class="woosc-settings-tool"
                                                               value="hide_similarities"
-                                                              id="woosc_hide_similarities" <?php echo esc_attr( in_array( 'hide_similarities', $cookie_settings ) ? 'checked' : '' ); ?>/> <?php echo self::localization( 'hide_similarities', esc_html__( 'Hide similarities', 'woo-smart-compare' ) ); ?>
+                                                              id="woosc_hide_similarities" <?php echo esc_attr( in_array( 'hide_similarities', $cookie_settings ) ? 'checked' : '' ); ?>/> <?php echo wp_kses_post( self::localization( 'hide_similarities', esc_html__( 'Hide similarities', 'woo-smart-compare' ) ) ); ?>
                                                 </label></li>
                                             <li>
                                                 <label><input type="checkbox" class="woosc-settings-tool"
                                                               value="highlight_differences"
-                                                              id="woosc_highlight_differences" <?php echo esc_attr( in_array( 'highlight_differences', $cookie_settings ) ? 'checked' : '' ); ?>/> <?php echo self::localization( 'highlight_differences', esc_html__( 'Highlight differences', 'woo-smart-compare' ) ); ?>
+                                                              id="woosc_highlight_differences" <?php echo esc_attr( in_array( 'highlight_differences', $cookie_settings ) ? 'checked' : '' ); ?>/> <?php echo wp_kses_post( self::localization( 'highlight_differences', esc_html__( 'Highlight differences', 'woo-smart-compare' ) ) ); ?>
                                                 </label></li>
                                         </ul>
-                                        <?php echo self::localization( 'bar_select_fields_desc', esc_html__( 'Select the fields to be shown. Others will be hidden. Drag and drop to rearrange the order.', 'woo-smart-compare' ) ); ?>
+                                        <?php echo wp_kses_post( self::localization( 'bar_select_fields_desc', esc_html__( 'Select the fields to be shown. Others will be hidden. Drag and drop to rearrange the order.', 'woo-smart-compare' ) ) ); ?>
                                         <ul class="woosc-settings-fields">
                                             <?php
                                             $fields        = self::get_fields();
@@ -2889,7 +2912,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
                             <div class="<?php echo esc_attr( self::get_setting( 'bar_bubble', 'no' ) === 'yes' ? 'woosc-bar woosc-bar-bubble' : 'woosc-bar' ); ?>">
                                 <?php if ( self::get_setting( 'click_outside', 'yes' ) !== 'no' && self::get_setting( 'bar_bubble', 'no' ) !== 'yes' ) { ?>
                                     <div class="woosc-bar-notice">
-                                        <?php echo self::localization( 'bar_click_outside', esc_html__( 'Click outside to hide the comparison bar', 'woo-smart-compare' ) ); ?>
+                                        <?php echo wp_kses_post( self::localization( 'bar_click_outside', esc_html__( 'Click outside to hide the comparison bar', 'woo-smart-compare' ) ) ); ?>
                                     </div>
                                 <?php }
 
@@ -2909,7 +2932,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
                                 <?php }
 
                                 if ( self::get_setting( 'bar_filter', 'no' ) !== 'no' ) {
-                                    echo '<span class="woosc-bar-filter hint--top" aria-label="' . esc_attr( self::localization( 'bar_filter', esc_html__( 'Filter', 'woo-smart-compare' ) ) ) . '">' . self::get_filter() . '</span>';
+                                    echo '<span class="woosc-bar-filter hint--top" aria-label="' . esc_attr( self::localization( 'bar_filter', esc_html__( 'Filter', 'woo-smart-compare' ) ) ) . '">' . wp_kses_post( self::get_filter() ) . '</span>';
                                 }
 
                                 echo '<div class="woosc-bar-items"></div>';
@@ -2924,22 +2947,22 @@ if ( ! function_exists( 'woosc_init' ) ) {
                                         <div class="woosc-bar-btn-icon-inner"><span></span><span></span><span></span>
                                         </div>
                                     </div>
-                                    <?php echo apply_filters( 'woosc_bar_btn_text', self::localization( 'bar_button', esc_html__( 'Compare', 'woo-smart-compare' ) ) ); ?>
+                                    <?php echo wp_kses_post( apply_filters( 'woosc_bar_btn_text', self::localization( 'bar_button', esc_html__( 'Compare', 'woo-smart-compare' ) ) ) ); ?>
                                 </div>
                             </div>
 
                             <?php if ( self::get_setting( 'button_action', 'show_table' ) === 'show_sidebar' || self::get_setting( 'menu_action', 'open_popup' ) === 'open_sidebar' || self::get_setting( 'open_button_action', 'open_popup' ) === 'open_sidebar' ) { ?>
                                 <div class="<?php echo esc_attr( 'woosc-sidebar woosc-sidebar-position-' . self::get_setting( 'sidebar_position', 'right' ) ); ?>">
                                     <div class="woosc-sidebar-top">
-                                        <span class="woosc-sidebar-heading"><?php echo self::localization( 'sidebar_heading', esc_html__( 'Compare', 'woo-smart-compare' ) ); ?></span>
+                                        <span class="woosc-sidebar-heading"><?php echo wp_kses_post( self::localization( 'sidebar_heading', esc_html__( 'Compare', 'woo-smart-compare' ) ) ); ?></span>
                                         <span class="woosc-sidebar-count"></span>
                                         <span class="woosc-sidebar-close hint--left" role="button"
                                               aria-label="<?php echo esc_attr( self::localization( 'sidebar_close', esc_html__( 'Close', 'woo-smart-compare' ) ) ); ?>"> &times; </span>
                                     </div>
                                     <div class="woosc-sidebar-items"></div>
                                     <div class="woosc-sidebar-bot">
-                                        <span class="woosc-sidebar-btn"><?php echo self::localization( 'sidebar_button', esc_html__( 'Let\'s Compare!', 'woo-smart-compare' ) ); ?></span>
-                                        <span class="woosc-sidebar-continue"><span><?php echo self::localization( 'sidebar_continue', esc_html__( 'Continue shopping', 'woo-smart-compare' ) ); ?></span></span>
+                                        <span class="woosc-sidebar-btn"><?php echo wp_kses_post( self::localization( 'sidebar_button', esc_html__( 'Let\'s Compare!', 'woo-smart-compare' ) ) ); ?></span>
+                                        <span class="woosc-sidebar-continue"><span><?php echo wp_kses_post( self::localization( 'sidebar_continue', esc_html__( 'Continue shopping', 'woo-smart-compare' ) ) ); ?></span></span>
                                     </div>
                                 </div>
                             <?php } ?>
@@ -2953,7 +2976,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
                     $cookie_fields = 'woosc_fields_' . $hash . '_' . self::get_user_key();
 
                     if ( ! empty( $_COOKIE[ $cookie_fields ] ) ) {
-                        $fields = explode( ',', sanitize_text_field( $_COOKIE[ $cookie_fields ] ) );
+                        $fields = explode( ',', sanitize_text_field( wp_unslash( $_COOKIE[ $cookie_fields ] ) ) );
                     } else {
                         $fields = $saved_fields;
                     }
@@ -2966,7 +2989,7 @@ if ( ! function_exists( 'woosc_init' ) ) {
                     $cookie_settings = 'woosc_settings_' . $hash . '_' . self::get_user_key();
 
                     if ( isset( $_COOKIE[ $cookie_settings ] ) ) {
-                        $settings = explode( ',', sanitize_text_field( $_COOKIE[ $cookie_settings ] ) );
+                        $settings = explode( ',', sanitize_text_field( wp_unslash( $_COOKIE[ $cookie_settings ] ) ) );
                     } else {
                         $settings = $saved_settings;
                     }
@@ -3041,11 +3064,11 @@ if ( ! function_exists( 'woosc_init' ) ) {
                 }
 
                 function account_endpoint() {
-                    echo apply_filters( 'woosc_myaccount_compare_content', do_shortcode( '[woosc_list]' ) );
+                    echo wp_kses_post( apply_filters( 'woosc_myaccount_compare_content', do_shortcode( '[woosc_list]' ) ) );
                 }
 
                 function show_quick_table() {
-                    echo do_shortcode( '[woosc_quick_table]' );
+                    echo wp_kses_post( do_shortcode( '[woosc_quick_table]' ) );
                 }
 
                 function shortcode_quick_table() {
@@ -3072,12 +3095,12 @@ if ( ! function_exists( 'woosc_init' ) ) {
                             class="<?php echo esc_attr( apply_filters( 'woosc_quick_table_class', $quick_table_class ) ); ?>">
                         <?php
                         do_action( 'woosc_before_quick_table', $product );
-                        echo apply_filters( 'woosc_quick_table_heading', '<h2>' . self::localization( 'quick_table_heading', esc_html__( 'Quick Comparison', 'woo-smart-compare' ) ) . '</h2>' );
+                        echo wp_kses_post( apply_filters( 'woosc_quick_table_heading', '<h2>' . self::localization( 'quick_table_heading', esc_html__( 'Quick Comparison', 'woo-smart-compare' ) ) . '</h2>' ) );
                         ?>
                         <div class="woosc-quick-table-products">
                             <?php
                             do_action( 'woosc_before_quick_table_products', $product );
-                            echo self::get_table( false, $related, 'quick_table' );
+                            echo wp_kses_post( self::get_table( false, $related, 'quick_table' ) );
                             do_action( 'woosc_after_quick_table_products', $product );
                             ?>
                         </div>
@@ -3126,9 +3149,13 @@ if ( ! function_exists( 'woosc_init' ) ) {
                 }
 
                 function ajax_add_field() {
-                    $type    = sanitize_key( $_POST['type'] ?? '' );
-                    $field   = sanitize_text_field( urldecode( $_POST['field'] ?? '' ) );
-                    $setting = sanitize_key( $_POST['setting'] ?? '' );
+                    if ( ! current_user_can( 'manage_options' ) || ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['nonce'] ) ), 'woosc-security' ) ) {
+                        die( 'Permissions check failed!' );
+                    }
+
+                    $type    = sanitize_key( wp_unslash( $_POST['type'] ?? '' ) );
+                    $field   = urldecode( sanitize_text_field( wp_unslash( $_POST['field'] ?? '' ) ) );
+                    $setting = sanitize_key( wp_unslash( $_POST['setting'] ?? '' ) );
 
                     if ( ! empty( $type ) && ! empty( $field ) && ! empty( $setting ) ) {
                         if ( ( $type === 'attribute' ) && ( $field === 'all' ) ) {
@@ -3178,14 +3205,14 @@ if ( ! function_exists( 'woosc_init' ) ) {
                 }
 
                 function field_html( $key, $setting, $type, $field, $title, $label = '' ) {
-                    echo '<div class="woosc-field woosc-field-' . $key . ' woosc-field-type-' . $type . '">';
+                    echo '<div class="woosc-field woosc-field-' . esc_attr( $key ) . ' woosc-field-type-' . esc_attr( $type ) . '">';
                     echo '<span class="move">' . esc_html__( 'move', 'woo-smart-compare' ) . '</span>';
                     echo '<span class="info">';
                     echo '<span class="title">' . esc_html( $title ) . '</span>';
-                    echo '<input class="woosc-field-type" type="hidden" name="woosc_settings[' . $setting . '][' . $key . '][type]" value="' . esc_attr( $type ) . '"/>';
+                    echo '<input class="woosc-field-type" type="hidden" name="woosc_settings[' . esc_attr( $setting ) . '][' . esc_attr( $key ) . '][type]" value="' . esc_attr( $type ) . '"/>';
 
                     if ( ( $type === 'custom_field' ) && ( $meta_keys = self::get_meta_keys() ) ) {
-                        echo '<select class="woosc-field-name" name="woosc_settings[' . $setting . '][' . $key . '][name]">';
+                        echo '<select class="woosc-field-name" name="woosc_settings[' . esc_attr( $setting ) . '][' . esc_attr( $key ) . '][name]">';
 
                         foreach ( $meta_keys as $meta_key ) {
                             echo '<option value="' . esc_attr( $meta_key ) . '" ' . selected( $field, $meta_key, false ) . '>' . esc_html( $meta_key ) . '</option>';
@@ -3193,10 +3220,10 @@ if ( ! function_exists( 'woosc_init' ) ) {
 
                         echo '</select>';
                     } else {
-                        echo '<input class="woosc-field-name" type="text" name="woosc_settings[' . $setting . '][' . $key . '][name]" value="' . esc_attr( $field ) . '" placeholder="' . esc_attr__( 'name', 'woo-smart-compare' ) . '"/>';
+                        echo '<input class="woosc-field-name" type="text" name="woosc_settings[' . esc_attr( $setting ) . '][' . esc_attr( $key ) . '][name]" value="' . esc_attr( $field ) . '" placeholder="' . esc_attr__( 'name', 'woo-smart-compare' ) . '"/>';
                     }
 
-                    echo '<input class="woosc-field-label" type="text" name="woosc_settings[' . $setting . '][' . $key . '][label]" value="' . esc_attr( $label ) . '" placeholder="' . esc_attr__( 'label', 'woo-smart-compare' ) . '"/>';
+                    echo '<input class="woosc-field-label" type="text" name="woosc_settings[' . esc_attr( $setting ) . '][' . esc_attr( $key ) . '][label]" value="' . esc_attr( $label ) . '" placeholder="' . esc_attr__( 'label', 'woo-smart-compare' ) . '"/>';
                     echo '</span>';
                     echo '<span class="remove">&times;</span>';
                     echo '</div>';
@@ -3259,7 +3286,8 @@ if ( ! function_exists( 'woosc_init' ) ) {
                 }
 
                 function save_post( $post_id, $post ) {
-                    if ( $post->post_type === 'product' ) {
+                    // No form data is processed here; only cache invalidation.
+                    if ( $post->post_type === 'product' ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
                         delete_transient( 'woosc_get_product_meta_keys' );
                     }
                 }
@@ -3293,9 +3321,9 @@ if ( ! function_exists( 'woosc_init' ) ) {
 
                     if ( ! empty( $_COOKIE[ $cookie ] ) ) {
                         if ( $type === 'string' ) {
-                            $products = sanitize_text_field( $_COOKIE[ $cookie ] );
+                            $products = sanitize_text_field( wp_unslash( $_COOKIE[ $cookie ] ) );
                         } else {
-                            $products = explode( ',', sanitize_text_field( $_COOKIE[ $cookie ] ) );
+                            $products = explode( ',', sanitize_text_field( wp_unslash( $_COOKIE[ $cookie ] ) ) );
                         }
                     }
 

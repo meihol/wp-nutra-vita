@@ -250,5 +250,10 @@ if ( ! class_exists( 'Woo_Variation_Swatches' ) ) {
 		public function get_pro_product_id() {
 			return 113;
 		}
+
+		public static function plugin_activated(){
+			update_option( 'woocommerce_show_marketplace_suggestions', 'no' );
+			update_option( 'woo_variation_swatches_do_activate_redirect', 'yes' );
+		}
 	}
 }

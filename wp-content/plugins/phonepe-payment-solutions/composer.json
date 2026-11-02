@@ -6,17 +6,7 @@
             "name": "phonepe"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
-        "phonepe/phonepe-pg-php-sdk": "*"
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "/Users/sudarshan.gawale/Downloads/pg-sdk-php-v2-sdk",
-            "options": {
-                "symlink": false
-            }
-        }
-    ]
+        "phonepe/phonepe-pg-php-sdk": "2.2.0"
+    }
 }

@@ -34,11 +34,11 @@ register_setting("qrc_admin_integrate", "qrc_admin_integrate", array($this ,'qr_
 
 
 
-        add_settings_field("qrc_bbpress_display", esc_html__("BB Press Plugin (Premium)", "qr-code-composer") ,array($this , "qrc_bbpress_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_bbpress_display',));
+        add_settings_field("qrc_bbpress_display", esc_html__("BB Press QR Code (Premium)", "qr-code-composer") ,array($this , "qrc_bbpress_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_bbpress_display',));
 
-        add_settings_field("qrc_bdypress_display", esc_html__("Buddy Press Plugin (Premium)", "qr-code-composer") ,array($this , "qrc_bdypress_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_bdypress_display',));
+        add_settings_field("qrc_bdypress_display", esc_html__("Buddy Press QR Code (Premium)", "qr-code-composer") ,array($this , "qrc_bdypress_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_bdypress_display',));
 
-        add_settings_field("qrc_dokan_display", esc_html__("Dokan Plugin (Premium)", "qr-code-composer") ,array($this , "qrc_dokan_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_dokan_display',));
+        add_settings_field("qrc_dokan_display", esc_html__("Dokan QR Code (Premium)", "qr-code-composer") ,array($this , "qrc_dokan_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_dokan_display',));
 
     
 
@@ -47,9 +47,9 @@ register_setting("qrc_admin_integrate", "qrc_admin_integrate", array($this ,'qr_
   public function settting_log_sec_func()
     { ?>
 <div class="qrc-box-header" >
-   <h3 class="sui-box-title"><?php echo esc_html__('Generate QR codes for other plugins', 'qr-code-composer') ?>
+   <h3 class="sui-box-title"><?php echo esc_html__('QR Code Integration with Your Favorite WordPress Plugins', 'qr-code-composer') ?>
 </h3>
-<p class="vrcomponents"><?php echo esc_html__('QR codes can be generated for other plugins, we have integrated QR codes for BuddyPress, BBPress, and Dokan plugin. What other plugins can be integrated with.', 'qr-code-composer') ?> <a href="https://sharabindu.com/what-features-want-to-see/"><?php echo esc_html__('Send your feedback', 'qr-code-composer') ?></a></p>
+<p class="vrcomponents"><?php echo esc_html__('Connect your QR codes with the tools you already use and create better user experiences, faster access, and higher engagement.', 'qr-code-composer') ?></p>
 
         </div>
         <?php

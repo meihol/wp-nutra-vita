@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Shiprocket
  * Description: Seamlessly integrate with Shiprocket which will help you ship across 26000 pincodes and and at the cheapest of rates. Let you customer choose the courier based on their flexibility.
- * Version: 2.0.8
+ * Version: 2.0.9
  * Author: Shiprocket
  * Author URI: https://shiprocket.in
  * Copyright: Shiprocket
@@ -197,7 +197,7 @@ if ( ! class_exists( 'Shiprocket_Woocommerce_Shipping' ) ) {
 			$plugin_links = array(
 				'<a href="' . admin_url( 'admin.php?page=wc-settings&tab=shipping&section=shiprocket_woocommerce_shipping' ) . '">' . __( 'Settings', 'shiprocket-woocommerce-shipping-calculator' ) . '</a>',
 				'<a href="https://support.shiprocket.in/solution/articles/43000526636-shiprocket-wordpress-app-help-document">' . __( 'Documentation', 'shiprocket-woocommerce-shipping-calculator' ) . '</a>',
-				'<a href="https://app.shiprocket.in/register">' . __( 'Sign Up', 'shiprocket-woocommerce-shipping-calculator' ) . '</a>',
+				'<a href="https://app.shiprocket.in/newlogin">' . __( 'Sign Up', 'shiprocket-woocommerce-shipping-calculator' ) . '</a>',
 			);
 			return array_merge( $plugin_links, $links );
 		}

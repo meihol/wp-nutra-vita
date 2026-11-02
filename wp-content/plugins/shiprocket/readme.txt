@@ -7,7 +7,7 @@ Tags: woocommerce shipping, shipment tracking, cash on delivery, logistics integ
 Requires at least: 4.8
 Requires PHP: 4.8
 Tested up to: 6.9
-Stable tag: 2.0.8
+Stable tag: 2.0.9
 License: GPLv3
 
 Auto Sync your Woocommerce store orders & ship them at lowest shipping rates. Automate your shipping, save time & money.
@@ -118,6 +118,9 @@ Here are a few more features you get in the Shiprocket panel.</p>
 Please feel free to raise your concerns / issues on support@shiprocket.com.
 
 ==Changelog==
+
+= **2026-05-20 - version 2.0.9** =
+* Update - Sign up link now points to the Shiprocket login page.
 
 = **2024-08-05 - version 2.0.6** =
 * Update - Updated Description of Plugin

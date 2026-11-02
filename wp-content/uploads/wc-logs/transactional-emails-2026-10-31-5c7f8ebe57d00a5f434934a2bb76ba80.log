@@ -1,0 +1,27 @@
+2026-10-31T09:51:25+00:00 WARNING Email "customer_completed_order" for order #10714 failed to send: {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Login Required.",
+        "domain": "global",
+        "reason": "required",
+        "location": "Authorization",
+        "locationType": "header"
+      }
+    ],
+    "status": "UNAUTHENTICATED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "CREDENTIALS_MISSING",
+        "domain": "googleapis.com",
+        "metadata": {
+          "method": "caribou.api.proto.MailboxService.SendMessage",
+          "service": "gmail.googleapis.com"
+        }
+      }
+    ]
+  }
+} CONTEXT: {"email_type":"customer_completed_order","status":"failed","recipient":"guest","order":10714}

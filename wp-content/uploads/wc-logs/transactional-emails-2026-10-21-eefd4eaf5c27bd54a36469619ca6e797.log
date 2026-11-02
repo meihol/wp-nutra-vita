@@ -1,0 +1,54 @@
+2026-10-21T12:31:17+00:00 WARNING Email "customer_failed_order" for order #10706 failed to send: {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Login Required.",
+        "domain": "global",
+        "reason": "required",
+        "location": "Authorization",
+        "locationType": "header"
+      }
+    ],
+    "status": "UNAUTHENTICATED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "CREDENTIALS_MISSING",
+        "domain": "googleapis.com",
+        "metadata": {
+          "method": "caribou.api.proto.MailboxService.SendMessage",
+          "service": "gmail.googleapis.com"
+        }
+      }
+    ]
+  }
+} CONTEXT: {"email_type":"customer_failed_order","status":"failed","recipient":"harsh","order":10706}
+2026-10-21T12:31:18+00:00 WARNING Email "failed_order" for order #10706 failed to send: {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Login Required.",
+        "domain": "global",
+        "reason": "required",
+        "location": "Authorization",
+        "locationType": "header"
+      }
+    ],
+    "status": "UNAUTHENTICATED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "CREDENTIALS_MISSING",
+        "domain": "googleapis.com",
+        "metadata": {
+          "method": "caribou.api.proto.MailboxService.SendMessage",
+          "service": "gmail.googleapis.com"
+        }
+      }
+    ]
+  }
+} CONTEXT: {"email_type":"failed_order","status":"failed","recipient":"guest","order":10706}

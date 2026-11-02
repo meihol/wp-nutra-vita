@@ -3,7 +3,7 @@
  * The admin-specific functionality of the plugin.
  *
  * @link       https://sharabindu.com
- * @since      3.0.4
+ * @since      3.0.5
  *
  * @package    Qrc_composer
  * @subpackage Qrc_composer/admin
@@ -27,7 +27,7 @@ class Qrc_composer_Admin
     /**
      * The ID of this plugin.
      *
-     * @since    3.0.4
+     * @since    3.0.5
      * @access   private
      * @var      string    $plugin_name    The ID of this plugin.
      */
@@ -36,7 +36,7 @@ class Qrc_composer_Admin
     /**
      * The version of this plugin.
      *
-     * @since    3.0.4
+     * @since    3.0.5
      * @access   private
      * @var      string    $version    The current version of this plugin.
      */
@@ -45,7 +45,7 @@ class Qrc_composer_Admin
     /**
      * Initialize the class and set its properties.
      *
-     * @since    3.0.4
+     * @since    3.0.5
      * @param      string    $plugin_name       The name of this plugin.
      * @param      string    $version    The version of this plugin.
      */
@@ -87,7 +87,7 @@ class Qrc_composer_Admin
     /**
      * Register the stylesheets for the admin area.
      *
-     * @since    3.0.4
+     * @since    3.0.5
      */
     public function enqueue_styles()
     {
@@ -118,7 +118,7 @@ class Qrc_composer_Admin
     /**
      * Register the JavaScript for the admin area.
      *
-     * @since    3.0.4
+     * @since    3.0.5
      */
     public function enqueue_scripts()
     {
@@ -192,7 +192,7 @@ class Qrc_composer_Admin
     /**
      * Setting link.
      *
-     * @since    3.0.4
+     * @since    3.0.5
      */
 
     public function plugin_settings_link($links)

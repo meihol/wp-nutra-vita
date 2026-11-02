@@ -128,3 +128,20 @@ function ppLogInfo($message) {
 function ppLogDebug($message) {
   ppLog('debug', $message);
 }
+
+/**
+ * Logs an exception with full details: type, code, message, and data (for PhonePeException).
+ * Use this instead of ppLogError(json_encode($exception)) — PHP Exceptions do not serialize via json_encode.
+ * @param Exception $exception
+ * @param string $context Optional context prefix (e.g., "pay()", "getOrderStatus()")
+ */
+function ppLogException($exception, $context = '') {
+  $prefix = $context ? "[PhonePe " . $context . "] " : "[PhonePe] ";
+  $msg = $prefix . "Exception | type: " . get_class($exception)
+       . " | code: " . $exception->getCode()
+       . " | message: " . $exception->getMessage();
+  if (method_exists($exception, 'getData') && $exception->getData() !== null) {
+    $msg .= " | data: " . json_encode($exception->getData());
+  }
+  ppLogError($msg);
+}

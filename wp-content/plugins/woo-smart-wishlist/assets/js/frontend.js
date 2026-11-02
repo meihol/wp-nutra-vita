@@ -629,6 +629,37 @@
         });
     });
 
+    // search/filter products
+    $(document).on('input', '.woosw-search-input', function () {
+        var keyword = $(this).val().toLowerCase().trim();
+        var $items = $(this).closest('.woosw-popup-content').find('.woosw-items:not(.woosw-suggested-items) .woosw-item');
+
+        if (keyword === '') {
+            $items.show();
+            // show suggested section
+            $(this).closest('.woosw-popup-content').find('.woosw-suggested, .woosw-suggested-items').show();
+        } else {
+            $items.each(function () {
+                var name = ($(this).attr('data-name') || '').toLowerCase();
+                var note = ($(this).attr('data-note') || '').toLowerCase();
+
+                if (name.indexOf(keyword) > -1 || note.indexOf(keyword) > -1) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+
+            // hide suggested section when searching
+            $(this).closest('.woosw-popup-content').find('.woosw-suggested, .woosw-suggested-items').hide();
+        }
+    });
+
+    // clear search on popup close
+    $(document).on('click touch', '#woosw_wishlist .woosw-popup-close, .woosw-continue', function () {
+        $('.woosw-search-input').val('').trigger('input');
+    });
+
     // resize
     $(window).on('resize', function () {
         woosw_fix_height();
@@ -783,28 +814,8 @@
     }
 
     function woosw_load_data() {
-        if ($storage) {
-            try {
-                var data = JSON.parse(sessionStorage.getItem('woosw_data_' + key));
-
-                if (data.fragments) {
-                    woosw_refresh_fragments(data.fragments);
-                }
-
-                if (data.ids) {
-                    woosw_refresh_buttons(data.ids);
-                    woosw_refresh_ids(data.ids);
-                }
-
-                if (data.key && (key === null || key === undefined || key === '')) {
-                    Cookies.set('woosw_key', data.key, {expires: 7});
-                }
-            } catch (err) {
-                woosw_get_data();
-            }
-        } else {
-            woosw_get_data();
-        }
+        // don't use sessionStorage anymore
+        woosw_get_data();
     }
 
     function woosw_get_data() {

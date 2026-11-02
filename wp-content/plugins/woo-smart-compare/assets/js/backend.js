@@ -41,6 +41,7 @@
 
         var data = {
             action: 'woosc_add_field', type: type, field: field, setting: setting,
+            nonce: typeof woosc_backend_vars !== 'undefined' ? woosc_backend_vars.nonce : '',
         };
 
         $wrapper.addClass('woosc-fields-wrapper-loading');

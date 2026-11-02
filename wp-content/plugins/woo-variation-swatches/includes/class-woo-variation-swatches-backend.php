@@ -50,9 +50,19 @@ if ( ! class_exists( 'Woo_Variation_Swatches_Backend' ) ) {
 				'plugin_action_links',
 			) );
 			add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 2 );
+			add_action( 'admin_init', array( $this, 'activate_redirect' ) );
 
 			// add_action('woocommerce_attribute_updated', array( $this, 'clear_attribute_transient_on_update' ), 10, 2 );
 			// add_action('woocommerce_attribute_deleted', array( $this, 'clear_attribute_transient_on_delete' ), 10, 3 );
+		}
+
+		public function activate_redirect() {
+			if ( wc_string_to_bool( get_option( 'woo_variation_swatches_do_activate_redirect', 'no' ) ) && ! woo_variation_swatches()->is_pro() ) {
+				delete_option( 'woo_variation_swatches_do_activate_redirect' );
+
+				wp_redirect( $this->get_admin_menu()->get_settings_link( 'woo_variation_swatches', 'tutorial' ) );
+				exit;
+			}
 		}
 
 		public function clear_attribute_transient_on_update( $attribute_id, $data ) {

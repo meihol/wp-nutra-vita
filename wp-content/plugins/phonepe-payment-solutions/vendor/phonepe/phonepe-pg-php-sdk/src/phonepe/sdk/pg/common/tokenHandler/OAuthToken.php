@@ -1,5 +1,22 @@
 <?php
 
+/*
+*  Copyright (c) 2025 Original Author(s), PhonePe India Pvt. Ltd.
+*
+*  Licensed under the Apache License, Version 2.0 (the "License");
+*  you may not use this file except in compliance with the License.
+*  You may obtain a copy of the License at
+*
+*  http://www.apache.org/licenses/LICENSE-2.0
+*
+*  Unless required by applicable law or agreed to in writing, software
+*  distributed under the License is distributed on an "AS IS" BASIS,
+*  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+*  See the License for the specific language governing permissions and
+*  limitations under the License.
+*/
+
+
 namespace PhonePe\common\tokenHandler;
 
 class OAuthToken
@@ -23,7 +40,7 @@ class OAuthToken
 	 * @param int|null $session_expires_at
 	 * @param string|null $token_type
 	 */
-	public function __construct(string $access_token = null, string $encrypted_access_token = null, string $refresh_token = null, int $expires_in = null, int $issued_at = null, int $expires_at = null, int $session_expires_at = null, string $token_type = null)
+	public function __construct(?string $access_token = null, ?string $encrypted_access_token = null, ?string $refresh_token = null, ?int $expires_in = null, ?int $issued_at = null, ?int $expires_at = null, ?int $session_expires_at = null, ?string $token_type = null)
 	{
 		$this->access_token = $access_token;
 		$this->encrypted_access_token = $encrypted_access_token;

@@ -463,7 +463,7 @@ function qrc_print_pdf()
 
                      <li  class="qrc_fd_cnt"> 
                          <h3><?php echo esc_html('QR Code Composer', 'qr-code-composer') . ' <sup>' .esc_html( QRC_COMPOSER_VERSION); ?></sup> </h3>
-                 <small><?php echo esc_html('Create QR codes instantly. No setup required.', 'qr-code-composer') ?></small></li>
+                 <small><?php echo esc_html('Generate QR codes instantly.', 'qr-code-composer') ?></small></li>
                  </ul>
 
              </div>
@@ -558,12 +558,39 @@ function qrc_print_pdf()
              
            </form>
          </div>
+        <div class="qrc_wrap-md-5 lksfuieusb">
+         
+                     <div class="qrc_pro_ftcs_cont">
+                     <h4 class="pro_ftcs_qrch"><?php echo esc_html__('Upgrade to Pro', 'qr-code-composer') ?></h4>
 
+ <p><em style="color: #000;
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;">If you're just generating QR codes, use free tools.
+If you're growing your business with QR — this is for you</em></p>                    
+                     <h3 class="orderqrpro"><?php echo esc_html__('Branded & Custom QR Code Designs', 'qr-code-composer') ?></h3>
+                    
+                     <p style="color: #000;
+    text-align: center;
+    font-size: 16px;"><?php echo esc_html__('Make your QR codes match your brand with flexible design options — from circular to dotted styles. Create clean, professional-looking QR codes that enhance your website’s appearance.', 'qr-code-composer') ?></p>
+<video     autoplay 
+    muted 
+    loop 
+    playsinline
+    style="max-width:320px;"
+>
+    <source src="<?php echo esc_url(QRC_COMPOSER_URL . '/admin/img/wordpress-qr-code.mp4'); ?>" type="video/mp4">
+</video>
+
+                     <a class="qrc_gtnow" href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing"><?php echo esc_html__('Unlock PRO →', 'qr-code-composer') ?></a>
+                 </div>
+         </div> 
         </div>
     </div>
 
     <div  class="tab3-tab">
     <div id="dynamic-qr">
+          <div class="qrc_wrap-md-7">
         <form method="post" action="options.php" class="qrcdesings" id="qrcdesings">
          <?php  
 
@@ -576,11 +603,29 @@ function qrc_print_pdf()
         </div>
       </form>  
 
-  </div>    
+  </div> 
+        <div class="qrc_wrap-md-5 lksfuieusb">
+                     <div class="qrc_pro_ftcs_cont">
+                     <h4 class="pro_ftcs_qrch"><?php echo esc_html__('Upgrade to Pro', 'qr-code-composer') ?></h4>
+                     <h3 class="orderqrpro"><?php echo esc_html__('Order QR Code', 'qr-code-composer') ?></h3>
+                    
+                     <p><?php echo esc_html__('Automatically generates QR code for every new order and old order. WC order email QR code, can be created from different elements.', 'qr-code-composer') ?></p>
+                     <img style="box-shadow: 2px 2px 11px 2px #9f9f9f;" src="<?php echo esc_url(QRC_COMPOSER_URL . '/admin/img/order-qr-code.png') ?>" alt="Pro Features">
+
+        <a class="oreremils" id="orderemail" video-url="https://www.youtube.com/watch?v=hSCa9Tz0FZc" style="cursor: pointer;"><span title="Video Documentation" id="qrcdocsides" class="dashicons dashicons-video-alt3"></span></a>
+          <h3 class="orderqrpro" style="margin-bottom:30px"><?php echo esc_html__('Invoice QR Code', 'qr-code-composer') ?></h3>
+
+ <img style="box-shadow: 2px 2px 11px 2px #9f9f9f;" src="<?php echo esc_url(QRC_COMPOSER_URL . '/admin/img/pdf-min.png') ?>" alt="Pro Features">
+                     <a class="qrc_gtnow" href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing"><?php echo esc_html__('Unlock PRO →', 'qr-code-composer') ?></a>
+                 </div>
+
+
+        </div>  
+        </div> 
     </div>
     <div  class="tab4-tab">
         <div id="dynamic-qr">
-            
+        <div class="qrc_wrap-md-7">            
         <div>
         <form method="post" action="options.php" class="qrcpro_vacradsubmits" >              
 
@@ -595,10 +640,35 @@ function qrc_print_pdf()
          </div>
         
     </div>
+<div class="qrc_wrap-md-5 lksfuieusb">
+             <div>
+                 <div class="qrc_pro_ftcs_cont">
+                     <h4 class="pro_ftcs_qrch"><?php echo esc_html__('Upgrade to Pro', 'qr-code-composer') ?></h4>
+
+<h3 class="orderqrpro">Bulk vCard QR Code Generator</h3>                  
+                     <p style="color: #000;
+    font-size: 16px;">Create multiple vCard QR codes at once for your team, employees, or customers — saving time and eliminating repetitive manual work.</p>
+ <img src="<?php echo esc_url(QRC_COMPOSER_URL . '/admin/img/vcarddemo-min.png') ?>" alt="Pro Features" class="varcdemos">
+                     
+
+
+
+<h3 class="orderqrpro" style="margin-top:20px">Download vCard QR Code Images</h3>                  
+                     <p style="color: #000;
+    font-size: 16px;">Download all vCard QR code images from a single page, with easy filtering by post type and pagination support.</p>
+                   
+ <img src="<?php echo esc_url(QRC_COMPOSER_URL . '/admin/img/downlaod-vcard-min.png') ?>" alt="Pro Features" class="varcdemos">
+
+                     <a class="qrc_gtnow" href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing">Unlock PRO →</a>
+                 </div>
+             </div>
+         </div>
+
+            </div>
             </div>
     <div  class="tab5-tab">
         <div id="dynamic-qr">
-          
+        <div class="qrc_wrap-md-7">             
         <form method="post" action="options.php" class="qrcpro_integration">              
 
          <?php  
@@ -616,8 +686,22 @@ function qrc_print_pdf()
 
 
          </form>
+</div>
+  <div class="qrc_wrap-md-5 lksfuieusb">
+                         <div class="qrc_pro_ftcs_cont">
+                     <h4 class="pro_ftcs_qrch"><?php echo esc_html__('Upgrade to Pro', 'qr-code-composer') ?></h4>
+                     <h3 class="orderqrpro"><?php echo esc_html__('Order QR Code', 'qr-code-composer') ?></h3>
+                    
+                     <p><?php echo esc_html__('Automatically generates QR code for every new order and old order. WC order email QR code, can be created from different elements.', 'qr-code-composer') ?></p>
+                     <img style="box-shadow: 2px 2px 11px 2px #9f9f9f;" src="<?php echo esc_url(QRC_COMPOSER_URL . '/admin/img/order-qr-code.png') ?>" alt="Pro Features">
 
-  
+        <a class="oreremils" id="orderemail" video-url="https://www.youtube.com/watch?v=hSCa9Tz0FZc" style="cursor: pointer;"><span title="Video Documentation" id="qrcdocsides" class="dashicons dashicons-video-alt3"></span></a>
+          <h3 class="orderqrpro" style="margin-bottom:30px"><?php echo esc_html__('Invoice QR Code', 'qr-code-composer') ?></h3>
+
+ <img style="box-shadow: 2px 2px 11px 2px #9f9f9f;" src="<?php echo esc_url(QRC_COMPOSER_URL . '/admin/img/pdf-min.png') ?>" alt="Pro Features">
+                     <a class="qrc_gtnow" href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing"><?php echo esc_html__('Unlock PRO →', 'qr-code-composer') ?></a>
+                 </div>
+  </div>
          </div>  
          </div> 
 

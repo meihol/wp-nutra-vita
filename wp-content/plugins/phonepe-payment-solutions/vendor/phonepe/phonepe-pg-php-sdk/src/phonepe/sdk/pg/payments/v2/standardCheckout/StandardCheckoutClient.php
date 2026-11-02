@@ -1,5 +1,22 @@
 <?php
 
+/*
+*  Copyright (c) 2025 Original Author(s), PhonePe India Pvt. Ltd.
+*
+*  Licensed under the Apache License, Version 2.0 (the "License");
+*  you may not use this file except in compliance with the License.
+*  You may obtain a copy of the License at
+*
+*  http://www.apache.org/licenses/LICENSE-2.0
+*
+*  Unless required by applicable law or agreed to in writing, software
+*  distributed under the License is distributed on an "AS IS" BASIS,
+*  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+*  See the License for the specific language governing permissions and
+*  limitations under the License.
+*/
+
+
 namespace PhonePe\payments\v2\standardCheckout;
 
 use PhonePe\common\configs\Constants;
@@ -57,11 +74,11 @@ class StandardCheckoutClient
 	 * @return StandardCheckoutClient
 	 */
 	public static function getInstance($clientId,
-																		 $clientVersion,
-																		 $clientSecret,
-																		 $env,
-																		 $shouldPublishEvents = false,
-																		 $httpClient = new CurlHttpClient()): StandardCheckoutClient
+										 $clientVersion,
+										 $clientSecret,
+										 $env,
+										 $shouldPublishEvents = false,
+										 $httpClient = new CurlHttpClient()): StandardCheckoutClient
 	{
 		$httpClientName = get_class($httpClient);
 		$args = array(

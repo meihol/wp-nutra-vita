@@ -4,8 +4,8 @@ Tags: PhonePe, PhonePe Payments, PayWithPhonePe, PhonePe WooCommerce, PhonePe Pl
 Requires PHP: 8.2 or later
 Plugin Name: PhonePe Payment Solutions
 Authors: PhonePe
-Tested up to: 6.7
-Stable tag: 3.0.1
+Tested up to: 7.0
+Stable tag: 3.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,22 +14,21 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Using this plugin you can accept payments through PhonePe. After activating this plugin, you can see the PhonePe option linked to the checkout page of woocommerce site. On configuring with the provided Merchant credentials, you can enable this plugin in Preprod/Production environment.
 
 == Compatibilities and Dependencies ==
-
-* Wordpress v5.4.1 or higher
-* Woocommerce v4.14 or higher
-* PHP v5.6.0 or higher
+- WordPress v5.4.1 or higher
+- WooCommerce v4.14 or higher
+- PHP v8.2 or higher (For lower PHP versions, please download plugin version v2.0.11 from the [Advanced View](https://wordpress.org/plugins/phonepe-payment-solutions/advanced/) section.)
 
 == Getting Started == 
 
 New to PhonePe Payment Gateway? Follow the below steps to access PhonePe Merchant Dashboard.
 
 == Registration and Login ==
+- Check your registered email ID for an email from no-reply@phonepe.com with the subject line: "PhonePe dashboard access - ". This email contains a link to the login page.
+- Click the link and enter your registered Email ID or phone number.
+- You can log in using either the OTP option or by setting up a password via the Forgot Password option.
 
-* Check your registered mail ID for a mail from the “PhonePe team email id no-reply@phonepe.com” with the subject line: “PhonePe dashboard access - ”. This mail will contain a link to go to login page. Click on the link page and enter your Email ID or registered phone number. You can login either using the OTP option or by setting up a password by clicking on Forgot Password.
-
-
-Note: PhonePe will provide Merchant Id, SaltKey & keyIndex for the test and live modes. No money is deducted from your account in test mode.
-
+Note: PhonePe will provide Merchant ID, Client ID, and Client Secret for both test and live modes. No money is deducted from your account in test mode.
+If you haven’t registered yet, you can [sign up](https://business.phonepe.com/register?utm_source=plugin_website_woocommerce) here.
 
 == Plugin Installation == 
 
@@ -45,27 +44,66 @@ Note: In case you have installed the plugin directly from the wordpress dashboar
 * Unzip and open the downloaded folder.
 * Upload all plugin files in "wp-content/plugins/" directory
 * Install and activate the plugin from Wordpress admin panel
-* Visit the WooCommerce > Settings page to configure PhonePe – Pay Securely using UPI and Cards.
+* Visit the WooCommerce > Settings page to configure PhonePe Payment Solutions
 * Your PhonePe Payment Gateway plugin is now setup. You can now accept payments through PhonePe.
 
 == Configuration ==
 
-* Log into your WordPress admin and activate the PhonePe – Pay Securely using UPI and Cards plugin in WordPress Plugin Manager.
-* Log into your WooCommerce Webstore account, navigate to Settings and click the Checkout/Payment Gateways tab
-* Scroll down to the Checkout page and go to the setting option of PhonePe – Pay Securely using UPI and Cards under Gateway Display
-* Click on PhonePe – Pay Securely using UPI and Cards to edit the settings. If you do not see PhonePe in the list at the top of the screen make sure you have activated the plugin in the WordPress Plugin Manager
+1. Activate the Plugin
+    - Log into your WordPress admin and activate the PhonePe Payment Solutions plugin in the WordPress Plugin Manager.
 
-* Fill in the following credentials.
-    * Enable - Enable check box
-    * Merchant ID - Staging/Production MID provided by PhonePe
-    * Salt Key - Staging/Production Key provided by PhonePe
-    * Salt Key Index - Staging/Production provided by PhonePe
-    * Environment - Select environment type
+2. Configure WooCommerce Settings
+    - Log into your WooCommerce Webstore account.
+    - Navigate to Settings → Checkout/Payment Gateways tab.
+    - Scroll down to the Checkout page and go to the PhonePe Payment Solutions settings under Gateway Display.
+    - Click on PhonePe Payment Solutions to edit the settings.
+    - If PhonePe is not listed, ensure the plugin is activated in the WordPress Plugin Manager.
 
-Your PhonePe payment gateway is enabled. Now you can accept payment through PhonePe.
-In case of any issues with integration, please [get in touch](mailto:merchant-integration@phonepe.com).
+3. Enter Credentials Based on Plugin Version
+
+4. For Plugin Version 3.0.1 and Later:
+
+    Fill in the following credentials.
+
+    - Enable - Check the box to enable PhonePe payments.
+    - Client Id – Staging/Production Client ID provided by PhonePe.
+    - API Key – Staging/Production Client Secret provided by PhonePe.
+    - Client Version – Staging/Production client version provided by PhonePe
+    - Environment – Select the environment type (Staging/Production).
+
+5. For Plugin Version 2.0.11 and Earlier:
+
+    Fill in the following credentials.
+
+    - Enable - Enable check box
+    - Merchant ID - Staging/Production MID provided by PhonePe
+    - Salt Key - Staging/Production Key provided by PhonePe
+    - Salt Key Index - Staging/Production provided by PhonePe
+    - Environment - Select environment type
+
+Your PhonePe payment gateway is now enabled, and you can start accepting payments through PhonePe.
+Need Help?
+If you encounter any integration issues, please create a support ticket from your [PhonePe Merchant Dashboard](https://business.phonepe.com/dashboard) for assistance.
 
 == Changelog ==
+
+= Version 3.1.0 =
+* Security: Fixed critical vulnerability where payload was decoded before HMAC signature verification. Now authenticates requests before processing data.
+* Security: Removed logging of decoded untrusted data to prevent potential log injection attacks.
+* Security: Implemented sensitive data redaction in logs. OAuth tokens, access tokens, and customer PII (account numbers, VPA, UPI transaction IDs) are now masked.
+* Security: API response bodies now logged only on failures (non-200 status codes) to minimize sensitive data exposure.
+* Bug Fix: Resolved issue where empty customer details fields (email, phone, name) were sent as empty arrays causing payment request failures.
+* Bug Fix: Optional fields (customerDetails, prefillUserLoginDetails) are now only included in API requests when valid data exists.
+* Improvement: Enhanced error handling with proper JSON validation after signature verification.
+
+= Version 3.0.4 =
+* Added enhanced status check polling to resolve instagram browser issue.
+
+= Version 3.0.3 =
+* Minor bug fixes
+
+= Version 3.0.2 =
+* Updated readme with latest integration instructions.
 
 = Version 3.0.1 =
 * Added support for V2 of the Payment Gateway APIs from PhonePe, introducing multiple new features such as payment retries and token-based security.

@@ -226,12 +226,12 @@
     // add
     $(document).on('click touch', '.woosc-btn', function (e) {
         e.preventDefault();
-        var $this = $(this);
-        var id = $this.attr('data-id');
-        var pid = $this.attr('data-pid');
-        var product_id = $this.attr('data-product_id');
-        var product_name = $this.attr('data-product_name');
-        var product_image = $this.attr('data-product_image');
+        var $btn = $(this);
+        var id = $btn.attr('data-id');
+        var pid = $btn.attr('data-pid');
+        var product_id = $btn.attr('data-product_id');
+        var product_name = $btn.attr('data-product_name');
+        var product_image = $btn.attr('data-product_image');
 
         if (typeof pid !== typeof undefined && pid !== false) {
             id = pid;
@@ -241,7 +241,7 @@
             id = product_id;
         }
 
-        if ($this.hasClass('woosc-btn-added woosc-added')) {
+        if ($btn.hasClass('woosc-btn-added woosc-added')) {
             if (woosc_vars.click_again === 'yes') {
                 // remove
                 woosc_remove_product(id);
@@ -265,17 +265,8 @@
                 }
             }
         } else {
-            $this.addClass('woosc-btn-adding woosc-adding');
-            woosc_add_product(id);
-
-            if (woosc_vars.button_action === 'show_message') {
-                $.notiny({
-                    theme: 'woosc',
-                    position: woosc_vars.message_position,
-                    image: product_image,
-                    text: woosc_vars.message_added.replace('{name}', '<strong>' + product_name + '</strong>'),
-                });
-            }
+            $btn.addClass('woosc-btn-adding woosc-adding');
+            woosc_add_product(id, $btn);
         }
 
         if (woosc_vars.button_action === 'show_bar') {
@@ -368,11 +359,21 @@
     $(document).on('click touch', '.woosc-area-open-sidebar', function (e) {
         if (($(e.target).closest('.woosc-sidebar').length === 0)) {
             woosc_close_sidebar();
+
+            if (woosc_vars.open_bar === 'yes') {
+                woosc_load_data('bar');
+                woosc_open_bar();
+            }
         }
     });
 
     $(document).on('click touch', '.woosc-sidebar-close, .woosc-sidebar-continue', function (e) {
         woosc_close_sidebar();
+
+        if (woosc_vars.open_bar === 'yes') {
+            woosc_load_data('bar');
+            woosc_open_bar();
+        }
     });
 
     // let compare
@@ -560,7 +561,7 @@
         woosc_load_data('table');
     }
 
-    function woosc_add_product(product_id) {
+    function woosc_add_product(product_id, $btn = null) {
         var count;
         var limit = false;
         var limit_notice = woosc_vars.limit_notice;
@@ -614,6 +615,17 @@
                     $btn.text(text_added);
                 }
             });
+
+            if (woosc_vars.button_action === 'show_message') {
+                if ($btn !== null && $btn.data('product_name') !== undefined && $btn.data('product_name') !== '' && ($btn.data('product_image') !== undefined && $btn.data('product_image') !== '')) {
+                    $.notiny({
+                        theme: 'woosc',
+                        position: woosc_vars.message_position,
+                        image: $btn.data('product_image'),
+                        text: woosc_vars.message_added.replace('{name}', '<strong>' + $btn.data('product_name') + '</strong>'),
+                    });
+                }
+            }
         }
     }
 

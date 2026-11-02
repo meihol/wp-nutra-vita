@@ -264,6 +264,35 @@ class PPEX_WC_PG_Client implements PPEX_PG_Interface {
       return "Amount mismatch!";
     }
 
+    // Fix 2: For PAYMENT_SUCCESS callbacks, verify the payment server-side against
+    // PhonePe's status API before marking the order as paid. The callback body alone
+    // must never be trusted to complete a payment.
+    if ($ppex_pg_callback->get_pay_response_code() == PPEX_Constants::SUCCESS) {
+      $merchant_id = $this->merchant_context->get_merchant_id();
+      $salt_key    = $this->merchant_context->get_salt_key();
+      $salt_index  = $this->merchant_context->get_salt_index();
+      $x_verify    = self::calculate_status_checksum($merchant_id, $merchant_transaction_id, $salt_key, $salt_index);
+
+      $api_response = $this->network_manager->pg_status_check(
+        $x_verify, $merchant_id, $merchant_transaction_id, $this->plugin_context->get_environment()
+      );
+
+      if ($api_response->get_code() != PPEX_Constants::SUCCESS) {
+        ppLogError("Callback server-side verification failed for txn: " . $merchant_transaction_id
+          . " | Callback claimed SUCCESS but status API returned: " . $api_response->get_code());
+        $this->status_update_for_order(PPEX_Constants::FAILED, $wc_order_id, $merchant_transaction_id, "Server-side payment verification failed.");
+        return "Callback verification failed";
+      }
+
+      $status_amount = isset($api_response->get_data()['amount']) ? $api_response->get_data()['amount'] : 0;
+      if ($amount_in_paisa != $status_amount) {
+        ppLogError("Callback server-side amount mismatch for txn: " . $merchant_transaction_id
+          . " | Callback: " . $amount_returned_in_paisa . " | Status API: " . $status_amount);
+        $this->status_update_for_order(PPEX_Constants::FAILED, $wc_order_id, $merchant_transaction_id, "Amount mismatch in server-side verification.");
+        return "Amount mismatch in server-side verification";
+      }
+    }
+
     $this->status_update_for_order($ppex_pg_callback->get_pay_response_code(), $wc_order_id, $merchant_transaction_id);
   }
 

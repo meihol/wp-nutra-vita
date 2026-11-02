@@ -4,7 +4,7 @@
  * Fired during plugin deactivation
  *
  * @link       https://sharabindu.com
- * @since      3.0.4
+ * @since      3.0.5
  *
  * @package    Qrc_composer
  * @subpackage Qrc_composer/includes
@@ -15,7 +15,7 @@
  *
  * This class defines all code necessary to run during the plugin's deactivation.
  *
- * @since      3.0.4
+ * @since      3.0.5
  * @package    Qrc_composer
  * @subpackage Qrc_composer/includes
  * @author     Sharabindu Bakshi <sharabindu86@gmail.com>
@@ -27,7 +27,7 @@ class Qrc_composer_Deactivator {
 	 *
 	 * Long Description.
 	 *
-	 * @since    3.0.4
+	 * @since    3.0.5
 	 */
 	public static function deactivate() {
 

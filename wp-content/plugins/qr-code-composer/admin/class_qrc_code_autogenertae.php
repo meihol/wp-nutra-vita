@@ -88,7 +88,7 @@ function qcr_settings_page()
     {   
        ?>
 <div class="qrc-box-header" >
-            <h3 class="sui-box-title"><?php echo esc_html__('Auto Generate QR', 'qr-code-composer') ?></h3>
+            <h3 class="sui-box-title"><?php echo esc_html__('Automatic QR Code Generation ', 'qr-code-composer') ?></h3>
 <p><?php echo esc_html__('These QR codes are automatically displayed after the content of the web page. current page url will be used as content of QR code.', 'qr-code-composer') ?><a class="qrcdownsize" id="qrcauto" video-url="https://www.youtube.com/watch?v=LyQGEShmhn8"><span title="Video Documentation" id="qrcdocsides" class="dashicons dashicons-video-alt3"></span></a></p>
 
         </div>

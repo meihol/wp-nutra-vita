@@ -283,12 +283,6 @@ p.qrcvisisbolity {
     background: #fff;
     padding: 10px 10px 75px 23px;
 }
-.rightsidelast {
-    width: 17%;
-    margin-right: 12px;
-    /* padding: 10px; */
-    margin-left: 16px;
-}
 .qrc_popup_preview{
     position: -webkit-sticky;
     position: sticky;
@@ -779,9 +773,7 @@ ul.qr-pro-deisgn.dkhfjkfj p {
     margin-left: 6px;
 }
 .qrc_pro_ftcs_cont {
-    color: #fff;
-    background: #000;
-    text-align: center;
+    background: #FFEB3B;
     padding-bottom: 20px;
 }
 a.qrc_gtnow:hover {
@@ -791,6 +783,7 @@ a.qrc_gtnow:hover {
     margin-bottom: 10px;
 }
 .pro_ftcs_qrch {
+    font-size: 24px;
     margin-top: 0;
     color: #fff;
     text-transform: uppercase;
@@ -1025,7 +1018,7 @@ ul.qrvide-docs {
 
 
 .qrc_pro_ftcs_cont p {
-    font-size: 14px;
+       text-align: left;
     padding: 0 10px;
 }
 .qrc_wrap-md-7 {
@@ -1035,10 +1028,30 @@ ul.qrvide-docs {
 .qrc_pro_ftcs_cont img {
     max-width: 100%;
 }
+tr.qrcbulkvcardfet td {
+    width: 100%;
+}
+tr.qrcbulkvcardfet {
+    height: 165px;
+    position: relative;
+}
+tr.qrcbulkvcardfet td {
+    position: absolute;
+
+}
+tr.qrcbulkvcardfet th {
+    display: none;
+}
+.qrc_pro_ftcs_cont {
+    position: sticky;
+    background: #FFEB3B;
+    padding-bottom: 20px;
+    top: -25px;
+}
 .qrc_wrap-md-5 {
     margin-right: 1%;
     margin-left: 10%;
-    width: 30%;
+    width: 65%;
 }.qrc_wrap-md-5.lksfuieusb {
     border-radius: 10px;
 }
@@ -1485,8 +1498,14 @@ input.qrcprodemo3{
 p.vacrdsinflwrap {
     max-width: 72%;
 }
+h3.orderqrpro {
+    margin: 0px 10px;
+    padding: 10px;
+    background: rgb(254 254 254 / 41%);
+}
 a.oreremils {
-    display: inline-block;
+    margin: 20px 0px;
+    display: block;
     vertical-align: middle;
 }
 li.qrcmetalintitle {

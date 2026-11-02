@@ -3,23 +3,23 @@
 Plugin Name: WPC Smart Quick View for WooCommerce
 Plugin URI: https://wpclever.net/
 Description: WPC Smart Quick View allows users to get a quick look at products without opening the product page.
-Version: 4.2.9
+Version: 4.3.4
 Author: WPClever
 Author URI: https://wpclever.net
 Text Domain: woo-smart-quick-view
 Domain Path: /languages/
 Requires Plugins: woocommerce
-Requires at least: 4.0
-Tested up to: 6.9
+Requires at least: 5.9
+Tested up to: 7.0
 WC requires at least: 3.0
-WC tested up to: 10.4
+WC tested up to: 10.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 defined( 'ABSPATH' ) || exit;
 
-! defined( 'WOOSQ_VERSION' ) && define( 'WOOSQ_VERSION', '4.2.9' );
+! defined( 'WOOSQ_VERSION' ) && define( 'WOOSQ_VERSION', '4.3.4' );
 ! defined( 'WOOSQ_LITE' ) && define( 'WOOSQ_LITE', __FILE__ );
 ! defined( 'WOOSQ_FILE' ) && define( 'WOOSQ_FILE', __FILE__ );
 ! defined( 'WOOSQ_URI' ) && define( 'WOOSQ_URI', plugin_dir_url( __FILE__ ) );
@@ -28,11 +28,14 @@ defined( 'ABSPATH' ) || exit;
 ! defined( 'WOOSQ_REVIEWS' ) && define( 'WOOSQ_REVIEWS', 'https://wordpress.org/support/plugin/woo-smart-quick-view/reviews/' );
 ! defined( 'WOOSQ_CHANGELOG' ) && define( 'WOOSQ_CHANGELOG', 'https://wordpress.org/plugins/woo-smart-quick-view/#developers' );
 ! defined( 'WOOSQ_DISCUSSION' ) && define( 'WOOSQ_DISCUSSION', 'https://wordpress.org/support/plugin/woo-smart-quick-view' );
-! defined( 'WPC_URI' ) && define( 'WPC_URI', WOOSQ_URI );
 
-include 'includes/dashboard/wpc-dashboard.php';
-include 'includes/kit/wpc-kit.php';
-include 'includes/hpos.php';
+// WPC Core
+require_once __DIR__ . '/includes/wpc-core/wpc-core.php';
+wpc_core_register( [
+	'file'    => __FILE__,
+	'version' => WOOSQ_VERSION,
+	'prefix'  => 'woosq',
+] );
 
 if ( ! function_exists( 'woosq_init' ) ) {
     add_action( 'plugins_loaded', 'woosq_init', 11 );
@@ -66,6 +69,7 @@ if ( ! function_exists( 'woosq_init' ) ) {
 
                     // menu
                     add_action( 'admin_init', [ $this, 'register_settings' ] );
+                    add_filter( 'pre_update_option', [ $this, 'last_saved' ], 10, 2 );
                     add_action( 'admin_menu', [ $this, 'admin_menu' ] );
 
                     // admin enqueue scripts
@@ -126,13 +130,11 @@ if ( ! function_exists( 'woosq_init' ) ) {
 
                     // Nonce check
                     add_filter( 'woosq_disable_nonce_check', function ( $check, $context ) {
-                        return apply_filters( 'woosc_disable_security_check', $check, $context );
+                        return apply_filters( 'woosq_disable_security_check', $check, $context );
                     }, 10, 2 );
                 }
 
                 function init() {
-                    // load text-domain
-                    load_plugin_textdomain( 'woo-smart-quick-view', false, basename( WOOSQ_DIR ) . '/languages/' );
 
                     self::$settings       = (array) get_option( 'woosq_settings', [] );
                     self::$localization   = (array) get_option( 'woosq_localization', [] );
@@ -215,9 +217,9 @@ if ( ! function_exists( 'woosq_init' ) ) {
 
                 function add_to_cart_redirect( $url ) {
                     if ( apply_filters( 'woosq_redirect', true ) ) {
-                        if ( ! empty( $_REQUEST['woosq-redirect'] ) ) {
+                        if ( ! empty( $_REQUEST['woosq-redirect'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- nonce already verified by WooCommerce add-to-cart process
                             // add 'added_to_cart' to compatible with woofc & wooac
-                            return apply_filters( 'woosq_redirect_url', add_query_arg( 'added_to_cart', '1', sanitize_url( $_REQUEST['woosq-redirect'] ) ) );
+                            return apply_filters( 'woosq_redirect_url', add_query_arg( 'added_to_cart', '1', sanitize_url( wp_unslash( $_REQUEST['woosq-redirect'] ?? '' ) ) ) );
                         }
                     }
 
@@ -245,12 +247,12 @@ if ( ! function_exists( 'woosq_init' ) ) {
 
                 function ajax_quickview() {
                     if ( ! apply_filters( 'woosq_disable_nonce_check', false, 'quickview' ) ) {
-                        if ( ! isset( $_REQUEST['nonce'] ) || ! wp_verify_nonce( sanitize_key( $_REQUEST['nonce'] ), 'woosq-security' ) ) {
+                        if ( ! isset( $_REQUEST['nonce'] ) || ! wp_verify_nonce( sanitize_key( wp_unslash( $_REQUEST['nonce'] ) ), 'woosq-security' ) ) {
                             die( 'Permissions check failed!' );
                         }
                     }
 
-                    $product_id = absint( apply_filters( 'woosq_product_id', sanitize_key( $_REQUEST['product_id'] ?? 0 ), sanitize_key( $_REQUEST['context'] ?? 'default' ) ) );
+                    $product_id = absint( apply_filters( 'woosq_product_id', sanitize_key( wp_unslash( $_REQUEST['product_id'] ?? 0 ) ), sanitize_key( wp_unslash( $_REQUEST['context'] ?? 'default' ) ) ) );
 
                     global $post, $product;
 
@@ -344,7 +346,7 @@ if ( ! function_exists( 'woosq_init' ) ) {
                                             }
                                         }
                                     } else {
-                                        echo '<div class="thumbnail">' . wc_placeholder_img( $image_size ) . '</div>';
+                                        echo '<div class="thumbnail">' . wp_kses_post( wc_placeholder_img( $image_size ) ) . '</div>';
                                     }
 
                                     echo '</div>';
@@ -589,6 +591,15 @@ if ( ! function_exists( 'woosq_init' ) ) {
                     ] );
                 }
 
+                function last_saved( $value, $option ) {
+                    if ( $option == 'woosq_settings' || $option == 'woosq_localization' ) {
+                        $value['_last_saved']    = current_time( 'timestamp' );
+                        $value['_last_saved_by'] = get_current_user_id();
+                    }
+
+                    return $value;
+                }
+
                 function admin_menu() {
                     add_submenu_page( 'wpclever', esc_html__( 'WPC Smart Quick View', 'woo-smart-quick-view' ), esc_html__( 'Smart Quick View', 'woo-smart-quick-view' ), 'manage_options', 'wpclever-woosq', [
                             $this,
@@ -597,7 +608,7 @@ if ( ! function_exists( 'woosq_init' ) ) {
                 }
 
                 function admin_menu_content() {
-                    $active_tab = sanitize_key( $_GET['tab'] ?? 'settings' );
+                    $active_tab = sanitize_key( wp_unslash( $_GET['tab'] ?? 'settings' ) );
                     ?>
                     <div class="wpclever_settings_page wrap">
                         <div class="wpclever_settings_page_header">
@@ -622,7 +633,7 @@ if ( ! function_exists( 'woosq_init' ) ) {
                             </div>
                         </div>
                         <h2></h2>
-                        <?php if ( isset( $_GET['settings-updated'] ) && $_GET['settings-updated'] ) { ?>
+                        <?php if ( isset( $_GET['settings-updated'] ) && absint( wp_unslash( $_GET['settings-updated'] ?? '' ) ) ) { ?>
                             <div class="notice notice-success is-dismissible">
                                 <p><?php esc_html_e( 'Settings updated.', 'woo-smart-quick-view' ); ?></p>
                             </div>
@@ -715,7 +726,7 @@ if ( ! function_exists( 'woosq_init' ) ) {
                                                     <select name="woosq_settings[button_normal_icon]"
                                                             class="woosq_icon_picker">
                                                         <?php for ( $i = 1; $i <= 64; $i ++ ) {
-                                                            echo '<option value="woosq-icon-' . $i . '" ' . selected( $button_normal_icon, 'woosq-icon-' . $i, false ) . '>woosq-icon-' . $i . '</option>';
+                                                            echo '<option value="woosq-icon-' . absint( $i ) . '" ' . selected( $button_normal_icon, 'woosq-icon-' . absint( $i ), false ) . '>woosq-icon-' . esc_html( $i ) . '</option>';
                                                         } ?>
                                                     </select> </label>
                                             </td>
@@ -945,7 +956,7 @@ if ( ! function_exists( 'woosq_init' ) ) {
                                                     echo '<select name="woosq_settings[image_size]" ' . ( $image_sz !== 'default' ? 'disabled' : '' ) . '>';
 
                                                     foreach ( $image_sizes as $image_size_name => $image_size_data ) {
-                                                        echo '<option value="' . esc_attr( $image_size_name ) . '" ' . ( $image_size_name === $image_size ? 'selected' : '' ) . '>' . esc_attr( $image_size_name ) . ( ! empty( $image_size_data['width'] ) ? ' ' . $image_size_data['width'] . '&times;' . $image_size_data['height'] : '' ) . ( $image_size_data['crop'] ? ' (cropped)' : '' ) . '</option>';
+                                                        echo '<option value="' . esc_attr( $image_size_name ) . '" ' . ( $image_size_name === $image_size ? 'selected' : '' ) . '>' . esc_attr( $image_size_name ) . ( ! empty( $image_size_data['width'] ) ? ' ' . absint( $image_size_data['width'] ) . '&times;' . absint( $image_size_data['height'] ) : '' ) . ( $image_size_data['crop'] ? ' (cropped)' : '' ) . '</option>';
                                                     }
 
                                                     echo '</select>';
@@ -999,7 +1010,7 @@ if ( ! function_exists( 'woosq_init' ) ) {
 
                                                                     break;
                                                                 case 'attribute':
-                                                                    $title = wc_attribute_label( $title );
+                                                                    $title = esc_html( wc_attribute_label( $title ) );
 
                                                                     break;
                                                                 case 'custom_attribute':
@@ -1127,7 +1138,16 @@ if ( ! function_exists( 'woosq_init' ) ) {
                                         </tr>
                                         <tr class="submit">
                                             <th colspan="2">
-                                                <?php settings_fields( 'woosq_settings' ); ?><?php submit_button(); ?>
+                                                <div class="wpclever_submit">
+                                                    <?php
+                                                    settings_fields( 'woosq_settings' );
+                                                    submit_button( '', 'primary', 'submit', false );
+
+                                                    if ( function_exists( 'wpc_last_saved' ) ) {
+                                                        wpc_last_saved( self::get_settings() );
+                                                    }
+                                                    ?>
+                                                </div>
                                                 <a style="display: none;" class="wpclever_export"
                                                    data-key="woosq_settings"
                                                    data-name="settings"
@@ -1267,8 +1287,8 @@ if ( ! function_exists( 'woosq_init' ) ) {
                         wp_enqueue_style( 'woosq-backend', WOOSQ_URI . 'assets/css/backend.css', [ 'woocommerce_admin_styles' ], WOOSQ_VERSION );
 
                         add_thickbox();
-                        wp_enqueue_style( 'fonticonpicker', WOOSQ_URI . 'assets/libs/fonticonpicker/css/jquery.fonticonpicker.css' );
-                        wp_enqueue_script( 'fonticonpicker', WOOSQ_URI . 'assets/libs/fonticonpicker/js/jquery.fonticonpicker.min.js', [ 'jquery' ] );
+                        wp_enqueue_style( 'fonticonpicker', WOOSQ_URI . 'assets/libs/fonticonpicker/css/jquery.fonticonpicker.css', [], WOOSQ_VERSION );
+                        wp_enqueue_script( 'fonticonpicker', WOOSQ_URI . 'assets/libs/fonticonpicker/js/jquery.fonticonpicker.min.js', [ 'jquery' ], WOOSQ_VERSION, true );
                         wp_enqueue_style( 'woosq-icons', WOOSQ_URI . 'assets/css/icons.css', [], WOOSQ_VERSION );
                         wp_enqueue_script( 'woosq-backend', WOOSQ_URI . 'assets/js/backend.js', [
                                 'jquery',
@@ -1283,15 +1303,15 @@ if ( ! function_exists( 'woosq_init' ) ) {
                 }
 
                 function enqueue_scripts() {
-                    wp_enqueue_script( 'wc-add-to-cart-variation' );
+                    wp_enqueue_script( 'wc-add-to-cart-variation', false, [], WOOSQ_VERSION, true );
 
                     // slick
-                    wp_enqueue_style( 'slick', WOOSQ_URI . 'assets/libs/slick/slick.css' );
+                    wp_enqueue_style( 'slick', WOOSQ_URI . 'assets/libs/slick/slick.css', [], WOOSQ_VERSION );
                     wp_enqueue_script( 'slick', WOOSQ_URI . 'assets/libs/slick/slick.min.js', [ 'jquery' ], WOOSQ_VERSION, true );
 
                     // fancybox
                     if ( self::get_setting( 'content_image_effect', 'no' ) === 'fancybox' ) {
-                        wp_enqueue_style( 'fancybox', WOOSQ_URI . 'assets/libs/fancybox/jquery.fancybox.min.css' );
+                        wp_enqueue_style( 'fancybox', WOOSQ_URI . 'assets/libs/fancybox/jquery.fancybox.min.css', [], WOOSQ_VERSION );
                         wp_enqueue_script( 'fancybox', WOOSQ_URI . 'assets/libs/fancybox/jquery.fancybox.min.js', [ 'jquery' ], WOOSQ_VERSION, true );
                     }
 
@@ -1302,19 +1322,19 @@ if ( ! function_exists( 'woosq_init' ) ) {
 
                     // perfect srollbar
                     if ( self::get_setting( 'perfect_scrollbar', 'yes' ) === 'yes' ) {
-                        wp_enqueue_style( 'perfect-scrollbar', WOOSQ_URI . 'assets/libs/perfect-scrollbar/css/perfect-scrollbar.min.css' );
-                        wp_enqueue_style( 'perfect-scrollbar-wpc', WOOSQ_URI . 'assets/libs/perfect-scrollbar/css/custom-theme.css' );
+                        wp_enqueue_style( 'perfect-scrollbar', WOOSQ_URI . 'assets/libs/perfect-scrollbar/css/perfect-scrollbar.min.css', [], WOOSQ_VERSION );
+                        wp_enqueue_style( 'perfect-scrollbar-wpc', WOOSQ_URI . 'assets/libs/perfect-scrollbar/css/custom-theme.css', [], WOOSQ_VERSION );
                         wp_enqueue_script( 'perfect-scrollbar', WOOSQ_URI . 'assets/libs/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js', [ 'jquery' ], WOOSQ_VERSION, true );
                     }
 
                     // magnific
                     if ( self::get_setting( 'view', 'popup' ) === 'popup' ) {
-                        wp_enqueue_style( 'magnific-popup', WOOSQ_URI . 'assets/libs/magnific-popup/magnific-popup.css' );
+                        wp_enqueue_style( 'magnific-popup', WOOSQ_URI . 'assets/libs/magnific-popup/magnific-popup.css', [], WOOSQ_VERSION );
                         wp_enqueue_script( 'magnific-popup', WOOSQ_URI . 'assets/libs/magnific-popup/jquery.magnific-popup.min.js', [ 'jquery' ], WOOSQ_VERSION, true );
                     }
 
                     // feather icons
-                    wp_enqueue_style( 'woosq-feather', WOOSQ_URI . 'assets/libs/feather/feather.css' );
+                    wp_enqueue_style( 'woosq-feather', WOOSQ_URI . 'assets/libs/feather/feather.css', [], WOOSQ_VERSION );
 
                     if ( self::get_setting( 'button_icon', 'no' ) !== 'no' ) {
                         wp_enqueue_style( 'woosq-icons', WOOSQ_URI . 'assets/css/icons.css', [], WOOSQ_VERSION );
@@ -1361,7 +1381,7 @@ if ( ! function_exists( 'woosq_init' ) ) {
                                             'duration' => 120,
                                             'magnify'  => 1
                                     ] ) ) ),
-                                    'quick_view'              => absint( sanitize_key( $_REQUEST['quick-view'] ?? 0 ) ),
+                                    'quick_view'              => absint( sanitize_key( wp_unslash( $_REQUEST['quick-view'] ?? 0 ) ) ),
                             ] )
                     );
                 }
@@ -1483,13 +1503,14 @@ if ( ! function_exists( 'woosq_init' ) ) {
                 }
 
                 function ajax_add_field() {
-                    if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_key( $_POST['nonce'] ), 'woosq-security' ) ) {
+                    if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['nonce'] ) ), 'woosq-security' ) ) {
                         die( 'Permissions check failed!' );
                     }
 
-                    $type    = sanitize_key( $_POST['type'] ?? '' );
-                    $field   = sanitize_text_field( urldecode( $_POST['field'] ?? '' ) );
-                    $setting = sanitize_key( $_POST['setting'] ?? '' );
+                    // phpcs:ignore WordPress.Security.NonceVerification.Missing -- nonce verified above via wp_verify_nonce
+                    $type    = sanitize_key( wp_unslash( $_POST['type'] ?? '' ) );
+                    $field   = sanitize_text_field( wp_unslash( $_POST['field'] ?? '' ) );
+                    $setting = sanitize_key( wp_unslash( $_POST['setting'] ?? '' ) );
 
                     if ( ! empty( $type ) && ! empty( $field ) && ! empty( $setting ) ) {
                         if ( ( $type === 'attribute' ) && ( $field === 'all' ) ) {
@@ -1498,7 +1519,7 @@ if ( ! function_exists( 'woosq_init' ) ) {
                                 foreach ( $taxonomies as $taxonomy ) {
                                     if ( str_starts_with( $taxonomy->name, 'pa_' ) ) {
                                         $key = self::generate_key();
-                                        self::field_html( $key, wc_attribute_label( $taxonomy->name ), $type, $taxonomy->name );
+                                        self::field_html( $key, esc_html( wc_attribute_label( $taxonomy->name ) ), $type, $taxonomy->name );
                                     }
                                 }
                             }
@@ -1514,7 +1535,7 @@ if ( ! function_exists( 'woosq_init' ) ) {
 
                                     break;
                                 case 'attribute':
-                                    $title = wc_attribute_label( $field );
+                                    $title = esc_html( wc_attribute_label( $field ) );
 
                                     break;
                                 case 'custom_attribute':
@@ -1543,10 +1564,10 @@ if ( ! function_exists( 'woosq_init' ) ) {
                     echo '<span class="move">' . esc_html__( 'move', 'woo-smart-quick-view' ) . '</span>';
                     echo '<span class="info">';
                     echo '<span class="title">' . esc_html( $title ) . '</span>';
-                    echo '<input class="woosq-field-type" type="hidden" name="woosq_settings[fields][' . $key . '][type]" value="' . esc_attr( $type ) . '"/>';
+                    echo '<input class="woosq-field-type" type="hidden" name="woosq_settings[fields][' . esc_attr( $key ) . '][type]" value="' . esc_attr( $type ) . '"/>';
 
                     if ( ( $type === 'custom_field' ) && ( $meta_keys = self::get_meta_keys() ) ) {
-                        echo '<select class="woosq-field-name" name="woosq_settings[fields][' . $key . '][name]">';
+                        echo '<select class="woosq-field-name" name="woosq_settings[fields][' . esc_attr( $key ) . '][name]">';
 
                         foreach ( $meta_keys as $meta_key ) {
                             echo '<option value="' . esc_attr( $meta_key ) . '" ' . selected( $field, $meta_key, false ) . '>' . esc_html( $meta_key ) . '</option>';
@@ -1554,10 +1575,10 @@ if ( ! function_exists( 'woosq_init' ) ) {
 
                         echo '</select>';
                     } else {
-                        echo '<input class="woosq-field-name" type="text" name="woosq_settings[fields][' . $key . '][name]" value="' . esc_attr( $field ) . '" placeholder="' . esc_attr__( 'name', 'woo-smart-quick-view' ) . '"/>';
+                        echo '<input class="woosq-field-name" type="text" name="woosq_settings[fields][' . esc_attr( $key ) . '][name]" value="' . esc_attr( $field ) . '" placeholder="' . esc_attr__( 'name', 'woo-smart-quick-view' ) . '"/>';
                     }
 
-                    echo '<input class="woosq-field-label" type="text" name="woosq_settings[fields][' . $key . '][label]" value="' . esc_attr( $label ) . '" placeholder="' . esc_attr__( 'label', 'woo-smart-quick-view' ) . '"/>';
+                    echo '<input class="woosq-field-label" type="text" name="woosq_settings[fields][' . esc_attr( $key ) . '][label]" value="' . esc_attr( $label ) . '" placeholder="' . esc_attr__( 'label', 'woo-smart-quick-view' ) . '"/>';
                     echo '</span>';
                     echo '<span class="remove">&times;</span>';
                     echo '</div>';

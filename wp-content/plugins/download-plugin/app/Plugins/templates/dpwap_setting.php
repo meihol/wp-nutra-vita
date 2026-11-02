@@ -99,7 +99,7 @@
 	                <div class="row">
                         <div class="dpwap-section-col">
                             <?php esc_html_e('If you wish to know more about how to use these new feature, please', 'download-plugin');?>
-                            <a href="<?php echo esc_url('https://metagauss.com/download-plugin-guide/');?>" target="blank"><?php esc_html_e('read our guide.', 'download-plugin');?></a></div>
+                            <a href="<?php echo esc_url(DPWAP_FREE_GUIDE_URL);?>" target="blank"><?php esc_html_e('read our guide.', 'download-plugin');?></a></div>
 	                </div>
 	                <div class="modal-footer">
 		                <button class="btn btn-default prev-tab" id="last-slide-button" type="button"><?php esc_html_e('Prev', 'download-plugin');?></button>
